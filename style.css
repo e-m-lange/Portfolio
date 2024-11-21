@@ -1,0 +1,151 @@
+:root {
+    --blue-dark:#0E313B;
+    --yellow-dark:#443B00;
+    --teal-dark:#184141;
+    --blue-med:#417989;
+    --blue-light:#B9E2F6;
+    --teal-light:#BDE9E4;
+    --yellow-light:#EFEEC8;
+}
+
+@media (width <= 1170px) {
+    div #mainSkills > ul { /*adding an ancestor allows for overriding*/
+        justify-content: center;
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('./resources/background_image.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Libre Baskerville';
+    font-size: 4rem;
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Libre Baskerville';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Quicksand';
+    font-size: 1rem;
+}
+
+ul > li {
+    font-family: 'Quicksand';
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navBtnList {
+    display: flex;
+    padding: 1.5rem;
+}
+
+.navBtn {
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.25rem 2rem 1.25rem 2rem;
+    margin: 0rem 0.75rem 0rem 0.75rem;
+    color: white;
+    background-color: black;
+    border: 0px;
+    border-style: solid;
+    border-radius: 4rem;
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+.arrowNote {
+    display: flex;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.arrowNote > img {
+    flex: 1;
+    height: 2.75rem;
+    width: 2.75rem;
+    padding: 0.5rem 0rem 0rem 0rem;
+}
+
+.arrowNote > p {
+    flex-wrap: wrap;
+    padding: 0rem 0.75rem 0rem 0.75rem;
+    margin: 0px;
+}
+
+#nameTitle {
+    background-image: linear-gradient(to right, var(--blue-dark) 30%, var(--yellow-light));
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+    margin: 0% 0% 0% 5%;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+#mainIntro {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: white;
+    padding: 3rem 5% 0.75rem 5%;
+    border-radius: 2rem 2rem 0rem 0rem;
+    margin: -2.5rem 0rem 0rem 0rem;
+}
+
+#mainSkills {
+    background-image: linear-gradient(to right, var(--blue-med), var(--blue-dark), var(--blue-dark), var(--blue-med));
+    padding: 1rem;
+}
+
+#mainSkills > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mainSkills > ul > li {
+    padding: 0.25rem 1rem;
+    color: white;
+    font-size: 0.85rem;
+}
+
+#mainPreview {
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+}
