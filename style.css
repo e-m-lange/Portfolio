@@ -8,7 +8,7 @@
     --yellow-light:#EFEEC8;
 }
 
-@media (width <= 1170px) {
+@media (width <= 1165px) {
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: center;
     }
