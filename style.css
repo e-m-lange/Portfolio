@@ -12,6 +12,22 @@
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: center;
     }
+
+    div .desktop { 
+        display: none; /*since visibility just hides, display will make sure it's not there and doesn't leave space*/
+    }
+
+    div .mobile {
+        display: block;
+    }
+
+    div .arrowNote > img {
+        flex: 1;
+        height: 2.75rem;
+        width: 2.75rem;
+        padding: 0.5rem 0rem 0rem 0rem;
+        
+    }
 }
 
 body {
@@ -54,6 +70,14 @@ ul > li {
     font-family: 'Quicksand';
     font-size: 1rem;
     font-weight: 100;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
 }
 
 .header {
