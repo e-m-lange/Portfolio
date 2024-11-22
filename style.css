@@ -67,14 +67,14 @@
     }
 
     div .arrowNote {
-        padding: 0.5rem 0rem 0.5rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
         align-items: center;
     }
 
     div .arrowNote > img {
         flex: 1;
-        height: 1rem;
-        width: 1rem;
+        height: 0.65rem;
+        width: 0.65rem;
         padding: 0.5rem 0rem 0rem 0rem;
     }
 
