@@ -3,32 +3,34 @@
     --yellow-dark:#443B00;
     --teal-dark:#184141;
     --blue-med:#417989;
+    --yellow-med:#898742;
     --blue-light:#B9E2F6;
     --teal-light:#BDE9E4;
     --yellow-light:#EFEEC8;
 }
 
-@media (max-width: 429px) {
-    div #nameTitle > h2 {
-        font-size: 1.5rem;
-    }
-    
+@media (max-width: 368px) {
     div #mainIntro {
-        margin: -6.5rem 0rem 0rem 0rem;
+        margin: -5.5rem 0rem 0rem 0rem;
     }
 
+    div #mainIntroItem2 {
+        margin-top: 3.5rem;
+    }
+}
+
+@media (max-width: 429px) {
     #mainIntroItem2 {
-        margin-top: 4rem;
+        margin-top: 0.25rem;
     }
 
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: space-between;
     }
 
-    div #mainSkills > ul > li {
-        padding: 0.25rem 1rem;
-        color: white;
-        font-size: 0.7rem;
+    div .navBtn {
+        font-size: 0.8rem;
+        padding: 1rem 1.75rem 1rem 1.75rem;
     }
 }
 
@@ -93,7 +95,7 @@
     }
     
     #mainIntroItem1 {
-        flex-direction: column;
+        flex-direction: column-reverse;
         flex-wrap: nowrap;
         order: 2;
     }
@@ -103,7 +105,7 @@
     }
 
     #mainIntroItem2 {
-        flex-direction: column-reverse;
+        flex-direction: column;
         order: 0;
     }
 
@@ -144,7 +146,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image: url('./resources/background_image.png');
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.7)), url('./resources/background_image.png');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,7 +170,7 @@ h1 {
 
 h2 {
     font-family: 'Libre Baskerville';
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
 }
 
@@ -240,11 +242,12 @@ ul > li {
 }
 
 #nameTitle {
-    background-image: linear-gradient(to right, var(--blue-dark) 30%, var(--yellow-light));
+    background-image: linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med));
     color: transparent;
     background-clip: text;
     width: fit-content;
     margin: 0% 0% 0% 5%;
+    /*text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25);*/
 }
 
 #mainContent {
