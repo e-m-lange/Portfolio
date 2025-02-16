@@ -25,8 +25,6 @@
 @media (max-width: 625px) {
     body {
         position: fixed;
-        /*width: 100vw;*/
-        height: 100vh;
         background-attachment: fixed;
     }
 
@@ -111,10 +109,10 @@
     }
 }
 
-/*Special media query for the project preview cards*/
+/*Special media query for the project preview cards on mobile etc*/
 @media (max-width: 1220px), (max-height: 655px) {
     #mainPreview {
-
+        display: grid;
     }
 
     .projectCard {
@@ -124,6 +122,10 @@
     }
 
     .projectCard:nth-child(5) { margin-bottom: 1rem; }
+
+    body {
+        height: 100%;
+    }
 }
 
 @media (min-width: 626px) and (max-width: 1169px) {  
