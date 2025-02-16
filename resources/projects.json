@@ -1,0 +1,74 @@
+[
+    {
+        "caAdmin": {
+            "title": "CA Admin",
+            "snippet": "Re-design*Enterprise Software",
+            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "challenge": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team member’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
+            "tools": "Figma, Google Forms",
+            "imgUrl": "thumbnails/previewCaAdmin.png"
+        },
+        "landingPages": {
+            "title": "Landing Pages",
+            "snippet": "Wordpress Website",
+            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "challenge": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team member’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
+            "tools": "Figma, Google Forms",
+            "imgUrl": "thumbnails/previewLandingPages.png"
+        },
+        "mobileHome": {
+            "title": "Mobile App Homepage",
+            "snippet": "Re-design",
+            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "challenge": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team member’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
+            "tools": "Figma, Google Forms",
+            "imgUrl": "thumbnails/previewAB.png"
+        },
+        "mobilePain": {
+            "title": "Mobile App Pain Point",
+            "snippet": "Ideation",
+            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "challenge": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team member’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
+            "tools": "Figma, Google Forms",
+            "imgUrl": "thumbnails/previewAB.png"
+        },
+        "abTests": {
+            "title": "A/B Tests",
+            "snippet": "Webpage Research",
+            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "challenge": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team member’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
+            "tools": "Figma, Google Forms",
+            "imgUrl": "thumbnails/previewAB.png"
+        }
+    }
+]

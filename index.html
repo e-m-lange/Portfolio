@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div id="nameTitle">
             <h2>Eve Lange</h2>
         </div>
@@ -20,35 +20,32 @@
     </div>
     <div id="mainContent">
         <div id="mainIntro">
-            <h1 class="mainIntroItem" id="mainIntroItem0">Welcome!</h1>
-            <div class="arrowNote mainIntroItem" id="mainIntroItem1" style="flex-wrap:wrap-reverse;">
-                <img class="desktop" src="./resources/arrow_desktop.svg"/>
-                <img class="mobile" src="./resources/arrow_mobile.svg"/>
-                <p style="align-content: start;">Here are my main competencies as a UX/UI designer</p>
+            <div id="welcomeSection">
+                <h1 id="mainIntroItem0">Welcome!</h1>
+                <p>I’m a UX/UI designer fascinated by digital experiences and the technical possibilities that shape meaningful solutions.</p>
             </div>
-            <div class="arrowNote mainIntroItem" id="mainIntroItem2" style="flex-wrap:wrap;">
+            <div class="arrowNote" id="mainIntroItem1" style="flex-wrap:wrap-reverse;">
                 <img class="desktop" src="./resources/arrow_desktop.svg"/>
                 <img class="mobile" src="./resources/arrow_mobile.svg"/>
-                <p style="align-content: end;">Start exploring here!</p>
+                <p style="align-content: start;">My main competencies</p>
             </div>
         </div>
         <div id="mainSkills">
             <ul>
                 <li>HCI</li>
-                <li>Web Design</li>
-                <li>Mobile Design</li>
-                <li>UX/UI Design</li>
+                <li>Mobile & Desktop Design</li>
+                <li>UX/UI</li>
                 <li>UX Research</li>
-                <li>Desktop Design</li>
-                <li>Design Tools</li>
                 <li>User-Centred Design</li>
+                <li>Design Testing & Prototyping</li>
                 <li>Front-end Programming</li>
-                <li>Design Testing and Prototyping</li>
             </ul>
         </div>
         <div id="mainPreview">
-            <p></p>
         </div>
     </div>
+    <script src="./currentPageState.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./templates.js"></script>
 </body>
 </html>

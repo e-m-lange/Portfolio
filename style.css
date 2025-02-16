@@ -9,43 +9,17 @@
     --yellow-light:#EFEEC8;
 }
 
-@media (max-width: 526px) {
-    #mainIntro {
-        margin: -5.5rem 0rem 0rem 0rem;
-    }
-
-    #mainIntroItem2 {
-        margin-top: 0rem;
-    }
-}
-
 @media (max-width: 527px) {
-    #mainIntroItem2 {
-        margin-top: 0.25rem;
-    }
-
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: center;
     }
 
     div .navBtn {
         font-size: 0.8rem;
-        padding: 1rem 1.75rem 1rem 1.75rem;
+        padding: 1rem 1.25rem 1rem 1.25rem;
     }
 
-    div #mainIntro {
-        margin: -2rem 0rem 0rem 0rem;
-    }
-}
 
-@media (min-width: 528px) and (max-width: 625px) {
-    #mainIntroItem2 {
-        margin-top: 0.25rem;
-    }
-
-    div #mainIntro {
-        margin: -2.5rem 0rem 0rem 0rem;
-    }
 }
 
 @media (max-width: 625px) {
@@ -56,7 +30,7 @@
         background-attachment: fixed;
     }
 
-    .header {
+    #header {
         flex-direction: column;
     }
 
@@ -99,28 +73,25 @@
         flex-direction: column;
     }
 
-    #mainIntroItem0 {
+    #welcomeSection {
+        flex-direction: column;
+    }
+
+    #welcomeSection > h1 {
         font-size: 3.25rem;
-        order: 1;
+    }
+
+    #welcomeSection > p {
+        text-align: center;
     }
     
     #mainIntroItem1 {
         flex-direction: column-reverse;
         flex-wrap: nowrap;
-        order: 2;
     }
 
     div #mainIntroItem1 > .mobile {
         transform: scaleY(1);
-    }
-
-    #mainIntroItem2 {
-        flex-direction: column;
-        order: 0;
-    }
-
-    div #mainIntroItem2 > .mobile {
-        transform: scaleY(-1);
     }
 
     div #nameTitle {
@@ -140,7 +111,22 @@
     }
 }
 
-@media (min-width: 626px) and (max-width: 1180px) {  
+/*Special media query for the project preview cards*/
+@media (max-width: 1220px), (max-height: 655px) {
+    #mainPreview {
+
+    }
+
+    .projectCard {
+        position: static !important;
+        justify-self: center !important;
+        margin: 1.5rem 0rem 0rem 0rem;
+    }
+
+    .projectCard:nth-child(5) { margin-bottom: 1rem; }
+}
+
+@media (min-width: 626px) and (max-width: 1169px) {  
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: center;
     }
@@ -180,7 +166,7 @@ div {
 
 h1 {
     font-family: 'Libre Baskerville';
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 100;
     padding: 0px;
     margin: 0px;
@@ -189,7 +175,7 @@ h1 {
 h2 {
     font-family: 'Libre Baskerville';
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 p {
@@ -211,31 +197,84 @@ ul > li {
     display: none;
 }
 
-.header {
+#header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
 }
 
+#header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.4rem; /* Height of the rectangle */
+    background-color: white; /* Rectangle color */
+    border-top-left-radius: 25px; /* Top-left border radius */
+    border-top-right-radius: 25px; /* Top-right border radius */
+}
+
 .navBtnList {
     display: flex;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 }
 
 .navBtn {
     font-family: 'Quicksand';
     font-weight: 600;
     font-size: 1rem;
-    padding: 1.25rem 2rem 1.25rem 2rem;
+    padding: 1.165rem 1.915rem 1.165rem 1.915rem; /*reduced due to border*/
     margin: 0rem 0.75rem 0rem 0.75rem;
     color: white;
+    background-image: linear-gradient(to bottom, #cfdfe300 0%, rgba(0, 0, 0, 0.5) 70%);
     background-color: black;
-    border: 0px;
-    border-style: solid;
+    border: 0.085rem solid transparent;
     border-radius: 4rem;
+    background-clip: padding-box;
     box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
     order: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navBtn:hover {
+    position: relative;
+    color: black;
+    background-image: linear-gradient(to bottom, #CFDFE3 0%, rgba(255, 255, 255, 0) 70%);
+    background-color: white;
+    /*box-shadow: inset 0 0 0 1.25px black;*/
+    border: 0.05rem solid transparent;
+    transition: 0.3s;
+}
+
+.navBtn:hover::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.05rem; bottom: -0.065rem;
+    left: -0.05rem; right: -0.05rem;
+    background: linear-gradient(to bottom, #00000000 30%, black);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
+} /*https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient*/
+
+.navBtn:active {
+    background-image: none;
+    background-color: var(--teal-light);
+    transition: 0s;
+}
+
+.navBtn:active::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.085rem; bottom: -0.1rem;
+    left: -0.085rem; right: -0.085rem;
+    background: var(--teal-light);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
 }
 
 .arrowNote {
@@ -248,17 +287,75 @@ ul > li {
     height: 2.75rem;
     width: 2.75rem;
     padding: 0.5rem 0rem 0rem 0rem;
+    opacity: 0.5;
 }
 
 .arrowNote > p {
     flex-wrap: wrap;
     padding: 0rem 0.75rem 0rem 0.75rem;
     margin: 0px;
+    opacity: 0.5;
 }
 
-.mainIntroItem {
-    order: 0;
+.projectCard {
+    position: absolute; 
+    height: 150px; 
+    width: 320px;
+    transition: 0.3s;
 }
+
+.projectCard-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+    pointer-events: none; /* Allows clicking elements underneath */
+}
+
+.projectPreview {
+    background: white;
+    border: solid 6px white;
+    transition: 0.3s;
+}
+
+.projectPreview * {
+    pointer-events: none /*Means the children won't block div from capturing events*/
+}
+
+.projectPreview:hover {
+    background: var(--blue-med);
+    border: solid 6px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projectPreview:active {
+    background: var(--blue-light);
+}
+
+.floating {
+    animation: floatingAnim 6s ease-in-out infinite;
+}
+
+@keyframes floatingAnim {
+    0% { transform: translateY(0px) translateX(1.5px); }
+    15% { transform: translateY(-1.5px) translateX(0.5px); }
+    25% { transform: translateY(-2px) translateX(0px); }
+    50% { transform: translateY(0px) translateX(1.5px); }
+    75% { transform: translateY(2px) translateX(0px); }
+    85% { transform: translateY(1px)translateX(0.5px); }
+    100% { transform: translateY(0px)translateX(1.5px); }
+}
+
+/*offset the animations*/
+.floating:nth-child(1) { animation-delay: 0s; }
+.floating:nth-child(2) { animation-delay: 0.5s; }
+.floating:nth-child(3) { animation-delay: 1.1s; }
+.floating:nth-child(4) { animation-delay: 1.7s; }
+.floating:nth-child(5) { animation-delay: 2s; }
 
 #nameTitle {
     background-image: linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med));
@@ -269,11 +366,16 @@ ul > li {
     /*text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25);*/
 }
 
+#nameTitle > h2 {
+    margin-bottom: 0.5rem;
+}
+
 #mainContent {
     display: flex;
     flex-direction: column;
     height: 100%;
     z-index: 1;
+    overflow-y: auto;
 }
 
 #mainIntro {
@@ -281,18 +383,29 @@ ul > li {
     align-items: center;
     justify-content:space-between;
     background-color: white;
-    padding: 3rem 5% 0.75rem 5%;
-    border-radius: 2rem 2rem 0rem 0rem;
-    margin: -2.5rem 0rem 0rem 0rem;
+    padding: 2rem 5% 0.75rem 5%;
 }
 
-#mainIntroItem2 > img {
-    transform: scaleY(-1);
+#welcomeSection {
+    display: flex;
+    align-items: center;
+}
+
+#welcomeSection > h1 {
+    padding-right: 1.25rem;
+}
+
+#welcomeSection > p {
+    max-width: 22rem;
 }
 
 #mainSkills {
-    background-image: linear-gradient(to right, var(--blue-med), var(--blue-dark), var(--blue-dark), var(--blue-med));
+    /*background-image: linear-gradient(to right, var(--blue-med), var(--blue-dark), var(--blue-dark), var(--blue-med));*/
+    background-color: #ffffffCC;
     padding: 1rem;
+    border-bottom: 2px solid #CFDFE3;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+    z-index: -1;
 }
 
 #mainSkills > ul {
@@ -306,11 +419,13 @@ ul > li {
 
 #mainSkills > ul > li {
     padding: 0.25rem 1rem;
-    color: white;
+    color: rgba(0, 0, 0, 0.8);
     font-size: 0.85rem;
 }
 
 #mainPreview {
     background-color: rgba(255, 255, 255, 0.8);
     flex-grow: 1;
+    z-index: -1;
+    position: relative;
 }
