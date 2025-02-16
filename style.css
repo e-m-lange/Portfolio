@@ -126,6 +126,13 @@
     body {
         height: 100%;
     }
+
+    /*no hover for mobile or tablet, temp solution*/
+    .projectPreview:hover {
+        background: white;
+        border: solid 6px white;
+        cursor: none;
+    }
 }
 
 @media (min-width: 626px) and (max-width: 1169px) {  
