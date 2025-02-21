@@ -201,26 +201,33 @@ function showPreviewProjectBg() {
     
     // set the images
     var bgImages = document.querySelectorAll("#mainPreviewProjectBg img");
-    
     var tempCurrProject = projects[0][projectKeys[currOpenedProjectNum]];
 
     // for correct fade in animation
-    if (!projectCardIsSelected) {
-        var imgList = tempCurrProject.previewImageList.split("*");
-        for (let i = 0; i < bgImages.length; i++) {
-            bgImages[i].src = "./resources/" + imgList[i];
-        }
+    if (!projectCardIsSelected) { // If no project is currently selected
+        //showPreviewProjectBgLoadImage(bgImages);
+        new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject); resolve(); }).then(showPreviewProjectBgImagesLoaded);
     }
     else {
-        document.getElementById("mainPreviewProjectBg").style.opacity = 0;
+        document.getElementById("mainPreviewProjectBg").style.opacity = 0; // Otherwise hide the currently shown
         setTimeout(() => {
-            var imgList = tempCurrProject.previewImageList.split("*");
-            for (let i = 0; i < bgImages.length; i++) {
-                bgImages[i].src = "./resources/" + imgList[i];
-            }
+            //showPreviewProjectBgLoadImage(bgImages, tempCurrProject);
+            new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject); resolve(); }).then(showPreviewProjectBgImagesLoaded);
         }, 260);
     }
-    
+}
+
+// Attaches the project images as background images
+function showPreviewProjectBgLoadImage(bgImages, tempCurrProject) {
+    console.log(tempCurrProject);
+    var imgList = tempCurrProject.previewImageList.split("*");
+    for (let i = 0; i < bgImages.length; i++) {
+        bgImages[i].src = "./resources/" + imgList[i];
+    }   
+}
+
+// Continue the fade in once all images have been loaded
+function showPreviewProjectBgImagesLoaded() {
     // Fade in animation
     if (!projectCardIsSelected) {
         setTimeout(() => {
@@ -234,7 +241,7 @@ function showPreviewProjectBg() {
             document.getElementById("welcomeSection").style.transition = "0.3s";
             document.getElementById("mainPreviewProjectBg").style.opacity = 1;
             document.getElementById("mainPreviewOverlay").style.opacity = 1;
-        }, 300);
+        }, 100);
     }
 }
 
