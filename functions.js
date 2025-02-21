@@ -66,6 +66,10 @@ function clickProjectCard(element){
     hideMainSkills();
     hideProjectCard(element);
     showGoToProjectBtn(element);
+    if (innerWidth <= 700) {
+        // For mobile, don't show them anyway
+        hideOtherProjectCards();
+    }
     showPreviewProjectBg();
     welcomeSectionToProject();
     forceScrollTo();
@@ -88,6 +92,18 @@ function hideProjectCard(element) {
     }
 }
 
+function hideOtherProjectCards() {
+    var projectCards = document.getElementsByClassName("projectCard");
+    for (let i = 0; i < projectCards.length; i++) {
+        if (projectCards[i].querySelector("#goToProjectID") == null) {
+            console.log(projectCards[i].querySelector("#goToProjectID") + ", " + projectCards[i]);
+            projectCards[i].style.opacity = 0;
+            projectCards[i].querySelector(".projectPreview").classList.add("hidden");
+            projectCards[i].querySelector(".projectPreviewLabel").classList.add("hidden");
+        }
+    }
+}
+
 // Show the go to project button
 function showGoToProjectBtn(element) {
     let newElement = document.createElement("div");
@@ -104,6 +120,7 @@ function hideGoToProjectBtn() {
 function showAllProjectCards() {
     for (let k = 0; k < document.getElementsByClassName("projectCard").length; k++) {
         var element = document.getElementsByClassName("projectCard")[k]
+        element.opacity = 1;
         for (let i = 0; i < element.childNodes.length; i++) {
             if (element.childNodes[i].classList != undefined) {
                 element.childNodes[i].classList.remove("hidden");
@@ -232,7 +249,6 @@ function showPreviewProjectBgLoadImage(bgImages, tempCurrProject, resolve) {
             // If all images are loaded, resolve the promise
             if (loadedImages === bgImages.length) {
                 resolve();
-                console.log("images loaded");
             }
         };
     }   
@@ -253,10 +269,8 @@ function showPreviewProjectBgImagesLoaded() {
             document.getElementById("welcomeSection").style.transition = "0.3s";
             document.getElementById("mainPreviewProjectBg").style.opacity = 1;
             document.getElementById("mainPreviewOverlay").style.opacity = 1;
-        }, 300);
+        }, 50);
     }
-
-    console.log("fade in");
 }
 
 // Reset the message in the welcome section to the default
@@ -318,7 +332,10 @@ function welcomeSectionToProject() {
 
 // particularily on mobile, scroll so e.g., button is visible
 function forceScrollTo() {
-    const buttonPosition = document.getElementById("goToProjectID").getBoundingClientRect().top;
+    var buttonPosition;
+    if (document.getElementById("goToProjectID") !== null) {
+        buttonPosition = document.getElementById("goToProjectID").getBoundingClientRect().top;
+    }
     const mainIntroDistance = document.getElementById("mainIntro").getBoundingClientRect().top;
     const mainIntroPos = document.getElementById("mainContent").scrollTop;
     console.log(mainIntroDistance - buttonPosition);
@@ -335,33 +352,44 @@ let handScrollIsRunning = false;
 // Check scroll for the mobile ux
 async function handleScroll() {
     // Only care when user is browsing a project
-    if (projectCardIsSelected && !handScrollIsRunning){
+    // To return the arrow under the welcome message
+    console.log(projectCardIsSelected + ", " + handScrollIsRunning);
+    if (!projectCardIsSelected && !handScrollIsRunning) {
         handScrollIsRunning = true;
-
+        console.log("scroll 2 : scrollPosition");
+        document.getElementById("mainIntro").style.position = "relative";
+        document.getElementById("mainIntroItem1").classList.remove("hidden");
+        scrollStylesSet = false;
+        await wait(500); // 500 milliconds
+        handScrollIsRunning = false
+    }
+    else if (projectCardIsSelected && !handScrollIsRunning){
+        handScrollIsRunning = true;
         //console.log("handle scroll 2 " + document.getElementById("mainContent").scrollTop);
         const scrollPosition = document.getElementById("mainContent").scrollTop; // Get the scroll position from the top of the page
-        const threshold = 10; // Scroll threshold in pixels
+        console.log("scrollStylesSet " + scrollStylesSet);
 
-        if (scrollPosition > threshold) {
-            if (!scrollStylesSet) {
-                document.getElementById("mainIntro").style.position = "sticky";
-                document.getElementById("mainIntro").style.top = "0px";
-                document.getElementById("mainIntroItem1").classList.add("hidden");
-                scrollStylesSet = true;
-                await wait(500); // 500 milliconds  
-                handScrollIsRunning = false
-            }
-        } else {
-            if (scrollStylesSet) {
-                document.getElementById("mainIntro").style.position = "relative";
-                document.getElementById("mainIntroItem1").classList.remove("hidden");
-                scrollStylesSet = false;
-                await wait(500); // 500 milliconds
-                handScrollIsRunning = false
-            }
-        }
-
+        if (!scrollStylesSet) {
+            document.getElementById("mainIntro").style.position = "sticky";
+            document.getElementById("mainIntro").style.top = "0px"; // Needed to activate sticky
+            document.getElementById("mainIntroItem1").classList.add("hidden");
+            scrollStylesSet = true;
+            await wait(500); // 500 milliconds  
+            handScrollIsRunning = false
+        }            
+        await wait(500); // 500 milliconds  
+        handScrollIsRunning = false
         forceScrollTo();
+    }
+}
+
+async function handleScrollMobile() {
+    // On mobile we don't show other project cards when one is selected
+    for (let element in document.getElementsByClassName("projectPreview")) {
+        element.classList.add("hidden");
+    }
+    for (let element in document.getElementsByClassName("projectPreviewLabel")) {
+        element.classList.add("hidden");
     }
 }
 

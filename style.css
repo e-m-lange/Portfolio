@@ -139,7 +139,6 @@
 
 /*Assume this is the phone view from hereon (narrow)*/
 @media (max-width: 700px) {
-
     div #mainIntroItem0 {
         text-align: center;
         font-size: 3rem;
@@ -150,7 +149,7 @@
         display: grid !important;
         grid-template-columns: auto !important;
         row-gap: 0px !important;
-        padding-bottom: 1rem;
+        padding-bottom: 4.25rem;
     }
 
     #mainPreviewProjectBg {
@@ -206,7 +205,7 @@
     }
 }
 
-/*Special media query for the project preview cards on mobile, tablet etc*/
+/*Special media query for the project preview cards on tablet etc*/
 @media (min-width: 701px) and (max-width: 1220px), (max-height: 655px) {
     #mainPreview {
         display: grid;
