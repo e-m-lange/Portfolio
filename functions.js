@@ -210,10 +210,9 @@ function showPreviewProjectBg() {
     }
     else {
         document.getElementById("mainPreviewProjectBg").style.opacity = 0; // Otherwise hide the currently shown
-        setTimeout(() => {
-            //showPreviewProjectBgLoadImage(bgImages, tempCurrProject);
+        setTimeout(() => { 
             new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject); resolve(); }).then(showPreviewProjectBgImagesLoaded);
-        }, 260);
+        }, 300); // need to wait for fade out animation first
     }
 }
 
@@ -224,6 +223,7 @@ function showPreviewProjectBgLoadImage(bgImages, tempCurrProject) {
     for (let i = 0; i < bgImages.length; i++) {
         bgImages[i].src = "./resources/" + imgList[i];
     }   
+    console.log("has loaded");
 }
 
 // Continue the fade in once all images have been loaded
@@ -241,8 +241,10 @@ function showPreviewProjectBgImagesLoaded() {
             document.getElementById("welcomeSection").style.transition = "0.3s";
             document.getElementById("mainPreviewProjectBg").style.opacity = 1;
             document.getElementById("mainPreviewOverlay").style.opacity = 1;
-        }, 100);
+        }, 300);
     }
+
+    console.log("fade in");
 }
 
 // Reset the message in the welcome section to the default
