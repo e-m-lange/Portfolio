@@ -9,6 +9,18 @@
     --yellow-light:#EFEEC8;
 }
 
+@media (min-width: 2560px) { /* 2K resolution 2560px */
+    html {
+      font-size: 32px; /* 2x larger */
+    }
+}
+
+@media (min-width: 1900px) and (max-width: 2559px) { /* 1920px */
+    html {
+      font-size: 24px;
+    }
+}
+
 @media (max-width: 527px) {
     div #mainSkills > ul { /*adding an ancestor allows for overriding*/
         justify-content: center;
@@ -75,8 +87,9 @@
         flex-direction: column;
     }
 
-    #welcomeSection > h1 {
-        font-size: 3.25rem;
+    div #mainIntroItem0 {
+        font-size: 2.75rem;
+        padding-right: 0px;
     }
 
     #welcomeSection > p {
@@ -107,31 +120,120 @@
     #navBtn2 {
         order: 2;
     }
-}
-
-/*Special media query for the project preview cards on mobile etc*/
-@media (max-width: 1220px), (max-height: 655px) {
-    #mainPreview {
-        display: grid;
+    
+    div #nameTitle {
+        width: 100%;
+        justify-content: center;
+    }
+    div #nameTitle > h2 {
+        margin-left: -2.25rem;
     }
 
+    div #profilePhoto {
+        margin-left: 0.8rem;
+        margin-top: 0.5rem;
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+}
+
+/*Assume this is the phone view from hereon (narrow)*/
+@media (max-width: 700px) {
+
+    div #mainIntroItem0 {
+        text-align: center;
+        font-size: 3rem;
+        padding-right: 0px;
+    }
+
+    #mainPreview {
+        display: grid !important;
+        grid-template-columns: auto !important;
+        row-gap: 0px !important;
+        padding-bottom: 1rem;
+    }
+
+    #mainPreviewProjectBg {
+        grid-template-rows: repeat(5, 1fr) !important;
+        grid-template-columns: auto auto !important;
+        padding: 0rem !important;
+        height: 100% !important;
+        width: 100% !important;
+        column-gap: 0.5rem !important;
+        gap: 2rem !important;
+    }
+
+    #mainPreviewProjectBg > div > img {
+        height: 100% !important;
+        width: auto !important; /* Makes the image stretch to fill the width of the grid cell */;
+    }
+    
+    div #mainPreviewProjectBgItem0 {
+        justify-self: center !important;
+        grid-row: 1 !important;
+        grid-column: 1 / span 2 !important; /* will span across the 1st and 2nd rows */
+    }
+    
+    div #mainPreviewProjectBgItem1 {
+        grid-row: 2 !important;
+        grid-column: 1 !important;
+    }
+    
+    div #mainPreviewProjectBgItem2 {
+        grid-row: 2 !important;
+        grid-column: 2 !important;
+        display: flex !important;
+    }
+    
+    div #mainPreviewProjectBgItem3 {
+        grid-row: 3 !important;
+        grid-column: 1 / span 2 !important;
+    }
+    
+    div #mainPreviewProjectBgItem4 {
+        grid-row: 4 !important;
+        grid-column: 1 !important;
+    }
+    
+    div #mainPreviewProjectBgItem5 {
+        grid-row: 4 !important;
+        grid-column: 2 !important;
+    }
+    
+    div #mainPreviewProjectBgItem6 {
+        grid-row: 5 !important;
+        grid-column: 1 / span 2 !important;
+    }
+}
+
+/*Special media query for the project preview cards on mobile, tablet etc*/
+@media (min-width: 701px) and (max-width: 1220px), (max-height: 655px) {
+    #mainPreview {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 20px;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1220px), (max-height: 655px) {
     .projectCard {
         position: static !important;
         justify-self: center !important;
         margin: 1.5rem 0rem 0rem 0rem;
     }
 
-    .projectCard:nth-child(5) { margin-bottom: 1rem; }
-
-    body {
-        height: 100%;
-    }
+    .projectCard:nth-child(5) { margin-bottom: 2rem; }
 
     /*no hover for mobile or tablet, temp solution*/
     .projectPreview:hover {
         background: white;
         border: solid 6px white;
         cursor: none;
+    }
+    
+    div #mainPreviewProjectBg {
+        padding: 0rem 2.5rem 0rem 2.5rem;
     }
 }
 
@@ -161,6 +263,7 @@ body {
     padding: 0px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.7)), url('./resources/background_image.png');
     height: 100vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -307,9 +410,11 @@ ul > li {
 }
 
 .projectCard {
+    border-radius: 1.25rem;
+    overflow: hidden;
     position: absolute; 
-    height: 150px; 
-    width: 320px;
+    height: 9.375rem; 
+    width: 20rem;
     transition: 0.3s;
 }
 
@@ -328,10 +433,18 @@ ul > li {
     background: white;
     border: solid 6px white;
     transition: 0.3s;
+    position: absolute; 
+    overflow: hidden; 
+    width: 19.375rem; 
+    height: 8.75rem; 
+    border-radius: 20px; 
+    box-shadow: 0px 0px 8px #18414126 inset; 
+    z-index: -1;
+    transition: 0.3s;
 }
 
 .projectPreview * {
-    pointer-events: none /*Means the children won't block div from capturing events*/
+    pointer-events: none; /*Means the children won't block div from capturing events*/
 }
 
 .projectPreview:hover {
@@ -343,6 +456,25 @@ ul > li {
 
 .projectPreview:active {
     background: var(--blue-light);
+}
+
+.projectPreviewLabel {
+    pointer-events: none; 
+    position: absolute; 
+    overflow: hidden; 
+    width: 10rem; 
+    background: white; 
+    padding: 0.625rem; 
+    margin: 0.875rem; 
+    border-radius: 0.75rem; 
+    box-shadow: 0px 0px 0.75rem #18414166;
+}
+
+.projectPreviewImg {
+    width: 15.938rem; 
+    height: auto; 
+    margin-left: 5.313rem;
+    box-shadow: 0px 0px 6px #00000066;
 }
 
 .floating {
@@ -366,7 +498,41 @@ ul > li {
 .floating:nth-child(4) { animation-delay: 1.7s; }
 .floating:nth-child(5) { animation-delay: 2s; }
 
+.goToProjectBtn {
+    width: fit-content; 
+    background: black;
+    box-shadow: 0rem 0.1rem 1rem 0.2rem rgba(255, 255, 255, 0.5);
+    padding: 1.25rem 2rem 1.25rem 2rem; 
+    border-radius: 20rem;
+    justify-self: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.goToProjectBtn > p {
+    color: white;
+    font-weight: 700; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.goToProjectBtn:hover {
+    background: white;
+    background-image: linear-gradient(to bottom, #CFDFE3 0%, rgba(255, 255, 255, 0) 70%);
+    transition: 0.3s;
+}
+
+.goToProjectBtn:hover > p {
+    color: black;
+}
+
+.hidden {
+    display: none !important;
+}
+
 #nameTitle {
+    display: flex;
     background-image: linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med));
     color: transparent;
     background-clip: text;
@@ -379,12 +545,33 @@ ul > li {
     margin-bottom: 0.5rem;
 }
 
+#profilePhoto {
+    margin-left: 1rem;
+    margin-top: -0.5rem;
+    position: absolute;
+    border-radius: 20rem;
+    object-fit: cover;
+    height: 3.5rem;
+    width: 3.5rem;
+    transition: 0.3s;
+}
+
 #mainContent {
     display: flex;
     flex-direction: column;
     height: 100%;
     z-index: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-content {
+    scrollbar-width: none;
 }
 
 #mainIntro {
@@ -392,15 +579,16 @@ ul > li {
     align-items: center;
     justify-content:space-between;
     background-color: white;
-    padding: 2rem 5% 0.75rem 5%;
+    padding: 1.8rem 5% 1.125rem 5%;
 }
 
 #welcomeSection {
     display: flex;
     align-items: center;
+    transition: 0.3s;
 }
 
-#welcomeSection > h1 {
+#mainIntroItem0 {
     padding-right: 1.25rem;
 }
 
@@ -412,9 +600,10 @@ ul > li {
     /*background-image: linear-gradient(to right, var(--blue-med), var(--blue-dark), var(--blue-dark), var(--blue-med));*/
     background-color: #ffffffCC;
     padding: 1rem;
-    border-bottom: 2px solid #CFDFE3;
+    border-bottom: 0.05rem solid #d8d8d8;
     box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
     z-index: -1;
+    transition: 0.3s;
 }
 
 #mainSkills > ul {
@@ -437,4 +626,88 @@ ul > li {
     flex-grow: 1;
     z-index: -1;
     position: relative;
+    transition: 0.3s;
+}
+
+#mainPreviewOverlay {
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+    background: radial-gradient(circle at center, rgba(65, 65, 65, 0) 60%, rgba(65, 65, 65, 0.8) 100%);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    /*mix-blend-mode: darken;*/
+}
+
+#mainPreviewProjectBg {
+    opacity: 0;
+    position: absolute;
+    z-index: -3;
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0rem 4.25rem 0rem 4.25rem;
+    gap: 2.25rem;
+    transition: 0.3s;
+}
+
+#mainPreviewProjectBg > div {
+    border-radius: 0.5rem;
+    display: flex; /* Enables flexbox for the image container */
+    justify-content: center; /* Centers the image horizontally (optional) */
+    overflow: hidden; /* Ensures the image doesn’t overflow the grid cell */
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+
+    /*-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.25) 90%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.25) 90%);*/
+}
+
+#mainPreviewProjectBg > div > img {
+    height: auto;
+    width: 100%; /* Makes the image stretch to fill the width of the grid cell */
+    object-fit: cover;
+    z-index: -3;
+    aspect-ratio: 8 / 5;
+    object-position: top;
+}
+
+#mainPreviewProjectBgItem0 {
+    grid-column: 1;
+    grid-row: 1 / span 2; /* will span across the 1st and 2nd rows */
+}
+
+#mainPreviewProjectBgItem1 {
+    grid-column: 1;
+    grid-row: 3 / span 3;
+}
+
+#mainPreviewProjectBgItem2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: none !important;
+}
+
+#mainPreviewProjectBgItem3 {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+#mainPreviewProjectBgItem4 {
+    grid-column: 2;
+    grid-row: 4 / span 4;
+}
+
+#mainPreviewProjectBgItem5 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+#mainPreviewProjectBgItem6 {
+    grid-column: 3;
+    grid-row: 3 / span 3;
 }
