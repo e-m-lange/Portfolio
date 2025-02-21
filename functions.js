@@ -206,24 +206,36 @@ function showPreviewProjectBg() {
     // for correct fade in animation
     if (!projectCardIsSelected) { // If no project is currently selected
         //showPreviewProjectBgLoadImage(bgImages);
-        new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject); resolve(); }).then(showPreviewProjectBgImagesLoaded);
+        new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject, resolve); }).then(showPreviewProjectBgImagesLoaded);
     }
     else {
         document.getElementById("mainPreviewProjectBg").style.opacity = 0; // Otherwise hide the currently shown
         setTimeout(() => { 
-            new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject); resolve(); }).then(showPreviewProjectBgImagesLoaded);
+            new Promise((resolve) => { showPreviewProjectBgLoadImage(bgImages, tempCurrProject, resolve); }).then(showPreviewProjectBgImagesLoaded);
         }, 300); // need to wait for fade out animation first
     }
 }
 
 // Attaches the project images as background images
-function showPreviewProjectBgLoadImage(bgImages, tempCurrProject) {
+function showPreviewProjectBgLoadImage(bgImages, tempCurrProject, resolve) {
+    var loadedImages = 0; // count how many images have been loaded
+
     console.log(tempCurrProject);
     var imgList = tempCurrProject.previewImageList.split("*");
     for (let i = 0; i < bgImages.length; i++) {
         bgImages[i].src = "./resources/" + imgList[i];
+
+         // Attach a load event listener to each image
+        bgImages[i].onload = () => {
+            loadedImages++;  // Count how many images are loaded
+
+            // If all images are loaded, resolve the promise
+            if (loadedImages === bgImages.length) {
+                resolve();
+                console.log("images loaded");
+            }
+        };
     }   
-    console.log("has loaded");
 }
 
 // Continue the fade in once all images have been loaded
