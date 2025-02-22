@@ -1,9 +1,20 @@
 // Positioning list for 5 items (might have to cater for different lists if we choose to show more / fewer projects)
 var projectPosList = [["2rem", "2rem"], ["50%", "11%"], ["30%", "37.5%"], ["55%", "64%"], ["10%", "71%"]];
+function projectPositions(numOfProjects) {
+    console.log(numOfProjects);
+    switch (numOfProjects) {
+        case 4:
+            return [["10%", "29%"], ["38%", "3%"], ["55%", "52%"], ["12%", "71%"]]; // item 1 moved to item 2's position (to keep item 1 as the first for mobile)
+        case 5:
+            return [["2rem", "2rem"], ["50%", "11%"], ["30%", "37.5%"], ["55%", "64%"], ["10%", "71%"]];
+    }
+}
 
 // Attach the elements, need to do based on which page
 function attachElements() {
     for (let i = 0; i < projects.length; i++){
+        // Positions based on the project length
+        var projectPosList = projectPositions(Object.keys(projects[i]).length);
         var projNumCount = 0;
         for (let key in projects[i]) {
             // Create a temporary container to hold the HTML string
@@ -353,12 +364,12 @@ let handScrollIsRunning = false;
 async function handleScroll() {
     // Only care when user is browsing a project
     // To return the arrow under the welcome message
-    console.log(projectCardIsSelected + ", " + handScrollIsRunning);
-    if (!projectCardIsSelected && !handScrollIsRunning) {
+    if (!projectCardIsSelected && !handScrollIsRunning && scrollStylesSet) {
         handScrollIsRunning = true;
         console.log("scroll 2 : scrollPosition");
         document.getElementById("mainIntro").style.position = "relative";
         document.getElementById("mainIntroItem1").classList.remove("hidden");
+        document.getElementById("mainSkills").style.filter = "none";
         scrollStylesSet = false;
         await wait(500); // 500 milliconds
         handScrollIsRunning = false
@@ -373,13 +384,14 @@ async function handleScroll() {
             document.getElementById("mainIntro").style.position = "sticky";
             document.getElementById("mainIntro").style.top = "0px"; // Needed to activate sticky
             document.getElementById("mainIntroItem1").classList.add("hidden");
+            document.getElementById("mainSkills").style.filter = "blur(3px)";
             scrollStylesSet = true;
-            await wait(500); // 500 milliconds  
+            await wait(490); // 500 milliconds  
             handScrollIsRunning = false
+            forceScrollTo();
         }            
         await wait(500); // 500 milliconds  
         handScrollIsRunning = false
-        forceScrollTo();
     }
 }
 

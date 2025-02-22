@@ -4,7 +4,7 @@
             "title": "CA Admin",
             "snippet": "Re-design*Enterprise Software",
             "previewImageList": "thumbnails/previewsCaAdmin/0-CaAdminPreview.png*thumbnails/previewsCaAdmin/1-CaAdminPreview.png*thumbnails/previewsCaAdmin/2-CaAdminPreview.png*thumbnails/previewsCaAdmin/3-CaAdminPreview.png*thumbnails/previewsCaAdmin/4-CaAdminPreview.png*thumbnails/previewsCaAdmin/5-CaAdminPreview.png*thumbnails/previewsCaAdmin/6-CaAdminPreview.png",
-            "blurb": "Re-design of internal software used by the Customer Service team of CubiCasa",
+            "blurb": "Re-design of internal software used by the Customer Service team at CubiCasa",
             "team": "Me, Product Manager, Customer Support Team Lead",
             "myRole": "Main UX/UI Designer",
             "duration": "5 months",
@@ -44,21 +44,6 @@
             "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
             "tools": "Figma, Google Forms",
             "imgUrl": "thumbnails/previewHomepage.png"
-        },
-        "mobilePain": {
-            "title": "Improving Fee Transparency",
-            "snippet": "Mobile Design Ideas*Brainstorming",
-            "previewImageList": "thumbnails/previewsCaAdmin/0-CaAdminPreview.png*thumbnails/previewsCaAdmin/1-CaAdminPreview.png*thumbnails/previewsCaAdmin/2-CaAdminPreview.png*thumbnails/previewsCaAdmin/3-CaAdminPreview.png*thumbnails/previewsCaAdmin/4-CaAdminPreview.png*thumbnails/previewsCaAdmin/5-CaAdminPreview.png*thumbnails/previewsCaAdmin/6-CaAdminPreview.png",
-            "blurb": "Brainstorming to increase communication of new pricing implication to users",
-            "team": "Me, Product Manager, Customer Support Team Lead",
-            "myRole": "Main UX/UI Designer",
-            "duration": "5 months",
-            "challenge": "Re-design the in-house tool used by the CS team",
-            "goal": "Improve the efficiency of the CS team member’s workflow",
-            "deliverable": "Mockup with some Prototype functionality",
-            "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
-            "tools": "Figma, Google Forms",
-            "imgUrl": "thumbnails/previewPainPoint.png"
         },
         "abTests": {
             "title": "A/B Tests",

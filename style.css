@@ -211,7 +211,7 @@
         display: grid;
         grid-template-columns: auto auto;
         row-gap: 20px;
-        padding-bottom: 1rem;
+        padding-bottom: 4.25rem;
     }
 }
 
@@ -221,8 +221,6 @@
         justify-self: center !important;
         margin: 1.5rem 0rem 0rem 0rem;
     }
-
-    .projectCard:nth-child(5) { margin-bottom: 2rem; }
 
     /*no hover for mobile or tablet, temp solution*/
     .projectPreview:hover {
@@ -661,9 +659,6 @@ ul > li {
     align-items: flex-start;
     height: 100%;
     width: 100%;
-
-    /*-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.25) 90%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.25) 90%);*/
 }
 
 #mainPreviewProjectBg > div > img {
