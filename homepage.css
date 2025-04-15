@@ -1,0 +1,729 @@
+
+@media (max-width: 527px) {
+    div #mainSkills > ul { /*adding an ancestor allows for overriding*/
+        justify-content: center;
+    }
+
+    div .navBtn {
+        font-size: 0.8rem;
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+
+
+}
+
+@media (max-width: 625px) {
+    body {
+        position: fixed;
+        background-attachment: fixed;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    div .navBtnList {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    div .navBtn {
+        margin: 0.35rem 0.5rem 0.35rem 0.5rem;
+    }
+
+    div .desktop { 
+        display: none; /*since visibility just hides, display will make sure it's not there and doesn't leave space*/
+    }
+
+    div .mobile {
+        display: block;
+    }
+
+    div .arrowNote {
+        padding: 0rem 0rem 0rem 0rem;
+        align-items: center;
+    }
+
+    div .arrowNote > img {
+        flex: 1;
+        height: 0.65rem;
+        width: 0.65rem;
+        padding: 0.5rem 0rem 0rem 0rem;
+    }
+
+    div .arrowNote > p {
+        text-align: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+    }
+
+    #mainIntro {
+        flex-direction: column;
+    }
+
+    #welcomeSection {
+        flex-direction: column;
+    }
+
+    div #mainIntroItem0 {
+        font-size: 2.75rem;
+        padding-right: 0px;
+    }
+
+    #welcomeSection > p {
+        text-align: center;
+    }
+    
+    #mainIntroItem1 {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    div #mainIntroItem1 > .mobile {
+        transform: scaleY(1);
+    }
+
+    div #nameTitle {
+        margin: 0% 0% 0% 0%;
+    }
+
+    #navBtn0 {
+        order: 1;
+    }
+
+    #navBtn1 {
+        order: 0;
+    }
+
+    #navBtn2 {
+        order: 2;
+    }
+    
+    div #nameTitle {
+        width: 100%;
+        justify-content: center;
+    }
+    div #nameTitle > h2 {
+        margin-left: -2.25rem;
+    }
+
+    div #profilePhoto {
+        margin-left: 0.8rem;
+        margin-top: 0.5rem;
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+}
+
+/*Assume this is the phone view from hereon (narrow)*/
+@media (max-width: 700px) {
+    div #mainIntroItem0 {
+        text-align: center;
+        font-size: 3rem;
+        padding-right: 0px;
+    }
+
+    #mainPreview {
+        display: grid !important;
+        grid-template-columns: auto !important;
+        row-gap: 0px !important;
+        padding-bottom: 5.5rem;
+    }
+
+    #mainPreviewProjectBg {
+        grid-template-rows: repeat(5, 1fr) !important;
+        grid-template-columns: auto auto !important;
+        padding: 0rem !important;
+        height: 100% !important;
+        width: 100% !important;
+        column-gap: 0.5rem !important;
+        gap: 2rem !important;
+    }
+
+    #mainPreviewProjectBg > div > img {
+        height: 100% !important;
+        width: auto !important; /* Makes the image stretch to fill the width of the grid cell */;
+    }
+    
+    div #mainPreviewProjectBgItem0 {
+        justify-self: center !important;
+        grid-row: 1 !important;
+        grid-column: 1 / span 2 !important; /* will span across the 1st and 2nd rows */
+    }
+    
+    div #mainPreviewProjectBgItem1 {
+        grid-row: 2 !important;
+        grid-column: 1 !important;
+    }
+    
+    div #mainPreviewProjectBgItem2 {
+        grid-row: 2 !important;
+        grid-column: 2 !important;
+        display: flex !important;
+    }
+    
+    div #mainPreviewProjectBgItem3 {
+        grid-row: 3 !important;
+        grid-column: 1 / span 2 !important;
+    }
+    
+    div #mainPreviewProjectBgItem4 {
+        grid-row: 4 !important;
+        grid-column: 1 !important;
+    }
+    
+    div #mainPreviewProjectBgItem5 {
+        grid-row: 4 !important;
+        grid-column: 2 !important;
+    }
+    
+    div #mainPreviewProjectBgItem6 {
+        grid-row: 5 !important;
+        grid-column: 1 / span 2 !important;
+    }
+
+    /* Phones need an extra bump */
+    div #aboutThisSite {
+        bottom: calc(calc(var(--customVh) * 0.15) - var(--vhDifference)) !important;
+    }
+
+    div #aboutThisSite > button:hover {
+        background-color: rgba(237, 237, 237, 0.85); /* Don't do hover for mobile */
+        transition: 0.3s;
+    }
+}
+
+/*Special media query for the project preview cards on tablet etc*/
+@media (min-width: 701px) and (max-width: 1145px), (max-height: 590px) {
+    #mainPreview {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 20px;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 1145px), (max-height: 590px) {
+    .projectCard {
+        position: static !important;
+        justify-self: center !important;
+        margin: 1.5rem 0rem 0rem 0rem;
+    }
+
+    /*no hover for mobile or tablet, temp solution*/
+    .projectPreview:hover {
+        background: white;
+        cursor: none;
+    }
+    
+    div #mainPreviewProjectBg {
+        padding: 0rem 2.5rem 0rem 2.5rem;
+    }
+}
+
+@media (min-width: 626px) and (max-width: 1169px) {  
+    div #mainSkills > ul { /*adding an ancestor allows for overriding*/
+        justify-content: center;
+    }
+
+    div .desktop { 
+        display: none; /*since visibility just hides, display will make sure it's not there and doesn't leave space*/
+    }
+
+    div .mobile {
+        display: block;
+    }
+
+    div .arrowNote > img {
+        flex: 1;
+        height: 2.75rem;
+        width: 2.75rem;
+        padding: 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.7)), url('./resources/background_image.webp');
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+#header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.4rem; /* Height of the rectangle */
+    background-color: white; /* Rectangle color */
+    border-top-left-radius: 25px; /* Top-left border radius */
+    border-top-right-radius: 25px; /* Top-right border radius */
+}
+
+.navBtnList {
+    display: flex;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.navBtn {
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.165rem 1.915rem 1.165rem 1.915rem; /*reduced due to border*/
+    margin: 0rem 0.75rem 0rem 0.75rem;
+    color: white;
+    background-image: linear-gradient(to bottom, #cfdfe300 0%, rgba(0, 0, 0, 0.5) 70%);
+    background-color: black;
+    border: 0.085rem solid transparent;
+    border-radius: 4rem;
+    background-clip: padding-box;
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+    order: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navBtn:hover {
+    position: relative;
+    color: black;
+    background-image: linear-gradient(to bottom, #CFDFE3 0%, rgba(255, 255, 255, 0) 70%);
+    background-color: white;
+    /*box-shadow: inset 0 0 0 1.25px black;*/
+    border: 0.05rem solid transparent;
+    transition: 0.3s;
+}
+
+.navBtn:hover::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.05rem; bottom: -0.065rem;
+    left: -0.05rem; right: -0.05rem;
+    background: linear-gradient(to bottom, #00000000 30%, black);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
+} /*https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient*/
+
+.navBtn:active {
+    background-image: none;
+    background-color: var(--teal-light);
+    transition: 0s;
+}
+
+.navBtn:active::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.085rem; bottom: -0.1rem;
+    left: -0.085rem; right: -0.085rem;
+    background: var(--teal-light);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
+}
+
+.arrowNote {
+    display: flex;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.arrowNote > img {
+    flex: 1;
+    height: 2.75rem;
+    width: 2.75rem;
+    padding: 0.5rem 0rem 0rem 0rem;
+    opacity: 0.5;
+}
+
+.arrowNote > p {
+    flex-wrap: wrap;
+    padding: 0rem 0.75rem 0rem 0.75rem;
+    margin: 0px;
+    opacity: 0.5;
+}
+
+.projectCard {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: absolute; 
+    width: 21rem;
+    height: 10.375rem;
+    transition: 0.3s;
+}
+
+.projectCard-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+    pointer-events: none; /* Allows clicking elements underneath */
+}
+
+.projectPreview {
+    background: white;
+    transition: 0.3s;
+    position: absolute; 
+    overflow: hidden; 
+    width: 20.375rem; 
+    height: 9.75rem; 
+    border-radius: 20px; 
+    /*box-shadow: 0px 0px 8px #18414126 inset; */
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.projectPreview * {
+    pointer-events: none; /*Means the children won't block div from capturing events*/
+}
+
+.projectPreview:hover {
+    background: var(--blue-med);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projectPreview:active {
+    background: var(--blue-light);
+}
+
+.projectPreviewLabel {
+    pointer-events: none; 
+    position: absolute; 
+    overflow: hidden;
+    background: white; 
+    padding: 0.625rem; 
+    margin: 0.875rem; 
+    border-radius: 0.75rem; 
+    box-shadow: 0px 0px 0.75rem #18414166;
+}
+
+.projectPreviewImg {
+    width: 16.938rem; 
+    height: auto; 
+    margin-left: 5.313rem;
+    box-shadow: 0px 0px 6px #00000066;
+}
+
+.floating {
+    animation: floatingAnim 6s ease-in-out infinite;
+}
+
+@keyframes floatingAnim {
+    0% { transform: translateY(0px) translateX(1.5px); }
+    15% { transform: translateY(-1.5px) translateX(0.5px); }
+    25% { transform: translateY(-2px) translateX(0px); }
+    50% { transform: translateY(0px) translateX(1.5px); }
+    75% { transform: translateY(2px) translateX(0px); }
+    85% { transform: translateY(1px)translateX(0.5px); }
+    100% { transform: translateY(0px)translateX(1.5px); }
+}
+
+/*offset the animations*/
+.floating:nth-child(1) { animation-delay: 0s; }
+.floating:nth-child(2) { animation-delay: 0.5s; }
+.floating:nth-child(3) { animation-delay: 1.1s; }
+.floating:nth-child(4) { animation-delay: 1.7s; }
+.floating:nth-child(5) { animation-delay: 2s; }
+
+.goToProjectBtn {
+    width: fit-content; 
+    background: black;
+    box-shadow: 0rem 0.1rem 1rem 0.2rem rgba(255, 255, 255, 0.5);
+    padding: 1.25rem 2rem 1.25rem 2rem; 
+    border-radius: 20rem;
+    justify-self: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    margin: auto; /*This is for browsers that don't support justify-items and flex*/
+    transition: 0.3s;
+}
+
+.goToProjectBtn > p {
+    color: white;
+    font-weight: 700; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.goToProjectBtn:hover {
+    background: white;
+    background-image: linear-gradient(to bottom, #CFDFE3 0%, rgba(255, 255, 255, 0) 70%);
+    transition: 0.3s;
+}
+
+.goToProjectBtn:hover > p {
+    color: black;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Project Page */
+.projectSummaryPTitle {
+    margin-bottom: 2px;
+}
+
+.projectSummaryPContent {
+    font-weight: 700;
+    margin: 0px;
+}
+
+#nameTitle {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.45);
+    background-image: linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med));
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+    margin: 0% 0% 0% 5%;
+    transition: 0.3s;
+    /*text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25);*/
+}
+
+#nameTitle > h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+#profilePhoto {
+    margin-left: 1rem;
+    margin-top: -0.5rem;
+    position: absolute;
+    border-radius: 20rem;
+    object-fit: cover;
+    height: 3.5rem;
+    width: 3.5rem;
+    transition: 0.3s;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-content {
+    scrollbar-width: none;
+}
+
+#mainIntro {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: white;
+    padding: 1.8rem 5% 0.5rem 5%;
+}
+
+#welcomeSection {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#mainIntroItem0 {
+    padding-right: 1.25rem;
+}
+
+#welcomeSection > p {
+    max-width: 22rem;
+}
+
+#mainSkills {
+    /*background-image: linear-gradient(to right, var(--blue-med), var(--blue-dark), var(--blue-dark), var(--blue-med));*/
+    background-color: #ffffffCC;
+    padding: 1rem;
+    border-bottom: 0.05rem solid #d8d8d8;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    transition: 0.3s;
+}
+
+#mainSkills > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mainSkills > ul > li {
+    padding: 0.25rem 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+}
+
+#mainPreview {
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+    z-index: -1;
+    position: relative;
+    transition: 0.3s;
+}
+
+#mainPreviewOverlay {
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+    background: radial-gradient(circle at center, rgba(65, 65, 65, 0) 60%, rgba(65, 65, 65, 0.8) 100%);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    /*mix-blend-mode: darken;*/
+}
+
+#mainPreviewProjectBg {
+    opacity: 0;
+    position: absolute;
+    z-index: -3;
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0rem 4.25rem 0rem 4.25rem;
+    gap: 2.25rem;
+    transition: 0.3s;
+}
+
+#mainPreviewProjectBg > div {
+    border-radius: 0.5rem;
+    display: flex; /* Enables flexbox for the image container */
+    justify-content: center; /* Centers the image horizontally (optional) */
+    overflow: hidden; /* Ensures the image doesn’t overflow the grid cell */
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+#mainPreviewProjectBg > div > img {
+    height: auto;
+    width: 100%; /* Makes the image stretch to fill the width of the grid cell */
+    object-fit: cover;
+    z-index: -3;
+    aspect-ratio: 8 / 5;
+    object-position: top;
+}
+
+#mainPreviewProjectBgItem0 {
+    grid-column: 1;
+    grid-row: 1 / span 2; /* will span across the 1st and 2nd rows */
+}
+
+#mainPreviewProjectBgItem1 {
+    grid-column: 1;
+    grid-row: 3 / span 3;
+}
+
+#mainPreviewProjectBgItem2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: none !important;
+}
+
+#mainPreviewProjectBgItem3 {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+#mainPreviewProjectBgItem4 {
+    grid-column: 2;
+    grid-row: 4 / span 4;
+}
+
+#mainPreviewProjectBgItem5 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+#mainPreviewProjectBgItem6 {
+    grid-column: 3;
+    grid-row: 3 / span 3;
+}
+
+#aboutThisSite {
+    position: absolute;
+    bottom: calc(calc(var(--customVh) * 0.05) - var(--vhDifference));
+    right: 2rem;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: self-end;
+    gap: 0.5rem;
+}
+
+#aboutThisSite > div {
+    display: none;
+    background-color: rgba(237, 237, 237, 0.85);
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem solid #d8d8d8;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+#aboutThisSite > div > p {
+    max-width: 12rem;
+    font-size: 0.9rem;
+}
+
+#aboutThisSite > button {
+    margin: 0px;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    max-width: 8rem;
+    border-radius: 10rem;
+    border: 0.05rem solid #d8d8d8;
+    box-shadow: 0.05rem solid #d8d8d8;
+    background-color: rgba(237, 237, 237, 0.85);
+    transition: 0.3s;
+}
+
+#aboutThisSite > button:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+#aboutThisSite > button > p {
+    font-size: 0.9rem;
+    padding: 0rem;
+    margin: 0rem;
+}

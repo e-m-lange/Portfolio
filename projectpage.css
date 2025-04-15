@@ -1,0 +1,745 @@
+@media (max-width: 527px) {
+    div .navBtn {
+        font-size: 0.8rem;
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+}
+
+@media (max-width: 625px) {
+    body {
+        position: fixed;
+        background-attachment: fixed;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    .headerMinimised {
+        flex-direction: row !important;
+    }
+
+    div .navBtnList {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    div .navBtn {
+        margin: 0.35rem 0.5rem 0.35rem 0.5rem;
+    }
+
+    div .desktop { 
+        display: none; /*since visibility just hides, display will make sure it's not there and doesn't leave space*/
+    }
+
+    div .mobile {
+        display: block;
+    }
+
+    #mainIntro {
+        flex-direction: column;
+    }
+
+    div #nameTitle {
+        margin: 0% 0% 0% 5%;
+        width: auto;
+        justify-content: center;
+    }
+
+    #navBtn0 {
+        order: 1;
+    }
+
+    #navBtn1 {
+        order: 0;
+    }
+
+    #navBtn2 {
+        order: 2;
+    }
+}
+
+@media (max-width: 700px) {
+    #projectNameTitle {
+        font-size: 3rem; 
+    }
+
+    #mainProjectSummary {
+        padding: 1rem;
+        gap: 1rem;
+        display: flex;
+    }
+
+    div #mainProjectSummary > div {
+        margin: 0rem;
+        flex: 1;
+    }
+
+    /* Phones need an extra bump */
+    #anchorMenu {
+        bottom: calc(calc(var(--customVh) * 0.15) - var(--vhDifference)) !important;
+    }
+
+    #anchorMenuTitles > p:hover {
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 626px) and (max-width: 1169px) {  
+    div .desktop { 
+        display: none; /*since visibility just hides, display will make sure it's not there and doesn't leave space*/
+    }
+
+    div .mobile {
+        display: block;
+    }
+
+    div .arrowNote > img {
+        flex: 1;
+        height: 2.75rem;
+        width: 2.75rem;
+        padding: 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.7)), url('./resources/background_image.webp');
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+#header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.4rem; /* Height of the rectangle */
+    background-color: white; /* Rectangle color */
+    border-top-left-radius: 25px; /* Top-left border radius */
+    border-top-right-radius: 25px; /* Top-right border radius */
+}
+/*After scrolling down*/
+.headerMinimised {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.75) 25%, rgba(0, 0, 0, 0)) !important;
+    position: absolute !important;
+    width: 100% !important;
+}
+
+.headerMinimised::after {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.headerMinimised > #nameTitle > h2 {
+    font-size: 1.25rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.headerMinimised > .navBtnList {
+    padding: 0.5rem 5% 0.5rem 0.75rem !important;
+}
+
+.headerMinimised > .navBtnList > .navBtn {
+    margin: 0rem !important;
+    padding: 0.6rem 1rem 0.6rem 1rem !important;
+    font-weight: 400;
+}
+
+.headerMinimised > .navBtnList > #navBtn1 {
+    display: none;
+}
+
+.headerMinimised > .navBtnList > #navBtn2 {
+    display: none;
+}
+
+.navBtnList {
+    display: flex;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.navBtn {
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.165rem 1.915rem 1.165rem 1.915rem; /*reduced due to border*/
+    margin: 0rem 0.75rem 0rem 0.75rem;
+    color: white;
+    background-image: linear-gradient(to bottom, #cfdfe300 0%, rgba(0, 0, 0, 0.5) 70%);
+    background-color: black;
+    border: 0.085rem solid transparent;
+    border-radius: 4rem;
+    background-clip: padding-box;
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+    order: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navBtn:hover {
+    position: relative;
+    color: black;
+    background-image: linear-gradient(to bottom, #CFDFE3 0%, rgba(255, 255, 255, 0) 70%);
+    background-color: white;
+    /*box-shadow: inset 0 0 0 1.25px black;*/
+    border: 0.05rem solid transparent;
+    transition: 0.3s;
+}
+
+.navBtn:hover::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.05rem; bottom: -0.065rem;
+    left: -0.05rem; right: -0.05rem;
+    background: linear-gradient(to bottom, #00000000 30%, black);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
+} /*https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient*/
+
+.navBtn:active {
+    background-image: none;
+    background-color: var(--teal-light);
+    transition: 0s;
+}
+
+.navBtn:active::after { /*creating the gradient border*/
+    position: absolute;
+    top: -0.085rem; bottom: -0.1rem;
+    left: -0.085rem; right: -0.085rem;
+    background: var(--teal-light);
+    content: '';
+    z-index: -1;
+    border-radius: 4rem;
+}
+
+#anchorMenu {
+    position: absolute; 
+    z-index: 2; 
+    display: flex; 
+    flex-direction: column; 
+    bottom: calc(calc(var(--customVh) * 0.05) - var(--vhDifference));
+    right: 2rem;
+    box-sizing: border-box; 
+    min-width: 1rem;
+    align-items: end;
+    transition: 0.3s;
+}
+
+#anchorMenuTitles {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.3s;
+    background-color: #ffffffed;
+    padding: 1rem 0rem 0rem 1rem;
+    border-radius: 1rem;
+}
+
+#anchorMenuTitles > p {
+    padding-right: 1rem;
+    margin: 0px;
+    margin-bottom: 0.75rem;
+    transition: 0.3s;
+}
+
+#anchorMenuTitles > p:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#anchorBtns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+
+#anchorBtns > button {
+    display: flex; 
+    height: 2.5rem; 
+    width: 2.5rem; 
+    margin-top: 0.5rem; 
+    border-radius: 3rem;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.60); 
+    text-align: center; 
+    justify-content: center; 
+    align-items: center;
+    order: 10;
+    transition: 0.3s;
+}
+
+.anchorMenuBtnActive {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    transition: 0.3s;
+}
+
+#anchorBtns > button > img {
+    height: 1rem; 
+    width: 1rem;
+}
+
+#anchorMenuBtnBackToTop {
+    opacity: 0;
+}
+
+#anchorMenuBtnBackToTop:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Project Page */
+.projectSummaryPTitle {
+    font-weight: 200;
+    margin-bottom: 2px;
+}
+
+.projectSummaryPContent {
+    font-weight: 500;
+    margin: 0px;
+}
+
+#nameTitle {
+    display: flex;
+    background-image: linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med));
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+    margin: 0% 0% 0% 5%;
+    /*text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25);*/
+}
+
+#nameTitle > h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-content {
+    scrollbar-width: none;
+}
+
+#mainIntro {
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1));
+    background-color: white;
+    padding: 1.8rem 5% 0.5rem 5%;
+    color: black;
+    transition: 0.3s;
+}
+
+#mainIntro > h1 {
+    transition: 0.3s;
+}
+
+#mainIntroMinimised {
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0));
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1.8rem 5% 0.5rem 5%;
+    transition: 0.3s;
+    height: 0rem;
+}
+
+#mainIntroMinimised > h1 {
+    opacity: 0;
+    display: hidden;
+    font-size: 2rem !important;
+    transition: 0.3s;
+}
+
+#welcomeSection {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#mainIntroItem0 {
+    padding-right: 1.25rem;
+}
+
+#welcomeSection > p {
+    max-width: 22rem;
+}
+
+/* Project Page */
+#projectNameTitle {
+    text-align: center;
+}
+
+#mainProjectSummary {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0.85));
+}
+
+#projectSummaryBox {
+    width: 35%;
+    min-width: 18rem;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: white;
+    margin: 3rem 0rem 3rem 1.5rem;
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+
+#projectSummaryBox > div {
+    display: block; 
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+div:has(> #projectFeaturedImage) { /* Parent of */
+    display: flex; 
+    width: 45%;
+    min-width: 18rem;
+    overflow: hidden;
+    margin: 3rem 1.5rem 3rem 0rem;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#projectFeaturedImage {
+    height: auto; 
+    width: 100%; 
+    object-fit: cover; 
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
+    transition: 0.3s;
+}
+
+#mainProjectContent {
+    background: white;
+    width: 100%;
+}
+
+/*Template CSS for this page*/
+#templateMainProjectContent {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 3rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#templateMainProjectContent p ul li {
+    font-size: 1.125rem;
+}
+
+#templateMainProjectContent h2 {
+    opacity: 0.8;
+}
+/*Title Paragraph*/
+.templateTitleParagraph {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 39rem; 
+    margin: 1.25rem;
+    gap: 1rem
+}
+
+.templateTitleParagraph > h2 {
+    margin-top: 1.25rem;
+}
+
+.templateTitleParagraph > p {
+    margin: 0px;
+}
+/*Icon Box*/
+.templateIconBox {
+    position: relative;
+    width: 100%; 
+    max-width: 39rem; 
+    justify-items: center;
+    border-radius: 0.75rem; 
+    border: solid 1px rgb(130, 130, 130);
+    margin: 1.25rem;
+}
+
+.templateIconBox > img { /*The Icon*/
+    position: absolute; 
+    height: 1.65rem; 
+    width: 1.65rem; 
+    padding: 1rem;
+}
+
+.templateIconBox > p {
+    text-align: center; 
+    margin: 2.25rem; 
+    max-width: 32rem;
+}
+/*List*/
+.templateList {
+    width: 100%;
+    max-width: 39rem;
+    margin: 1.25rem;
+}
+
+.templateList > p {
+    margin: 0px;
+}
+
+.templateList > ul {
+    margin: 0.5rem 0px 0.5rem 0px;
+}
+.templateList li {
+    margin: 1rem 0rem 0rem 0rem;
+}
+/*Full Width Image*/
+.templateFullWidthImage {
+    position: relative;
+    width: calc(100% + 2rem);
+    margin: 2rem -1rem 2rem -1rem;
+    overflow: hidden;
+}
+
+.templateFullWidthImage > div {
+    display: flex; 
+    flex-wrap: wrap; 
+    max-width: 100%; 
+    gap: 1.5rem;
+}
+
+.templateFullWidthImageNoGap > div {
+    gap: 0rem !important; /*Override the other css*/
+}
+
+.templateFullWidthImageChild {
+    flex: 1; 
+    min-width: 22rem; 
+    text-align: center;
+    overflow: hidden;
+}
+
+.templateFullWidthImageChild > img {
+    width: 100%; 
+    object-fit: cover;
+}
+
+.templateFullWidthImageChild > p {
+    font-weight: 100;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+/*Fixed Height Image*/
+.templateFixedHeightImage {
+    position: relative;
+    margin: 1.25rem 0rem 1.25rem 0rem;
+    overflow: hidden;
+}
+
+.templateFixedHeightImage > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.templateFixedHeightImageChild {
+    flex: 1;
+    min-width: 15rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.templateFixedHeightImageChild > img {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+    object-fit: contain;
+}
+
+.templateFixedHeightImageChild > p {
+    font-weight: 100;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+/*Modification if scrollable (override)*/
+.templateFixedScrollableImageChild {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    justify-items: center;
+    width: 100vw;
+}
+
+.scrollableImgX {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.scrollableImgX > img {
+    height: 26rem;
+}
+
+.scrollableImgY {
+    margin: auto; /*This is for browsers that don't support justify-items and flex*/
+    max-width: 39rem;
+    height: 31rem;
+    overflow-y: scroll;
+}
+
+.scrollableImgY > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.templateFixedScrollableImageChild > p {
+    font-weight: 100;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+/*Fixed Width Image*/
+.templateFixedWidthImageChild {
+    flex: 1;
+    max-width: 39rem !important;
+    max-height: 150rem !important;
+    min-height: 5rem !important;
+    text-align: center;
+    overflow: hidden;
+}
+
+.templateFixedWidthImageChild > img {
+    max-height: none !important;
+}
+/*Expandable Section*/
+.templateExpandable {
+    width: 100%;
+    max-width: 39rem;
+    margin: 2rem 1rem 2rem 1rem;
+    transition: 0.3s;
+}
+
+.templateExpandableTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    border-radius: 0.75rem;
+    border: solid 1px #e4e4e4;
+    background-color: #e4e4e4;
+}
+
+.templateExpandableTitle > p {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0rem 2rem 2rem;
+}
+
+.templateExpandableTitle > img {
+    height: 1.65rem;
+    width: 1.65rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    transition: 0.3s;
+    transform-origin: calc(50% - 0.5rem) center;
+    transform: rotate(180deg);
+}
+
+.templateExpandableContent {
+    border-radius: 0rem 0rem 0.75rem 0.75rem;
+    border-bottom: solid 2px #e4e4e4;
+    border-right: solid 2px #e4e4e4;
+    border-left: solid 2px #e4e4e4;
+    padding: 1rem 2rem 1rem 2rem;
+    padding-top: 1.5rem;
+    margin-top: -0.5rem;
+    display: none;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.templateExpandableContent > p {
+    z-index: -1;
+}
+/* Embed iframe */
+.templateEmbed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    margin: 1rem;
+}
+
+/* Magnifying zoom */
+.magnifying {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20rem;
+    margin: 0rem 1rem 1rem 0rem;
+}
+
+.magnifying > img {
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    object-fit: contain;
+}

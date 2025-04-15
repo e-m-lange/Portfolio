@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eve Lange UX/UI Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="updateCurrentPage('home')">
+    <div id="header">
+        <div id="nameTitle">
+            <h2>Eve Lange <img id="profilePhoto" src="./resources/profile-photo.jpg"></img></h2>
+        </div>
+        <div class="navBtnList">
+            <button id="navBtn0" class="navBtn">Home</button>
+            <button id="navBtn1" class="navBtn">Other Work</button>
+            <button id="navBtn2" class="navBtn">About</button>
+        </div>
+    </div>
+    <div id="mainContent" class="scrollable-content">
+        <div id="mainIntro">
+            <div id="welcomeSection">
+                <h1 id="mainIntroItem0">Welcome!</h1>
+                <p>I'm a UX/UI designer in Sweden from Hong Kong focused on digital experiences. Always ready to say "Let's try it!"</p>
+            </div>
+            <div class="arrowNote" id="mainIntroItem1" style="flex-wrap:wrap-reverse;">
+                <img class="desktop" src="./resources/arrow_desktop.svg"/>
+                <img class="mobile" src="./resources/arrow_mobile.svg"/>
+                <p style="align-content: start;">My main competencies</p>
+            </div>
+        </div>
+        <div id="mainSkills">
+            <ul>
+                <li>HCI</li>
+                <li>Mobile & Desktop Design</li>
+                <li>UX/UI</li>
+                <li>UX Research</li>
+                <li>User-Centred Design</li>
+                <li>Design Testing & Prototyping</li>
+                <li>Front-end Programming</li>
+            </ul>
+        </div>
+        <div id="mainPreview">
+            <div id="mainPreviewOverlay"></div>
+            <div id="mainPreviewProjectBg">
+                <div id="mainPreviewProjectBgItem0"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
+                <div id="mainPreviewProjectBgItem1"> <img src="./resources/thumbnails/previewAB.png"/> </div>
+                <div id="mainPreviewProjectBgItem2"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
+                <div id="mainPreviewProjectBgItem3"> <img src="./resources/thumbnails/previewAB.png"/> </div>
+                <div id="mainPreviewProjectBgItem4"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
+                <div id="mainPreviewProjectBgItem5"> <img src="./resources/thumbnails/previewAB.png"/> </div>
+                <div id="mainPreviewProjectBgItem6"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
+            </div>
+        </div>
+        <div id="aboutThisSite">
+            <div><p>This site was built by yours truly in JS, HTML, and CSS. It is hosted on GitHub pages.</p></div>
+            <button><p>About this site</p></button>
+        </div>
+    </div>
+    <script src="./currentPageState.js"></script>
+    <script src="./templates.js"></script>
+    <script src="./functions.js"></script>
+</body>
+</html>

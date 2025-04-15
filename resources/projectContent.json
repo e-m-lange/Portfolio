@@ -1,0 +1,830 @@
+{
+    "caAdmin": {
+        "hero": {
+            "heroTitle": "CA Admin",
+            "heroImg": "resources\\projectContentFiles\\caAdmin\\heroImgCaAdmin.webp"
+        },
+        "summary": {
+            "task": "Re-design the in-house tool used by the CS team",
+            "goal": "Improve the efficiency of the CS team’s workflow",
+            "deliverable": "Mockup with some Prototype functionality",
+            "team": "Me, Product Manager, Customer Support Team Lead",
+            "myRole": "Main UX/UI Designer",
+            "duration": "5 months",
+            "tools": "Figma, Google Forms"
+        },
+        "companyInfo": {
+            "type": "expandable",
+            "param0": "The project was part of my CubiCasa internship. Company Summary:",
+            "param1": "CubiCasa is a Finland-based company specializing in real estate technology. Their main product is an <u>AI-powered</u> mobile app that lets users <u>scan properties</u> and automatically <u>generate 2D floor plans</u>.</br></br>Alongside the app is a web platform where users can manage their generated floor plans. They have other products and services detailed here: https://www.cubi.casa/."
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Context",
+            "param1": "CA (Customer Admin) Admin is a webapp and one of the tools the CS (Customer Service) team use to resolve customer issues and manage orders.</br></br>I joined this project a few months after it had already been initiated, with key aspects like requirements and pain points already outlined. However, there were challenges in developing the design, which is where I stepped in."
+        },
+        "section1": {
+            "type": "list",
+            "param0": "The initial brief I received was as follows",
+            "param1": "Create a more unified interface*Reduce number of clicks*Improve search function*Integrating with other tools used by CS team*Visual simplification of the UI"
+        },
+        "section2": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\requirementFeaturesDoc.png",
+            "param1": ""
+        },
+        "section3": {
+            "type": "titleParagraph",
+            "param0": "The Current Tool",
+            "param1": "As the software is domain-specific and somewhat outdated, it often led to unintuitive user flows and a build-as-you-go structure. Understanding its functionality required a deep dive—talking to the customer service lead, testing the QA environment, and gathering team insights. Fortunately, close collaboration ensured a clear vision of how the software should operate."
+        },
+        "section4": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\currentStructure.png",
+            "param1": "Structure of the current CA Admin"
+        },
+        "section5": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\qaEnvironment1.png*resources\\projectContentFiles\\caAdmin\\qaEnvironment2.png",
+            "param1": "QA Environment: Search list*QA Environment: Order page"
+        },
+        "section6": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\qaEnvironment3.png*resources\\projectContentFiles\\caAdmin\\qaEnvironment4.png",
+            "param1": "QA Environment: Search list*QA Environment: Order page"
+        },
+        "section7": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Below is the previous design by the CS lead and product manager, retaining elements from the original (e.g., the search section) but with a more unified interface. New section cards add modularity, but concerns about user flow led to a push for a more drastic redesign."
+        },
+        "section8": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\oldDesigns.webp",
+            "param1": "Some initial designs made by CS lead and product manager"
+        },
+        "section9": {
+            "type": "titleParagraph",
+            "param0": "Pain Points",
+            "param1": "Bringing in the pain points from the document provided, adding my own, and from interviews, I added initial thoughts around them."
+        },
+        "section10": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\painPoints.png",
+            "param1": "Some initial designs made by CS lead and product manager"
+        },
+        "section11": {
+            "type": "titleParagraph",
+            "param0": "Market Research",
+            "param1": "I also did research around similar interfaces, making note of what I believed was done effectively."
+        },
+        "section12": {
+            "type": "titleParagraph",
+            "param0": "Ideating",
+            "param1": "I felt the easiest way to move forward was to start sketching out and identifying the main sections of the interface essential for a regular workflow. This led to a barebones lo-fi of what the overall structure could be, which I then discussed with the CS team lead. Since it was difficult to provide meaningful feedback at this stage, we decided that the three wireframes needed more detail."
+        },
+        "section13": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "I had weekly meeting with the CS team lead and monthly meetings with the product manager, keeping meeting notes & action items."
+        },
+        "section14": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\handdrawnSketch.webp*resources\\projectContentFiles\\caAdmin\\lofi-1.png",
+            "param1": "Hand drawn sketch first done before wireframe*First lo-fi wireframes of rough structure and assumptions"
+        },
+        "section15": {
+            "type": "titleParagraph",
+            "param0": "Lo-Fi Wireframing Pt.1",
+            "param1": "Based on the discussion and the QA environment, I began to flesh out the functions for each section for the three options. For instance, the search section, which was previously 3 different types in the header, evidently became its own section.</br></br>3 versions with varying flows were then made with the main goals in mind."
+        },
+        "section16": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "By now, I learned that the order section was actually the most important, taking precedence over e.g., user or company section"
+        },
+        "section17": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\lofi-2-1.png*resources\\projectContentFiles\\caAdmin\\lofi-2-2.png*resources\\projectContentFiles\\caAdmin\\lofi-2-3.png",
+            "param1": "",
+            "param2": "true",
+            "param3": "#444444"
+        },
+        "section18": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "'Action Space' & the right 'Information at a Glance'"
+        },
+        "section19": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "What's consistent across these designs is the use of cards for each section and an 'action space,' defined as an area that remains minimized until an action triggers the relevant section to appear in the 'action space'.</br></br>I also minimized scrolling on the default view by using expandable sections, maintaining the 'information at a glance' concept. This also helped make the transition between orders smoother"
+        },
+        "section20": {
+            "type": "titleParagraph",
+            "param0": "Interviews",
+            "param1": "To clarify, gather more pain points, and ideas, I organised two interviews with the CS team—one experienced and one new."
+        },
+        "section21": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\interview-2.png*resources\\projectContentFiles\\caAdmin\\interview-3.png",
+            "param1": ""
+        },
+        "section22": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "After questions around aspects such as what works well with the current and system and what doesn’t, I gathered the insights and highlighted significant ones to discuss in a next meeting as action items."
+        },
+        "section23": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\interview-1.png",
+            "param1": ""
+        },
+        "section24": {
+            "type": "titleParagraph",
+            "param0": "Lo-Fi Wireframing Pt.2",
+            "param1": "To move forward, we settled on the first of the three concepts, incorporating elements from the third, as its hierarchy made the most sense. It prioritised the order page to align with CS’s workflow, kept the search section persistent as a universal starting point, and emphasised tangible feedback through visual proximity.</br></br>Now, it was time to refine the interface flows. For instance, how searching would work, including minimisation to make more space for the order page and minimised states for order and company sections during search."
+        },
+        "section25": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\lofiProcess-1.png",
+            "param1": ""
+        },
+        "section26": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "As the design & interactions developed, I kept track of discussed changes needed through Figma comments."
+        },
+        "section27": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\lofiProcess-2.png",
+            "param1": ""
+        },
+        "section28": {
+            "type": "titleParagraph",
+            "param0": "Questionnaire",
+            "param1": "By now, I felt uncertain around some design decisions we were making, so it was time gather user input. The questionnaire aimed to validate workflow generalizations (identifying the common 90% of cases), guide feature direction (e.g., no. users handled at a time for user tabs), and gather new ideas. Its results grounded decisions in user perspectives and sparked valuable team discussions."
+        },
+        "section29": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\questionnaire-1.png*resources\\projectContentFiles\\caAdmin\\questionnaire-2.png",
+            "param1": ""
+        },
+        "section30": {
+            "type": "titleParagraph",
+            "param0": "Lo-Fi Wireframing Pt.3",
+            "param1": "I continued to create the different screens and flows which we then discussed and I would iterate on (or discard). The conversions also included discussing new ideas (to capture user needs) that came up individually between meetings.</br></br>It was important to have cohesive lo-fi wireframes with well-defined interactions, ensuring that the hi-fi phase would focus primarily on UI design. Interestingly, we also had a ‘purging’ session to show only the essential."
+        },
+        "section31": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\lofi-4.webp",
+            "param1": ""
+        },
+        "section32": {
+            "type": "titleParagraph",
+            "param0": "High-Fidelity",
+            "param1": "With lo-fi wireframes developed over months, it was time to bring it into the Metronic system, a toolkit used for another webapp of the company which will make the development easier, including sourcing existing components from the other webapp.</br></br>We still experimented with some new interactions, but changes were mostly for refinement. Key challenges included distinguishing information and actions visually, maintaining UI consistency, avoiding information overload, and ensuring interactable elements conveyed the right affordances."
+        },
+        "section33": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\hifi-1.png",
+            "param1": ""
+        },
+        "section34": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Near the end of my internship, I had created the Figma screens, a set of components, styles, and variables (for the prototypes). In light of the handover, I got the suggestion to create visualisations of different flows, which I did alongside organising the Figma file."
+        },
+        "section35": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\hifi-2.webp",
+            "param1": ""
+        },
+        "section36": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\flow-1.png",
+            "param1": "Overall architecture of the solution"
+        },
+        "section37": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\flow-2.png",
+            "param1": "Archicture/flows of specific sections"
+        },
+        "section38": {
+            "type": "titleParagraph",
+            "param0": "Presenting",
+            "param1": "As a way of gathering some final feedback, I requested to be able to present what was made so far to the CS team which consisted of two meetings. As there was no demo that could be tested out, there wasn’t much feedback beyond positive perspectives. Naturally, a demo would be the next stage—by this point my internship had ended."
+        },
+        "section39": {
+            "type": "titleParagraph",
+            "param0": "Overall Outcome",
+            "param1": "I redesigned the CA Admin webapp in Figma, focusing on the main flow for handling customer orders. This includes creating the screens for the process, and most of its interactions as a prototype. Below you will find the Figma prototypes and a brief overview of some aspects of each prototype."
+        },
+        "section40": {
+            "type": "embed",
+            "param0": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"100%\" height=\"100%\" src=\"https://embed.figma.com/proto/lEGweOgd7TPxvppyRCZ1L1/Prototype-CA-Admin?page-id=0%3A1&node-id=950-9246&viewport=224%2C-1692%2C0.03&scaling=contain&content-scaling=fixed&starting-point-node-id=950%3A9246&show-proto-sidebar=0&embed-host=share\" allowfullscreen></iframe>"
+        },
+        "section41": {
+            "type": "titleParagraph",
+            "param0": "Other Interactions",
+            "param1": "Here is the shortcut for being able to quickly navigate between orders, which similarily follows the current habit of copy-pasting the order ID straight into the URL."
+        },
+        "section42": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "Taking inspiration from a current habit and making it an efficient shortcut. (Quick Navigation)"
+        },
+        "section43": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\quickNavigation.gif",
+            "param1": "GIF showing how quick navigation works"
+        },
+        "section44": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "It was suggested by the CS lead to adapt the grouping feature seen in browsers to allow for organisation with labels: working, waiting, done."
+        },
+        "section45": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\groupedTabs.gif",
+            "param1": "GIF showing the grouped tabs expanded and minimised"
+        },
+        "section46": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Given the occasional but persistent issue of losing track what were doing when swapping between users, below is a suggestion for reminding what the last done action was (focus on recognition) or if a task (which required waiting) has completed."
+        },
+        "section47": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "Responses on the questionnaire showed that the history should cover a shorter time period rather than e.g., a week."
+        },
+        "section48": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\history.gif",
+            "param1": "GIF showing features to aid in prividing history cues"
+        },
+        "section49": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "The CS team work on monitors at home or at the office so resolution wasn't a major concern, however should it be, I felt it was important to indicate in the design how elements should grow and shrink."
+        },
+        "section50": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\responsiveness.gif",
+            "param1": "GIF showing the responsiveness of the Figma protoype"
+        },
+        "section51": {
+            "type": "titleParagraph",
+            "param0": "Deep Dive: Design Aspects",
+            "param1": "Below will explain a few of the design aspects across the interface.</br></br>Chips and buttons were kept different visually and functionally, with chips relating to categories or status and buttons with actions. Colours were also used for chips to provide shallow and quick information (e.g., red meaning soon)."
+        },
+        "section52": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\designAspectChipsButtons.png",
+            "param1": ""
+        },
+        "section53": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "The layout of the main 3 sections on the most common view (handling orders) can generally be split in two: Important information and buttons from left to right (common natural reading) taking up a majority of the space, chips and secondary actions (e.g., expand) from right to left."
+        },
+        "section54": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\designAspectPageStructure.webp",
+            "param1": ""
+        },
+        "section55": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "In order to keep the visibility of the user's and company's section while searching (to know if it is the right user/company), they have a expanded and minimised state. During search, it would be unlikely that any actions would be performed. Hence, space is saved and visibility is maintained."
+        },
+        "section56": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\caAdmin\\designAspectExpandMinimise-1.webp*resources\\projectContentFiles\\caAdmin\\designAspectExpandMinimise-2.webp",
+            "param1": ""
+        },
+        "section57": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "If you would like to discuss more about this project, please contact me!"
+        }
+    },
+    "landingPage": {
+        "hero": {
+            "heroTitle": "Landing Pages",
+            "heroImg": "resources\\projectContentFiles\\landingPage\\heroImgLandingPage.png"
+        },
+        "summary": {
+            "task": "Design landing pages that inform and convert users",
+            "goal": "Create pages that align with messaging and drive conversions",
+            "deliverable": "Landing page designs of which some have been implemented",
+            "team": " Me, WordPress Developer, Senior Marketing Specialist, Marketing Team",
+            "myRole": "UX/UI Designer",
+            "duration": "6 months",
+            "tools": "Figma, WordPress, Hotjar"
+        },
+        "companyInfo": {
+            "type": "expandable",
+            "param0": "The project was part of my CubiCasa internship. Company Summary:",
+            "param1": "CubiCasa is a Finland-based company specializing in real estate technology. Their main product is an <u>AI-powered</u> mobile app that lets users <u>scan properties</u> and automatically <u>generate 2D floor plans</u>.</br></br>Alongside the app is a web platform where users can manage their generated floor plans. They have other products and services detailed here: https://www.cubi.casa/."
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Context",
+            "param1": "These pages are part of the company’s website, built in WordPress, with their ongoing design being a regular task managed by the marketing team. The website was already being rebuilt using Gutenberg blocks (custom made WP templates), with some blocks already pre-designed by another designer. The pages I designed helped drive development forward through usage of the blocks, and I also contributed to expanding the block library."
+        },
+        "section1": {
+            "type": "titleParagraph",
+            "param0": "Learning: Landing Pages",
+            "param1": "As I was new to creating landing pages, apart from doing general market research and reading articles, it was suggested that I check out the company’s website on Hotjar."
+        },
+        "section2": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\hotjar-1.webp",
+            "param1": "Hotjar results for 'Pricing'"
+        },
+        "section3": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "While it was interesting to analyse Hotjar results and understand the tool, the pricing plan only covered a few pages. However, results indicated that the homepage did not benefit from a carousel, which has contributed to the future design of the homepage."
+        },
+        "section4": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\webResearch-1.webp",
+            "param1": "Looking at similar companies and sites"
+        },
+        "section5": {
+            "type": "titleParagraph",
+            "param0": "Page: CubiCasa Tour",
+            "param1": "When I started my internship, the rollout of 'Cubicasa Tour' was underway, and a product page was needed. I had to quickly learn about the product, its fit within the company, the design system, and visual branding.</br></br>I began by defining the page's content and story, distilling text from emails to CubiCasa users, and then created a rough content structure."
+        },
+        "section6": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\tour-1.webp",
+            "param1": "3 rough structure of content exploration"
+        },
+        "section7": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "My learning process involved perhaps too many iterations, meandering to align with feedback. Early designs had cramped content cantered in a small margin, leaving excessive empty space that clashed with the website’s style. They were also shorter and lacked product page details. Later, images were enhanced to be more engaging and informative."
+        },
+        "section8": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\tour-2.webp",
+            "param1": "Page design process"
+        },
+        "section9": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Many newly design website ‘blocks’ (sections) were also first used in practice on this page."
+        },
+        "section10": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "I contributed two new blocks, making sure they would be reusable, versatile and easily mix-and-matched."
+        },
+        "section11": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\block-1.png*resources\\projectContentFiles\\landingPage\\block-2.png",
+            "param1": "Icon and Image in Columns Block*FAQ Block"
+        },
+        "section12": {
+            "type": "titleParagraph",
+            "param0": "Page Design",
+            "param1": "See the live page <a href=\"https://www.cubi.casa/cubicasa-tour/\">here</a>"
+        },
+        "section13": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\tour-3.webp",
+            "param1": "Final design implemented",
+            "param2": "Y"
+        },
+        "section14": {
+            "type": "titleParagraph",
+            "param0": "Page: Comparing Home Floor Plans",
+            "param1": "To rank highly for multiple keywords with one page and avoid cannibalization, I was tasked with designing a page that balanced a landing page and a blog post using pre-written content. It was a long-form landing page that started informatively and shifted to promote the company's products."
+        },
+        "section15": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\webResearch-2.webp*resources\\projectContentFiles\\landingPage\\webResearch-3.webp",
+            "param1": "Looking at similar companies & sites*Looking at hotjar analysis of an existing blog posts"
+        },
+        "section16": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Designing the first landing page taught me a lot, but this task posed different challenges. The pre-designed blocks were tailored for product-focused, image-heavy pages with short content."
+        },
+        "section17": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "Thus, new blocks had to be created for long-form content. Also, the hero section needed to be more exciting and engaging."
+        },
+        "section18": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Initially, I chose a blogpost-style structure, but it wasn’t the right approach. Later, I tried adapting existing blocks for easier development, but that didn’t work either. Overly creative designs lacked compromise. The hero image was also a challenge, as it needed to communicate the page title attractively and generically."
+        },
+        "section19": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparing-1.webp",
+            "param1": "Initial wireframes"
+        },
+        "section20": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparing-2-1.webp*resources\\projectContentFiles\\landingPage\\comparing-2-2.webp",
+            "param1": "*",
+            "param2": "true",
+            "param3": "#444444"
+        },
+        "section21": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparing-3.webp",
+            "param1": "Initial Hero Images",
+            "param2": "X"
+        },
+        "section22": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "I identified two main content types: lists and bullet points, which are reusable for future pages. Lists are also positive for SEO. Creating these blocks involved balancing digestibility (clusters) with excitement (marketing) and ensuring they were reusable and easy to develop (web development)."
+        },
+        "section23": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparingBlock-1.png",
+            "param1": "List style block"
+        },
+        "section24": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparingBlock-2.png",
+            "param1": "Bullet point style block"
+        },
+        "section25": {
+            "type": "titleParagraph",
+            "param0": "Page Design",
+            "param1": "Though the result does not represent my dream site, it balances these two sides, even including a unique (to the other pages) design for the hero section.</br></br>See the live page <a href=\"https://www.cubi.casa/comparing-the-best-home-floor-plan-apps/\">here</a>"
+        },
+        "section26": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\comparingFull.webp",
+            "param1": "Final design implemented",
+            "param2": "Y"
+        },
+        "section27": {
+            "type": "titleParagraph",
+            "param0": "Page: For Interior Designers",
+            "param1": "This use case page for interior designers was easier to design than the previous two, likely due to what I’ve learned and because it could use all the previously designed ‘blocks.’"
+        },
+        "section28": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\interior-1.webp",
+            "param1": "Initial mockups"
+        },
+        "section29": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Content and keywords were derived from the company’s blog posts/landing and from adjacent companies with similar use cases. This included which products would be most helpful, benefits that resonate best, and how the structure should persuade. Providing test files in use cases would be a new type of thing to experiment with on use case pages."
+        },
+        "section30": {
+            "type": "titleParagraph",
+            "param0": "Page Design",
+            "param1": ""
+        },
+        "section31": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\projectContentFiles\\landingPage\\interiorFull.webp",
+            "param1": "",
+            "param2": "Y"
+        },
+        "section32": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Unfortunately, I my internship ended before this page could progress further."
+        }
+    },
+    "mobileHome": {
+        "hero": {
+            "heroTitle": "New User Engagement",
+            "heroImg": "resources\\projectContentFiles\\mobileHome\\heroImgMobileHome.png"
+        },
+        "summary": {
+            "task": "Reduce first-time user churn by improving the homepage",
+            "goal": "Encourage new users to engage by increasing first scans",
+            "deliverable": "Data Analysis Insights and Wireframes of Design Ideas",
+            "team": "Me, UX/UI Team",
+            "myRole": "UX/UI Designer (assistive)",
+            "duration": "2 months",
+            "tools": "Figma, FigJam, QuickSight, LibreOffice Calc"
+        },
+        "companyInfo": {
+            "type": "expandable",
+            "param0": "The project was part of my CubiCasa internship. Company Summary:",
+            "param1": "CubiCasa is a Finland-based company specializing in real estate technology. Their main product is an <u>AI-powered</u> mobile app that lets users <u>scan properties</u> and automatically <u>generate 2D floor plans</u>.</br></br>Alongside the app is a web platform where users can manage their generated floor plans. They have other products and services detailed here: https://www.cubi.casa/."
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Context",
+            "param1": "This mobile app issue had been discussed months before it was assigned to me and remained ongoing. One of the UX/UI designer suggested this task for me to work on, providing a brief."
+        },
+        "section1": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\brief.png",
+            "param1": "The brief I was given by the designer"
+        },
+        "section2": {
+            "type": "titleParagraph",
+            "param0": "Background",
+            "param1": "After reading articles on why users abandon apps early, I reviewed old Slack discussions for past issues and suggestions. Customer feedback on Productboard and Facebook about first-time app experiences was limited, but internal discussions revealed this is a longstanding, ongoing issue."
+        },
+        "section3": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "This indicated abundant past information to build upon."
+        },
+        "section4": {
+            "type": "titleParagraph",
+            "param0": "Formulating my Thoughts",
+            "param1": "From there, I started with a user journey map to create a more sequential outline of my understanding and assumptions, and to plot the thoughts I had gathered thus far. Importantly, it highlighted key opportunities for ideation."
+        },
+        "section5": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\userJourneyMap.png",
+            "param1": "User journey map of a new user's experience"
+        },
+        "section6": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "At the time, I wasn’t sure how to approach the task, so I jumped the gun a little in starting with rough brainstorming of design ideas."
+        },
+        "section7": {
+            "type": "titleParagraph",
+            "param0": "Getting Advice",
+            "param1": "Though the brainstorming was a little early, it provided the opportunity for me to ask the UX/UI team for feedback and advice on how to progress, particularly in areas that held a great of uncertainty."
+        },
+        "section8": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "For instance, questions like ‘how many of the new users even try a scan?’ and ‘do users try to save their first-time free scans?’."
+        },
+        "section9": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\roughSketch1.png*resources\\projectContentFiles\\mobileHome\\roughSketch2.png",
+            "param1": "Ideas 1 to 2*Ideas 3 to 4"
+        },
+        "section10": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\roughSketch3.png*resources\\projectContentFiles\\mobileHome\\roughSketch4.png",
+            "param1": "Ideas 5 to 6*Ideas 7 to 11"
+        },
+        "section11": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "I believed that these were important questions to ask to define the problem in the sequence and develop a more targeted improvement. It was hence suggested that I contact a colleague who worked heavily on data gathering and analysis to see if some of the questions could be answered."
+        },
+        "section12": {
+            "type": "titleParagraph",
+            "param0": "Looking at the Data",
+            "param1": "The data includes mobile app events that are currently being tracked. Unfortunately, some useful events weren’t tracked, such as how users may interact with homepage content.</br></br>My main goal was: find out if new users were doing a proper scan of their property or just testing out a scan quickly. I.e, a real estate agent scanning a client’s house vs trying out a scan on random room in their own house. Figuring out the successful use case would identify the most convincing and converting user flow."
+        },
+        "section13": {
+            "type": "titleParagraph",
+            "param0": "The Data Part.1",
+            "param1": "To begin, the data I requested consisted of summaries of scan events (e.g, when it started / ended), separated by new, first-time users vs recurring users. Skimming it made me realise the usefulness of knowing unique orders, user-by-user. I imported the data into LibreOffice Calc from QuickSight to calculate scan durations for new and returning users."
+        },
+        "section14": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "The findings indicated that new users tended to have shorter scans and more cancelled scans than recurring users."
+        },
+        "section15": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\dataP1-1.png",
+            "param1": "Comparing New Users vs Recurring Users: Scan Duration"
+        },
+        "section16": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\dataP1-2.png",
+            "param1": "Comparing New Users vs Recurring Users: Scan Ended vs Order Sent Time"
+        },
+        "section17": {
+            "type": "titleParagraph",
+            "param0": "The Data Part.2",
+            "param1": "Afterwards, it occurred to me that I could also find out how long it would take for them to send in their order (new vs recurring separation), so I requested the ‘Order Sent Events’. I could then find out how long the scan durations of successfully sent vs unsent orders were based on if it was a new user or not.</br></br>Analysis showed new user scan end vs order sent time is similar (Q1 vs Q3). However, the gap between recurring users in Q2 and Q3 is significant, suggesting some users take hours to send a scan. New and recurring users have similar scan durations and distributions for sent orders."
+        },
+        "section18": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "Two insights 1) there's a window of time for new users to send in scans 2) successfully sent scans were proper, like a recurring user's."
+        },
+        "section19": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\dataP2.png",
+            "param1": "Comparing New Users vs Recurring Users: Scan Ended vs Order Sent Time"
+        },
+        "section20": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "My question now was: How do we get partial scans to be submitted anyway, discouraging scan-saving and app abandoment?"
+        },
+        "section21": {
+            "type": "titleParagraph",
+            "param0": "Getting Advice Again",
+            "param1": "At this point I was deep into the data, making me feel like I had lost sight of the task. I reached out to a product manager to get his insights and upon hearing what I was working, I had a discussion another UX/UI designer who provided more insight and previous resources, such as a survey.</br></br>With suggestions and thoughts gathered, it was time to streamline the ideas."
+        },
+        "section22": {
+            "type": "titleParagraph",
+            "param0": "Streamlining Ideas",
+            "param1": ""
+        },
+        "section23": {
+            "type": "expandable",
+            "param0": "Idea 1: Tutorial (controlled)",
+            "param1": "The concept asks users if they are first-time users, disables unrelated features, and forces progress by only allowing movement forward. Considerations include the tutorial's accuracy and potential future issues with UI/flow changes."
+        },
+        "section24": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\finalIdea-1.png",
+            "param1": "Idea 1 Wireframe"
+        },
+        "section25": {
+            "type": "expandable",
+            "param0": "Idea 2: Hiding Info and Disabling Features on the Home Screen",
+            "param1": "The concept guides first-time users by showing only scan-related info, disabling unrelated features, and adding minor gamification, but may feel restrictive. It creates a sense of 'newness' compared to the regular home screen"
+        },
+        "section26": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\finalIdea-2.png",
+            "param1": "Idea 2 Wireframe"
+        },
+        "section27": {
+            "type": "expandable",
+            "param0": "Idea 3: Complete your first trial scan to unlock PLUS (Pseudo Prize)",
+            "param1": "First-time sent scans usually take 4 min, like recurring users, indicating proper scans are being done. Finding the right time and location for a good scan can be difficult so to ease users in, let them feel like they’re saving the PLUS scan for a proper one while completing a trial scan (still getting a floor plan).</br></br>Adding minor gamification, like a prize for finishing the trial, could help. Highlighting the PLUS scan's value monetarily could help clarify.</br></br>However, this may affect the current flow of conversions benefiting from getting PLUS as their first scan."
+        },
+        "section28": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\finalIdea-3.png",
+            "param1": "Idea 3 Wireframe"
+        },
+        "section29": {
+            "type": "expandable",
+            "param0": "Idea 4: Getting scans sent in anyway",
+            "param1": "First-time users' unsent scans typically last 1 minute 38 seconds, presenting an opportunity to encourage them to send the scans anyway. If users choose to cancel, we could offer another option to proceed. However, this could be seen as annoying or deceptive, and incomplete or poor scans may negatively impact users' first impressions."
+        },
+        "section30": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\mobileHome\\finalIdea-4.png",
+            "param1": "Idea 4 Wireframe"
+        },
+        "section31": {
+            "type": "titleParagraph",
+            "param0": "Wrapping Up",
+            "param1": "At this point my internship was coming to an end. It was suggested that I make my work visible and available on the company Slack, so I made a presentation and summary of the work and posted it to get feedback.</br></br>The ideas that gained the most traction was ‘Idea 3:  Complete your first trial scan to unlock PLUS (Pseudo Prize)’, with one of the designers saying that they’d be happy to push for it, and ‘Idea 2: Hiding Info and Disabling Features on the Home Screen’. A small part of ‘Idea 1: Tutorial (controlled)’ which involves asking whether a user is new or not also garnered attention.</br></br>As of now, I am awaiting updates on how the design challenge progresses in my absence."
+        }
+    },
+    "abTest": {
+        "hero" : {
+            "heroTitle": "A/B Tests",
+            "heroImg": "resources\\projectContentFiles\\abTest\\heroImgAbTest.png"
+        },
+        "summary": {
+            "task": "Create A/B tests on company website pages",
+            "goal": "Increase sign-up conversion rate of visitors",
+            "deliverable": "~12-17% increase in conversion rate and webpage design changes based on results",
+            "team": "Me, Marketing Team",
+            "myRole": "Main UX/UI Designer",
+            "duration": "1.5 months",
+            "tools": "VWO, Figma, Google Analytics"
+        },
+        "companyInfo": {
+            "type": "expandable",
+            "param0": "The project was part of my CubiCasa internship. Company Summary:",
+            "param1": "CubiCasa is a Finland-based company specializing in real estate technology. Their main product is an <u>AI-powered</u> mobile app that lets users <u>scan properties</u> and automatically <u>generate 2D floor plans</u>.</br></br>Alongside the app is a web platform where users can manage their generated floor plans. They have other products and services detailed here: https://www.cubi.casa/."
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Context",
+            "param1": "Since some company website pages were outdated in design, the A/B tests aimed to identify opportunities for improvement and redesign."
+        },
+        "section1": {
+            "type": "titleParagraph",
+            "param0": "Background Research",
+            "param1": "As I was responsible for both content and images, I researched what works best. To create relevant content, I explored keywords that resonated with the target audience and analysed competitor pages with similar topics."   
+        },
+        "section2": {
+            "type": "titleParagraph",
+            "param0": "Learning the Method & Tool",
+            "param1": "Having never created an A/B test before, this was an opportunity to learn. After expressing interest, I was assigned the CAD files page and created two variations: one with modified text and another with updated images. Due to low traffic, we kept changes minimal.</br></br>Reviewing past tests, I saw room to improve data collection. Previously, only total clicks to the signup page were tracked, but I wanted to identify which sections performed best."
+        },
+        "section3": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "I added unique goal tracking for each CTA button to segment results."
+        },
+        "section4": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "From this trial, I learned that content mattered more than images for this audience. Separating text and image changes seemed less effective than testing both together."
+        },
+        "section5": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\CAD-BeforeAfter.png",
+            "param1": "Preview of Before & After"
+        },
+        "section6": {
+            "type": "titleParagraph",
+            "param0": "Exploring Pages to Test",
+            "param1": "To decide which page to test next, I analysed Google Analytics data, including clicks to the sign-up page and current conversion rates. A discussion with my supervisor and an evaluation of the data led to choosing the landing page: Start Scanning First Floor Plan. It had a strong conversion rate and solid traffic, despite its unfinished design."
+        },
+        "section7": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-Stat.png*resources\\projectContentFiles\\abTest\\StartFirst-Stat2.png",
+            "param1": "'Start Scanning First Floor Plan' Bar Chart*'Start Scanning First Floor Plan' Statistics"
+        },
+        "section8": {
+            "type": "titleParagraph",
+            "param0": "Creating a Test",
+            "param1": "Using the VWO tool to create the tests and Figma for the visuals, 3 variations of the page were made."
+        },
+        "section9": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\VWO-1.png",
+            "param1": "Example of editing in VWO"
+        },
+        "section10": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "With the number of visitors on the page, I felt there would be too few visitors if I went beyond 3 variations. Below is the original page."
+        },
+        "section11": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-Control.png",
+            "param1": "Original Page",
+            "param2": "Y"
+        },
+        "section12": {
+            "type": "titleParagraph",
+            "param0": "The Variations",
+            "param1": ""
+        },
+        "section13": {
+            "type": "list",
+            "param0": "The important aspects of the variations are as follows",
+            "param1": "<u>Variation 1 – Video:</u> The hero section includes a different, animated image relevant to the content. The title highlights an audience's value. Benefits of floor plans are emphasized through clustering, followed by a video to engage visitors, especially those coming from video content.*<u>Variation 2 – Longer Page:</u> This page, like the first, changes the hero image into an animated image and content, with a title focused on creating FOMO and the paragraph further pushing statistical values.*<u>Variation 3 – Customer Support:</u> This page features a static hero image, with the original paragraph unchanged and no video included. An additional section on good customer service was added, reflecting the content of the testimonials."
+        },
+        "section14": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-V1Video.png*resources\\projectContentFiles\\abTest\\StartFirst-V2Longer.png*resources\\projectContentFiles\\abTest\\StartFirst-V3CS.png",
+            "param1": "Variation 1*Variation 2*Variation 3"
+        },
+        "section15": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "And these variations have the following goal setting, each goal linked to a CTA button belonging to section. This would bring more insight into where in the page users are potentially converting."
+        },
+        "section16": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-GoalSetting.png",
+            "param1": "Goals related to CTA buttons shown visually"
+        },
+        "section17": {
+            "type": "titleParagraph",
+            "param0": "The Results",
+            "param1": "The results cover just over a month—too short given the traffic but enough to provide early insights. Since the control page’s specific buttons aren’t tracked, we can only compare the variations."
+        },
+        "section18": {
+            "type": "iconBox",
+            "param0": "resources\\templateItems\\lightbulb.svg",
+            "param1": "Overall, all variations show improved conversion rates ranging from 12 to 16.8%."
+        },
+        "section19": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-Results1.jpg",
+            "param1": "Results for the Goal: All clicks that link to the Signup page"
+        },
+        "section20": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "For the hero section, whether the hero image was animated or not seemed to not have an effect and so I believe should not be included as it would be a heavier file with reduced resolution. All the variations performed similarly, so more variations with fewer changes should be made to determine if the title, paragraph, or image makes the biggest difference."
+        },
+        "section21": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-Results2.jpg*resources\\projectContentFiles\\abTest\\StartFirst-Results3.jpg",
+            "param1": "Results for the Goal: All clicks on the CTA button in the hero section*Results for the Goal: Second CTA button"
+        },
+        "section22": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Variation 2 (Longer Page) saw no clicks on the second CTA, while the other variations performed similarly. This suggests the middle section may not be helpful for V2, but clicks picked up at the third CTA (not included in other variations). Additionally, the final CTA performed best on the longer page (V2), perhaps due to its length. Overall, shorter pages performed better for the second CTA, but the final CTA benefited from a longer page."
+        },
+        "section23": {
+            "type": "fullWidthImage",
+            "param0": "resources\\projectContentFiles\\abTest\\StartFirst-Results4.jpg*resources\\projectContentFiles\\abTest\\StartFirst-Results5.jpg",
+            "param1": "Results for the Goal: Extra CTA button for only variation 2*Results for the Goal: Last CTA button on the page, final section"
+        },
+        "section24": {
+            "type": "titleParagraph",
+            "param0": "Limitations",
+            "param1": "Unfortunately, due to the limited traffic to many of these pages and my limited time at the company, I did not have enough time to observe the results reach a suitable point of saturation to definitively declare improvements. Also, ideally, I would have made the changes to the A/B tests more and more subtly to eke out variables that lead to increased conversions."
+        }
+    }
+}

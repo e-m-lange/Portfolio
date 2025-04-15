@@ -1,0 +1,60 @@
+:root {
+    --blue-dark:#0E313B;
+    --yellow-dark:#443B00;
+    --teal-dark:#184141;
+    --blue-med:#417989;
+    --yellow-med:#898742;
+    --blue-light:#B9E2F6;
+    --teal-light:#BDE9E4;
+    --yellow-light:#EFEEC8;
+    --blue-dark-grey:#363b3d;
+}
+
+h1 {
+    font-family: 'Libre Baskerville';
+    font-size: 3.6rem;
+    font-weight: 300;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Libre Baskerville';
+    font-size: 2.35rem;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-family: 'Quicksand';
+    font-size: 1.1rem;
+}
+
+ul > li {
+    font-family: 'Quicksand';
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.zoomableImg:hover {
+    cursor: zoom-in;
+}
+
+@media (min-width: 2560px) { /* 2K resolution 2560px */
+    html {
+      font-size: 32px; /* 2x larger */
+    }
+}
+
+@media (min-width: 1900px) and (max-width: 2559px) { /* 1920px */
+    html {
+      font-size: 24px;
+    }
+}
+
+@media (max-width: 1899px) { /* 1920px */
+    html {
+      font-size: 15px;
+    }
+}

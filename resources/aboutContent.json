@@ -1,0 +1,64 @@
+{
+    "aboutPage": {
+        "hero": {
+            "heroTitle": "About Me",
+            "heroImg": "resources\\navContentFiles\\aboutPage\\aboutme-0.jpg"
+        },
+        "summary": {
+            "do": "Anything UX+UI, happy to run interviews and tests, design wireframes and mockups, or analyse user metrics. Also, glad to make use of what I know about programming if applicable!",
+            "from": "I was born and raised in Hong Kong, though I am part Swedish, which is where I am currently based.",
+            "language": "English: Native, Swedish: Intermediate, Indonesian: Basic",
+            "contact": "Feel free to contact me directly on linkedin: <a href=\"https://www.linkedin.com/in/eve-l-620764203/\">https://www.linkedin.com/in/eve-l-620764203/</a></br></br>See my experience and more below!"
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Education",
+            "param1": ""
+        },
+        "section1": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">MSc Human-Computer Interaction, Uppsala University 2022-2024</span>",
+            "param1": "Conducted thesis on AI-enabled work tools & IT professionals*HCI: Embodied Interaction, Requirements within Agile Development, User Interface Programming I, Scientific Methods within HCI, Measuring and Analysing User Experience (Statistics)*Other: Reinforcement Learning, Information Visualization, AI for Game Programming 1 & 2, Big Data Analytics, Deep Learning for Industrial Imaging, Privacy Patterns for Software Design"
+        },
+        "section2": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">BA Design+Change, Linnaeus University 2019-2022</span>",
+            "param1": "All semesters in this program focus on sustainability (e.g., in service design, design methods, system thinking)*Extra Courses: Intro to App Dev with Flutter, Intro to Lifecycle Analysis, Digitalization of Society, Programming in C# I & II & III, Social Psychology, HCI, Web Management, Applied IoT Intro, Sustainable Development, 3D Modelling, Structured Programming with C++"
+        },
+        "section3": {
+            "type": "titleParagraph",
+            "param0": "Experience",
+            "param1": ""
+        },
+        "section4": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">Western Union 2019-Now</span>",
+            "param1": "Freelance Graphic Designer*Creation of marketing material, physical and digital in Hong Kong"
+        },
+        "section5": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">Cubicasa 2024-2025 (6 months)</span>",
+            "param1": "UX/UI Design Intern*Was located in Helsinki, Finland"
+        },
+        "section6": {
+            "type": "expandable",
+            "param0": "Evaluation by Anastasia Corjan, Senior Marketing Manager",
+            "param1": "\"Eve has successfully completed her UX/UI internship at CubiCasa, demonstrating exceptional creativity, problem-solving skills, and a strong understanding of user-centered design. Throughout her internship, she contributed to various projects, including improving the user experience of our employee facing web portal and customer facing mobile app. Her ability to conduct user research, analyze feedback, and translate insights into intuitive design solutions greatly enhanced the usability of CubiCasa.\""
+        },
+        "section7": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">2nd Place Winner in Uppsala Sustainable Mobility Hackathon 2023</span>",
+            "param1": "Hosted by InnoCenter, supported by European Union"
+        },
+        "section8": {
+            "type": "titleParagraph",
+            "param0": "Hobbies & Free Time",
+            "param1": "I enjoy photography, especially when travelling, art/digital illustration, badminton, hiking, and podcasts (like 'the next big idea' and 'no stupid questions')!</br></br>Also enjoy storytelling in general—from books to games, and am currently making a small game for fun.</br></br>Oh and I love my dogs, whom I train. Am realising that 'bowl' and 'ball' sound a little too similar to differentiate, especially for a dog."
+        },
+        "section9": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\navContentFiles\\aboutPage\\dogJump.webp",
+            "param1": "The Great Devourer"
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "otherWorkPage": {
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "Western Union",
+            "param1": "Some of the marketing material I have made while working as a freelance graphic designer for WU."
+        },
+        "section1": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\wu\\wuGroup-0.webp",
+            "param1": "",
+            "param2": "X"
+        },
+        "section2": {
+            "type": "titleParagraph",
+            "param0": "Digitised Group Museum Experience",
+            "param1": "App design made during my HCI master's to enhance the storytelling and context building of the museum artifacts, and to promote engaging educational social interactions within groups in the museum."
+        },
+        "section3": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\museumApp\\museumApp.webp",
+            "param1": "",
+            "param2": "X"
+        },
+        "section4": {
+            "type": "titleParagraph",
+            "param0": "Information Visualisation",
+            "param1": "After partaking in a course which resulted in visualising various datapoints in the OECD life satisfaction dataset. It was made with the Bokeh, a Python library that works with HTML and JS."
+        },
+        "section5": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\infoVis\\infoVisFullpage.webp",
+            "param1": "Full page of the information visualised",
+            "param2": "Y"
+        },
+        "section6": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-0.png*resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-2.png*resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-1.png",
+            "param1": ""
+        },
+        "section7": {
+            "type": "titleParagraph",
+            "param0": "Agile Development with POS System",
+            "param1": "Using agile weekly sprints, we gathered requirements through contextual inquiry and user stories, then developed a redesigned POS system prototype for an Indonesian restaurant in Stockholm."
+        },
+        "section8": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\agile\\agile-0.webp",
+            "param1": "",
+            "param2": "X"
+        },
+        "section9": {
+            "type": "titleParagraph",
+            "param0": "The Meeting Point",
+            "param1": "App design idea that promotes transfer tech skills to the elderly through existing relationships, like family or friends. It strengthens bonds and supports remote learning, such as a child teaching a parent."
+        },
+        "section10": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\meetingP\\meetingP-0.webp",
+            "param1": "",
+            "param2": "X"
+        }
+    }
+}
