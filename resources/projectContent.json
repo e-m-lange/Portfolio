@@ -21,7 +21,7 @@
         "section0": {
             "type": "titleParagraph",
             "param0": "Context",
-            "param1": "CA (Customer Admin) Admin is a webapp and one of the tools the CS (Customer Service) team use to resolve customer issues and manage orders.</br></br>I joined this project a few months after it had already been initiated, with key aspects like requirements and pain points already outlined. However, there were challenges in developing the design, which is where I stepped in."
+            "param1": "CA (Customer App) Admin is a webapp and one of the tools the CS (Customer Service) team use to resolve customer issues and manage orders.</br></br>I joined this project a few months after it had already been initiated, with key aspects like requirements and pain points already outlined. However, there were challenges in developing the design, which is where I stepped in."
         },
         "section1": {
             "type": "list",
