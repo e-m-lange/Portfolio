@@ -53,9 +53,19 @@
         "section8": {
             "type": "titleParagraph",
             "param0": "Hobbies & Free Time",
-            "param1": "I enjoy photography, especially when travelling, art/digital illustration, badminton, hiking, and podcasts (like 'the next big idea' and 'no stupid questions')!</br></br>Also enjoy storytelling in general—from books to games, and am currently making a small game for fun.</br></br>Oh and I love my dogs, whom I train. Am realising that 'bowl' and 'ball' sound a little too similar to differentiate, especially for a dog."
+            "param1": "I enjoy photography, especially when travelling, art/digital illustration, badminton, hiking, and podcasts (like 'the next big idea' and 'no stupid questions')!</br></br>Also enjoy storytelling in general—from books to games, and am currently making a small game for fun.</br></br>Occasionally, a need arises that allows me to enjoy designing 3D printing solutions to those problems (except when in the middle of printing, you realise you've made an error...)"
         },
         "section9": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\navContentFiles\\aboutPage\\3dPrint_1.webp*resources\\navContentFiles\\aboutPage\\3dPrint_0.webp*resources\\navContentFiles\\aboutPage\\3dPrint_2.webp*resources\\navContentFiles\\aboutPage\\3dPrint_3.webp*resources\\navContentFiles\\aboutPage\\3dPrint_5.webp",
+            "param1": "Drawing tablet stand disassembled*Drawing tablet on the stand*Back view of the e-reader case*Front view of the e-reader case*Figuring out the drawing tablet stand for 15° vertical incline"
+        },
+        "section10": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Oh and I love my dogs, whom I train."
+        },
+        "section11": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\aboutPage\\dogJump.webp",
             "param1": "The Great Devourer"
