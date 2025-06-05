@@ -216,11 +216,13 @@ function showMainSkills() {
 function darkenNameAndBg() {
     document.body.style.backgroundImage = "linear-gradient(to bottom, rgb(21, 27, 30, 0.93), rgba(54, 59, 61, 0.93)), url('./resources/background_image.webp')"
     document.getElementById("nameTitle").style.backgroundImage = "none";
+    document.querySelector("#mainIntro").style.boxShadow = "0px 4px 16px #0000003d";
 }
 
 function resetNameAndBg() {
     document.body.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.7)), url('./resources/background_image.webp')";
     document.getElementById("nameTitle").style.backgroundImage = "linear-gradient(to right, black 0%, var(--blue-dark) 70%, var(--yellow-med))";
+    document.querySelector("#mainIntro").style.boxShadow = "0px 0px 0px";
 }
 
 function blurOtherProjectCards(elementID) {
@@ -420,9 +422,9 @@ function forceScrollTo() {
     const mainIntroPos = document.getElementById("mainContent").scrollTop;
     console.log(mainIntroDistance - buttonPosition);
 
-    if (-270 < (mainIntroDistance - buttonPosition)) {
+    if (-230 < (mainIntroDistance - buttonPosition)) {
         // Scroll to the position of the button
-        document.getElementById("mainContent").scroll({top: mainIntroPos + (buttonPosition - buttonPosition - mainIntroDistance - 100), behavior: "smooth"});
+        document.getElementById("mainContent").scroll({top: mainIntroPos + (buttonPosition - buttonPosition - mainIntroDistance - 20), behavior: "smooth"});
     }
 }
 
