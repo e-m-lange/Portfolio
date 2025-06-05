@@ -131,13 +131,14 @@
     }
 
     #mainPreviewProjectBg {
-        grid-template-rows: repeat(5, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important; /*Changed to make it nicer on mobile view*/
         grid-template-columns: auto auto !important;
         padding: 0rem !important;
         height: 100% !important;
         width: 100% !important;
         column-gap: 0.5rem !important;
-        gap: 2rem !important;
+        gap: 0.5rem !important;
+        margin-top: -0.5rem;
     }
 
     #mainPreviewProjectBg > div > img {
@@ -456,10 +457,15 @@ div {
 .floating:nth-child(4) { animation-delay: 1.7s; }
 .floating:nth-child(5) { animation-delay: 2s; }
 
+#goToProjectID {
+    padding-top: 0.75rem;
+}
+
 .goToProjectBtn {
     width: fit-content; 
     background: black;
-    box-shadow: 0rem 0.1rem 1rem 0.2rem rgba(255, 255, 255, 0.5);
+    box-shadow: 0rem 0.1rem 1rem 0.2rem rgba(255, 255, 255, 1);
+    border: 2px solid white;
     padding: 1.25rem 2rem 1.25rem 2rem; 
     border-radius: 20rem;
     justify-self: center;

@@ -95,6 +95,10 @@ function clickProjectCard(element){
         showAllProjectCards();
         hideGoToProjectBtn();
         hidePreviewProjectBg();
+
+        if (innerWidth <= 700) {
+            document.querySelector("#welcomeSection").style.paddingBottom = "0rem";
+        }
     }
 
     blurOtherProjectCards(clickedCard.parentElement.id);
@@ -105,6 +109,7 @@ function clickProjectCard(element){
     if (innerWidth <= 700) {
         // For mobile, don't show them anyway
         hideOtherProjectCards();
+        document.querySelector("#welcomeSection").style.paddingBottom = "1rem";
     }
     showPreviewProjectBg();
     welcomeSectionToProject();
@@ -147,9 +152,24 @@ function showGoToProjectBtn(element) {
     newElement.id = "goToProjectID"; // Used for deletion later
     newElement.addEventListener('click', function(element) { updateCurrentPage(projectKeys[currOpenedProjectNum]); }); // attach click event
     element.target.parentElement.appendChild(newElement);
+    // For mobile
+    if (innerWidth <= 700) { // Shifts the button down a bit for the first card
+        if (newElement.getBoundingClientRect().top <= (innerHeight / 2)) {
+            newElement.style.paddingTop = "3rem";
+        }
+        else if (newElement.getBoundingClientRect().top >= (innerHeight / 4)) {
+            newElement.parentElement.style.paddingBottom = "6rem";
+        }
+    }
 }
 
 function hideGoToProjectBtn() {
+    // For mobile
+    if (innerWidth <= 700) {
+        if (document.getElementById("goToProjectID").getBoundingClientRect().top >= (innerHeight / 4)) {
+            document.getElementById("goToProjectID").parentElement.style.paddingBottom = "0rem";
+        }
+    }
     document.getElementById("goToProjectID").remove();
 }
 
@@ -169,8 +189,8 @@ function showAllProjectCards() {
 
 // Hide the main skills section when a project has been selected
 function hideMainSkills() {
-    // if it is in mobile view, ignore since hiding it messes with scrolling too much on mobile
-    if (innerWidth > 700) {
+    //if (innerWidth > 700) { // (old) if it is in mobile view, ignore since hiding it messes with scrolling too much on mobile
+    if (true) {
         // adding minimising effect
         document.getElementById("mainIntroItem1").classList.add("hidden");
         document.getElementById("mainSkills").style.padding = "0rem";
@@ -182,8 +202,8 @@ function hideMainSkills() {
 
 // Show the main skills again once all project cards have been deselected
 function showMainSkills() {
-    // if it is in mobile view, ignore
-    if (innerWidth > 700) {
+    // if (innerWidth > 700) { // (old) // if it is in mobile view, ignore
+    if (true) {
         document.getElementById("mainIntroItem1").classList.remove("hidden");
         document.getElementById("mainSkills").style.padding = "1rem";
         for (let i = 0; i < document.getElementById("mainSkills").children.length; i++) {
@@ -439,7 +459,7 @@ async function handleScrollHome() {
 function unsetScrollStyle() {
     document.getElementById("mainIntro").style.position = "relative";
     document.getElementById("mainIntroItem1").classList.remove("hidden");
-    document.getElementById("mainSkills").style.filter = "none";
+    //document.getElementById("mainSkills").style.filter = "none";
     scrollStylesSet = false;
 }
 
@@ -447,7 +467,7 @@ function setScrollStyle() {
     document.getElementById("mainIntro").style.position = "sticky";
     document.getElementById("mainIntro").style.top = "0px"; // Needed to activate sticky
     document.getElementById("mainIntroItem1").classList.add("hidden");
-    document.getElementById("mainSkills").style.filter = "blur(3px)";
+    //document.getElementById("mainSkills").style.filter = "blur(3px)";
     scrollStylesSet = true;
 }
 
