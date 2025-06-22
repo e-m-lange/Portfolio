@@ -69,6 +69,11 @@
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\aboutPage\\dogJump.webp",
             "param1": "The Great Devourer"
+        },
+        "section12": {
+            "type": "fixedHeightImage",
+            "param0": "resources\\navContentFiles\\aboutPage\\illu_1.webp*resources\\navContentFiles\\aboutPage\\illu_2.webp",
+            "param1": ""
         }
     }
 }
