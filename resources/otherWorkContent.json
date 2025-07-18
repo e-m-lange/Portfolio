@@ -59,6 +59,26 @@
             "param0": "resources\\navContentFiles\\otherWork\\meetingP\\meetingP-0.webp",
             "param1": "",
             "param2": "X"
+        },
+        "section11": {
+            "type": "titleParagraph",
+            "param0": "Sparrow: 2D Platformer",
+            "param1": "Hobby project developed in Godot, a 2D platformer mystery puzzle game still in the making."
+        },
+        "section12": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_1.gif*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_2.gif*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_3.gif",
+            "param1": ""
+        },
+        "section13": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_moodboard_1.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_moodboard_2.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_dialogue_1.webp",
+            "param1": ""
+        },
+        "section14": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_dialogue_2.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_icons_1.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_icons_animated.gif",
+            "param1": ""
         }
     }
 }
