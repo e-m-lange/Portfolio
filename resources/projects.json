@@ -43,6 +43,13 @@
             "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
             "tools": "Figma, Google Forms",
             "imgUrl": "thumbnails/previewAB.png"
+        },
+        "jollyRoom": {
+            "title": "Jolly Room",
+            "snippet": "Website design*Website Development",
+            "previewImageList": "thumbnails/previewsJollyRoom/0-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/1-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/4-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/5-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/6-JollyRoomPreview.webp",
+            "blurb": "Design and implementation of a website for party room business.",
+            "imgUrl": "thumbnails/previewJollyRoom.png"
         }
     }
 ]

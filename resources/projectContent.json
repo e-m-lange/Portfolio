@@ -826,5 +826,34 @@
             "param0": "Limitations",
             "param1": "Unfortunately, due to the limited traffic to many of these pages and my limited time at the company, I did not have enough time to observe the results reach a suitable point of saturation to definitively declare improvements. Also, ideally, I would have made the changes to the A/B tests more and more subtly to eke out variables that lead to increased conversions."
         }
+    },
+    "jollyRoom": {
+        "hero" : {
+            "heroTitle": "Party Room Website",
+            "heroImg": "resources\\projectContentFiles\\jollyRoom\\heroImgJollyRoom.webp"
+        },
+        "summary": {
+            "task": "Design and develop the visual branding and website for a party room business, and allow viewers to book",
+            "goal": "Create a website that communicates the business and converts viewers to book",
+            "deliverable": "Ongoing, a website",
+            "team": "Me",
+            "myRole": "Main UX/UI Designer & Developer",
+            "duration": "Ongoing",
+            "tools": "Figma, JS, HTML, CSS, GSAP, Astro"
+        },
+        "section0": {
+            "type": "titleParagraph",
+            "param0": "",
+            "param1": "Below is the embed, it is being hosted on GitHub for review in the meantime, available to check out: <a href='https://e-m-lange.github.io/jollyroom'>https://e-m-lange.github.io/jollyroom/</a>. Content still needs to be added to this page."
+        },
+        "section1": {
+            "type": "titleParagraph",
+            "param0": "See it in development below!",
+            "param1": ""
+        },
+        "section2": {
+            "type": "embed",
+            "param0": "<embed src=\"https://e-m-lange.github.io/jollyroom/\" style=\"width:90%; height: 150%;\">"
+        }
     }
 }
