@@ -9,56 +9,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body onload="updateCurrentPage('home')">
-    <div id="header">
-        <div id="nameTitle">
-            <h2>Eve Lange <img id="profilePhoto" src="./resources/profile-photo.webp"></img></h2>
+    <header>
+        <div>
+            <h1>Eve Lange</h1>
+            <p>UX/UI Designer, always ready to say "let's try it!"</p>
         </div>
         <div class="navBtnList">
             <button id="navBtn0" class="navBtn">Home</button>
             <button id="navBtn1" class="navBtn">Other Work</button>
             <button id="navBtn2" class="navBtn">About</button>
         </div>
-    </div>
-    <div id="mainContent" class="scrollable-content">
-        <div id="mainIntro">
-            <div id="welcomeSection">
-                <h1 id="mainIntroItem0">Welcome!</h1>
-                <p>I'm a UX/UI designer in Sweden from Hong Kong focused on digital experiences. Always ready to say "Let's try it!"</p>
-            </div>
-            <div class="arrowNote" id="mainIntroItem1" style="flex-wrap:wrap-reverse;">
-                <img class="desktop" src="./resources/arrow_desktop.svg"/>
-                <img class="mobile" src="./resources/arrow_mobile.svg"/>
-                <p style="align-content: start;">My main competencies</p>
+        <div id="navBtnMenu">
+            <div>
+                <svg width="14" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1H18.5M1 7.75H18.5M1 14.5H18.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
             </div>
         </div>
-        <div id="mainSkills">
-            <ul>
-                <li>HCI</li>
-                <li>Mobile & Desktop Design</li>
-                <li>UX/UI</li>
-                <li>UX Research</li>
-                <li>User-Centred Design</li>
-                <li>Design Testing & Prototyping</li>
-                <li>Front-end Programming</li>
-            </ul>
-        </div>
-        <div id="mainPreview">
-            <div id="mainPreviewOverlay"></div>
-            <div id="mainPreviewProjectBg">
-                <div id="mainPreviewProjectBgItem0"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
-                <div id="mainPreviewProjectBgItem1"> <img src="./resources/thumbnails/previewAB.png"/> </div>
-                <div id="mainPreviewProjectBgItem2"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
-                <div id="mainPreviewProjectBgItem3"> <img src="./resources/thumbnails/previewAB.png"/> </div>
-                <div id="mainPreviewProjectBgItem4"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
-                <div id="mainPreviewProjectBgItem5"> <img src="./resources/thumbnails/previewAB.png"/> </div>
-                <div id="mainPreviewProjectBgItem6"> <img src="./resources/thumbnails/previewCaAdmin.png"/> </div>
+    </header>
+    <div id="projectLines1"></div>
+    <main>
+        <section id="projectSection">
+            <div id="projectText">
+                <div id="projectTitle"><h2></h2></div>
+                <div id="projectDescription"><p>Project description is going to be written here.</p></div>
+                <button type="button" id="goToProjectBtn"><p class="labelText">Go To Project</p>
+                    <svg width="3rem" height="100%" viewBox="0 0 122 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 24H120.5M120.5 24L101 1.5M120.5 24L101 46" stroke="white" stroke-width="3px" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div id="projectLines2"></div>
             </div>
-        </div>
-        <div id="aboutThisSite">
-            <div><p>This site was built by yours truly in JS, HTML, and CSS. It is hosted on GitHub pages.</p></div>
-            <button><p>About this site</p></button>
-        </div>
-    </div>
+            <div id="projectImgSection">
+                <section id="projectTags">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </section>
+                <div id="projectImg"><img src="./resources/thumbnails/previewsCaAdmin/heroImgCaAdmin.webp"/></div>
+            </div>
+        </section>
+
+        <section id="otherProjects">
+            <button class="otherProjectBtn labelText" id=""></button>
+            <button class="otherProjectBtn labelText" id=""></button>
+            <button class="otherProjectBtn labelText" id=""></button>
+            <button class="otherProjectBtn labelText" id=""></button>
+        </section>
+    </main>
+    
     <script src="./currentPageState.js"></script>
     <script src="./templates.js"></script>
     <script src="./functions.js"></script>

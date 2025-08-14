@@ -2,14 +2,14 @@
     {
         "caAdmin": {
             "title": "CA Admin",
-            "snippet": "Re-design*Enterprise Software",
+            "snippet": "Re-design*Enterprise Software*Full-Cycle",
             "previewImageList": "thumbnails/previewsCaAdmin/0-CaAdminPreview.webp*thumbnails/previewsCaAdmin/1-CaAdminPreview.webp*thumbnails/previewsCaAdmin/2-CaAdminPreview.webp*thumbnails/previewsCaAdmin/3-CaAdminPreview.webp*thumbnails/previewsCaAdmin/4-CaAdminPreview.webp*thumbnails/previewsCaAdmin/5-CaAdminPreview.webp*thumbnails/previewsCaAdmin/6-CaAdminPreview.webp",
             "blurb": "Re-design of internal software used by the Customer Service team at CubiCasa",
-            "imgUrl": "thumbnails/previewCaAdmin.png"
+            "imgUrl": "resources/thumbnails/previewsCaAdmin/heroImgCaAdmin.webp"
         },
         "landingPage": {
             "title": "Landing Pages",
-            "snippet": "Website Design*Wordpress Website",
+            "snippet": "Website Design*Wordpress Website*Conversion",
             "previewImageList": "thumbnails/previewsLandingPage/0-LandingPagePreview.webp*thumbnails/previewsLandingPage/1-LandingPagePreview.webp*thumbnails/previewsLandingPage/2-LandingPagePreview.webp*thumbnails/previewsLandingPage/3-LandingPagePreview.webp*thumbnails/previewsLandingPage/4-LandingPagePreview.webp*thumbnails/previewsLandingPage/5-LandingPagePreview.webp*thumbnails/previewsLandingPage/6-LandingPagePreview.webp",
             "blurb": "Design of landing pages that were implemented on the company website",
             "team": "Me, Product Manager, Customer Support Team Lead",
@@ -20,18 +20,18 @@
             "deliverable": "Mockup with some Prototype functionality",
             "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
             "tools": "Figma, Google Forms",
-            "imgUrl": "thumbnails/previewLandingPages.png"
+            "imgUrl": "resources/thumbnails/previewsLandingPage/heroImgLandingPage.png"
         },
         "mobileHome": {
-            "title": "New User Engagement",
-            "snippet": "Mobile Design Ideas*Data Analysis",
+            "title": "New User Churn",
+            "snippet": "Mobile Design Ideas*Data Analysis*User Metrics",
             "previewImageList": "thumbnails/previewsMobileHome/0-MobileHomePreview.webp*thumbnails/previewsMobileHome/1-MobileHomePreview.webp*thumbnails/previewsLandingPage/2-LandingPagePreview.webp*thumbnails/previewsMobileHome/3-MobileHomePreview.webp*thumbnails/previewsMobileHome/4-MobileHomePreview.webp*thumbnails/previewsMobileHome/5-MobileHomePreview.webp*thumbnails/previewsMobileHome/6-MobileHomePreview.webp",
             "blurb": "Investigation and design suggestions to decrease churn rates of new users",
-            "imgUrl": "thumbnails/previewHomepage.png"
+            "imgUrl": "resources/thumbnails/previewsMobileHome/heroImgMobileHome.png"
         },
         "abTest": {
             "title": "A/B Tests",
-            "snippet": "Webpage Research",
+            "snippet": "Webpage Research*Conversion*Quantitative Data",
             "previewImageList": "thumbnails/previewsAbTest/0-AbTestPreview.webp*thumbnails/previewsAbTest/1-AbTestPreview.jpg*thumbnails/previewsAbTest/2-AbTestPreview.webp*thumbnails/previewsAbTest/3-AbTestPreview.webp*thumbnails/previewsAbTest/4-AbTestPreview.jpg*thumbnails/previewsAbTest/5-AbTestPreview.webp*thumbnails/previewsAbTest/6-AbTestPreview.webp",
             "blurb": "A/B tests of company website pages to guide changes for higher user conversion",
             "team": "Me, Product Manager, Customer Support Team Lead",
@@ -42,14 +42,14 @@
             "deliverable": "Mockup with some Prototype functionality",
             "context": "The brief that was given at the beginning of this task was the following: create a more unified interface, reduce the clicks, improve search function, integrating with other tools used by CS team, visual simplification of the UI",
             "tools": "Figma, Google Forms",
-            "imgUrl": "thumbnails/previewAB.png"
+            "imgUrl": "resources/thumbnails/previewsAbTest/heroImgAbTest.png"
         },
         "jollyRoom": {
             "title": "Jolly Room",
-            "snippet": "Website design*Website Development",
+            "snippet": "Website design*Website Development*Small Business",
             "previewImageList": "thumbnails/previewsJollyRoom/0-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/1-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/4-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/5-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/6-JollyRoomPreview.webp",
             "blurb": "Design and implementation of a website for party room business.",
-            "imgUrl": "thumbnails/previewJollyRoom.png"
+            "imgUrl": "resources/thumbnails/previewsJollyRoom/heroImgJollyRoom.png"
         }
     }
 ]
