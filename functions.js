@@ -27,6 +27,24 @@ async function loadProjects() {
     updateProjectKeys(projects);
     attachGoToProjectBtn();
     attachProjectBtnEvents(projects);
+    preloadHeroImg(projects);
+}
+
+// Preload for better experience on homepage
+function preloadHeroImg(project) {
+    const numOfProjects = Object.keys(projects[0]).length; // get the length by counting how many keys there are
+    const names = Array.from(Object.keys(projects[0]));
+    var imgToLoad = [];
+    
+    for (let i = 0; i < numOfProjects; i++) {
+        imgToLoad.push(projects[0][names[i]].imgUrl);
+    }
+
+    imgToLoad.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        preloadedHeroImg.push(img);
+    });
 }
 
 function updateProjectKeys(projects){
@@ -89,7 +107,7 @@ function updateCurrentProjectVar(projectNumber) {
 function updateProjectText() {
     document.querySelector("#projectTitle h2").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].title;
     document.querySelector("#projectDescription p").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].blurb;
-    document.querySelector("#projectImg img").src = projects[0][projectKeys[currOpenedProjectNum]].imgUrl;
+    document.querySelector("#projectImg img").src = preloadedHeroImg[currOpenedProjectNum].src; // Take the image from the preloaded images
     const tags = (projects[0][projectKeys[currOpenedProjectNum]].snippet).split("*");
     document.querySelectorAll("#projectTags p").forEach((element, i) => {
         element.innerHTML = tags[i];
@@ -132,8 +150,8 @@ async function connectHomeAnimations() {
     })
 
     // For the mobile hamburger menu, change from the hamburger icon and exit cross icon
-    let closedSVG = '<svg width="14" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1H18.5M1 7.75H18.5M1 14.5H18.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
-    let openSVG = '<svg width="14" height="14" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17.5 16.5M17.5 1L1 16.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+    let closedSVG = '<svg width="1.25rem" height="1.25rem" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1H18.5M1 7.75H18.5M1 14.5H18.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+    let openSVG = '<svg width="1.25rem" height="1.25rem" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17.5 16.5M17.5 1L1 16.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
 
     hamburgerDiv.setAttribute('data-menuState', 'closed');
 
@@ -182,7 +200,7 @@ function headerScroll() {
             return
         }
         let scrollPos = document.querySelector("main").scrollTop; // How far the page is scrolled vertically
-        console.log(scrollPos);
+
         if (scrollPos > 50) { // trigger after 200px of scrolling
             document.querySelector('header').style.opacity = 0;
         } else {

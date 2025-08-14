@@ -61,12 +61,6 @@ ul > li {
 
 @media (max-width: 1899px) { /* 1920px */
     html {
-      font-size: 15px;
-    }
-}
-
-@media (max-width: 1080px) { /* 1920px */
-    html {
-      font-size: 12px;
+      font-size: 16px;
     }
 }

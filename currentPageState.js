@@ -13,3 +13,5 @@ var welcomeSectionPDefault = "I'm a UX/UI designer in Sweden from Hong Kong focu
 var isHostedOnGithub = false; // Temporary workaround solution
 var customVh; // Especially for mobile screen
 var vhDifference; // Deals with the difference caused by extra browser bar
+
+var preloadedHeroImg = []; // only for the homepage to make the experience smoother
