@@ -28,6 +28,7 @@ header {
     padding: 2.75rem;
     padding-left: 4rem;
     z-index: 2;
+    transition: 0.2s;
 }
 
 header p {
@@ -416,6 +417,41 @@ main {
         padding-right: 1rem;
     }
 
+    @keyframes navBtnListAnim {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /*Opened when the hamburger menu is selected*/
+    .navBtnList {
+        display: none;
+        right: 0;
+        top: 0;
+        gap: 2.5vh;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem;
+        padding-top: 20vh;
+        width: calc(100vw - 8rem);
+        height: 100vh;
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 100%);
+        transition: 0.3s;
+    }
+
+    .navBtnList.animate {
+        animation: navBtnListAnim 0.4s ease forwards; /* forwards keeps final state */
+    }
+
+    .navBtnList button {
+        width: fit-content;
+        padding: 1.75rem 2.25rem 1.75rem 2.25rem;
+    }
+
     div .navBtnList {
         flex-wrap: wrap;
         justify-content: center;
@@ -426,12 +462,23 @@ main {
         margin: 0.35rem 0.5rem 0.35rem 0.5rem;
     }
 
-    .navBtnList {
-        display: none;
+    @keyframes navBtnMenuAnim {
+        0% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
     #navBtnMenu {
+        z-index: 1;
         display: block;
+        transition: 0.3s;
+    }
+
+    #navBtnMenu.animate svg {
+        animation: navBtnMenuAnim 0.4s ease forwards; /* forwards keeps final state */
     }
     
     #projectSection {
@@ -460,8 +507,7 @@ main {
     }
     
     #projectLines2::before {
-        right: 0rem;
-        right: -30rem;
+        right: -70vw;
         width: 30rem;
     }
 

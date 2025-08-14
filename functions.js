@@ -101,6 +101,9 @@ async function connectHomeAnimations() {
     var projectImg = document.querySelector('#projectImg img');
     var title = document.querySelector("#projectTitle");
     var tags = document.querySelectorAll("#projectTags p");
+    var hamburgerDiv = document.querySelector("#navBtnMenu div")
+    var hamburger = document.querySelector("#navBtnMenu")
+    var navBtnList = document.querySelector(".navBtnList")
 
     // Animate all buttons on page load
     btns.forEach(element => {
@@ -127,6 +130,27 @@ async function connectHomeAnimations() {
             });
         });
     })
+
+    // For the mobile hamburger menu, change from the hamburger icon and exit cross icon
+    let closedSVG = '<svg width="14" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1H18.5M1 7.75H18.5M1 14.5H18.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+    let openSVG = '<svg width="14" height="14" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17.5 16.5M17.5 1L1 16.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+
+    hamburgerDiv.setAttribute('data-menuState', 'closed');
+
+    hamburgerDiv.addEventListener('click', () => {
+        if (hamburgerDiv.getAttribute('data-menuState') === 'closed' ) {
+            document.querySelector(".navBtnList").style.display = "flex";
+            hamburgerDiv.innerHTML = openSVG;
+            hamburgerDiv.setAttribute('data-menuState', 'open');
+        }
+        else {
+            hamburgerDiv.innerHTML = closedSVG;
+            document.querySelector(".navBtnList").style.display = "none";
+            hamburgerDiv.setAttribute('data-menuState', 'closed');
+        }
+        addAnimateClass(hamburger, 400);
+        addAnimateClass(navBtnList, 400);
+    })
 }
 
 async function otherBtnAnim(element) {
@@ -143,13 +167,28 @@ async function addAnimateClass(element, waitTime) {
     await wait(waitTime);
     element.classList.remove('animate');
 }
-
 // Used to see if something should happen when user clicks document (see the currentpagestate.js file)
 function checkDocumentClick(click) {
     // On the project pages, if the anchor menu is shown and it wasn't the menu that was clicked
     if (anchorMenuTitles && !document.getElementById("anchorMenu")?.contains(click.target)) {
         document.getElementById("anchorMenuBtn").click();
     }
+}
+
+// To handle disappearing the header on mobile view
+function headerScroll() {
+    document.querySelector("main").addEventListener('scroll', function() {
+        if (this.innerWidth > 625) {
+            return
+        }
+        let scrollPos = document.querySelector("main").scrollTop; // How far the page is scrolled vertically
+        console.log(scrollPos);
+        if (scrollPos > 50) { // trigger after 200px of scrolling
+            document.querySelector('header').style.opacity = 0;
+        } else {
+            document.querySelector('header').style.opacity = 1;
+        }
+    });
 }
 
 function attachDocumentClick() {
@@ -222,6 +261,7 @@ async function start() {
         //To begin, start with the first project
         connectHomeAnimations();
         updateCurrentProjectVar(0);
+        headerScroll();
         await loadProjects().then(() => { updateProjectText(); });
     }
     // Loading the project page
