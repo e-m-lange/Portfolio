@@ -343,7 +343,7 @@ main {
   right: -10rem;
   width: 25%;
   height: 100%;             /* thickness of horizontal line */
-  top: 4.4rem;
+  top: 6rem;
   content: "";
   border-top: 1px solid black;
   position: relative;
@@ -572,6 +572,7 @@ main {
     }
     
     #projectLines2::before {
+        top: 4.4rem;
         right: -70vw;
         width: 30rem;
     }
