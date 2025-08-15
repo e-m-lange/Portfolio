@@ -343,7 +343,7 @@ main {
   right: -10rem;
   width: 25%;
   height: 100%;             /* thickness of horizontal line */
-  top: 6rem;
+  top: 4.4rem;
   content: "";
   border-top: 1px solid black;
   position: relative;
@@ -604,6 +604,16 @@ main {
         margin: 2rem 0rem 2rem 0rem;
         position: relative;
         align-self: end;
+    }
+
+    .otherProjectBtn:hover { /*since hover is doesn't work well on mobile*/
+        color: black;
+        background-color: #F7F8F8;
+    }
+
+    .otherProjectBtn:active {
+        color: white;
+        background-color: black;
     }
 }
 
