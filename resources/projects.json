@@ -9,7 +9,7 @@
         },
         "landingPage": {
             "title": "Landing Pages",
-            "snippet": "Website Design*Wordpress Website*Conversion",
+            "snippet": "Web Design*Wordpress Website*Conversion",
             "previewImageList": "thumbnails/previewsLandingPage/0-LandingPagePreview.webp*thumbnails/previewsLandingPage/1-LandingPagePreview.webp*thumbnails/previewsLandingPage/2-LandingPagePreview.webp*thumbnails/previewsLandingPage/3-LandingPagePreview.webp*thumbnails/previewsLandingPage/4-LandingPagePreview.webp*thumbnails/previewsLandingPage/5-LandingPagePreview.webp*thumbnails/previewsLandingPage/6-LandingPagePreview.webp",
             "blurb": "Design of landing pages that were implemented on the company website",
             "team": "Me, Product Manager, Customer Support Team Lead",
@@ -46,7 +46,7 @@
         },
         "jollyRoom": {
             "title": "Jolly Room",
-            "snippet": "Website design*Website Development*Small Business",
+            "snippet": "Web design*Web Development*Small Business",
             "previewImageList": "thumbnails/previewsJollyRoom/0-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/1-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/4-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/5-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/6-JollyRoomPreview.webp",
             "blurb": "Design and implementation of a website for party room business.",
             "imgUrl": "resources/thumbnails/previewsJollyRoom/heroImgJollyRoom.png"

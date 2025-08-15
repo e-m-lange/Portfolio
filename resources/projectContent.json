@@ -843,17 +843,67 @@
         },
         "section0": {
             "type": "titleParagraph",
-            "param0": "",
-            "param1": "Below is the embed, it is being hosted on GitHub for review in the meantime, available to check out: <a href='https://e-m-lange.github.io/jollyroom'>https://e-m-lange.github.io/jollyroom/</a>. Content still needs to be added to this page."
+            "param0": "Context",
+            "param1": "An acquaintance recently started a party room rental business and needed a website, opening up the opportunity for me to carry out this project."
         },
         "section1": {
             "type": "titleParagraph",
-            "param0": "See it in development below!",
-            "param1": ""
+            "param0": "Check it Out Here",
+            "param1": "<a href='https://e-m-lange.github.io/jollyroom' target='_blank'>https://e-m-lange.github.io/jollyroom/</a>"
         },
         "section2": {
+            "type": "titleParagraph",
+            "param0": "Getting Started",
+            "param1": "I began by taking a look at other similar websites both in Hong Kong (HK), which provides more specific audience insights, and outside HK, for creative inspiration. I hadn't visited the venue yet so I focused on how the hero section would hook audiences: image forward and highlighting the 3 best things about the venue."
+        },
+        "section3": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\jollyRoom\\jollyRoom_1.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_3.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_4.webp",
+            "param1": ""
+        },
+        "section4": {
+            "type": "titleParagraph",
+            "param0": "Gathering Materials & a Plan",
+            "param1": "After visiting and photographing the venue, and speaking with the owner, I determined the website’s content and required functionalities. For example, enquiries would go directly to the owner rather than through a booking system, as the business is new. Due to this, the target customers were also vague."
+        },
+        "section5": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\jollyRoom\\jollyRoom_2.webp",
+            "param1": ""
+        },
+        "section6": {
+            "type": "titleParagraph",
+            "param0": "Creating the Visual Identity",
+            "param1": "The owner was very loose with their desired look, mostly citing that they enjoy the clean look of modern websites. They stated they would like for me to do what I thought best. I spent extra time exploring how the gallery section would look like as images would be important for selling the venue. There was particular focus on creating an engaging, streamlined (not too many images at once), clean design that translated well to mobile."
+        },
+        "section7": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\jollyRoom\\jollyRoom_5.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_6.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_7.webp",
+            "param1": ""
+        },
+        "section8": {
+            "type": "titleParagraph",
+            "param0": "Hi-Fi",
+            "param1": "It was now time to move on, bringing together the structure, information, and visual identity. I had to strike a balance between inviting + friendly + fun and modern + minimalist. This way, I would not be neglecting either target market group. The owner had been in the loop since early wireframes and was pleased with the final result, so I continued to implementation."
+        },
+        "section9": {
+            "type": "fixedWidthImage",
+            "param0": "resources\\projectContentFiles\\jollyRoom\\jollyRoom_8.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_9.webp*resources\\projectContentFiles\\jollyRoom\\jollyRoom_10.webp",
+            "param1": ""
+        },
+        "section10": {
+            "type": "titleParagraph",
+            "param0": "Implementation",
+            "param1": "The site would be static and simple, so just HTML, CSS, and JS sufficed. To quickly produce more complex animations easily, I decided to make use of the GSAP library. Astro would help pre-render the site for faster load times and a better experience. As the business is new, a budget friendly direction was suitable; only the domain would be paid."
+        },
+        "section11": {
+            "type": "titleParagraph",
+            "param0": "Preview the <a href='https://e-m-lange.github.io/jollyroom' target='_blank'>Site</a> Below:",
+            "param1": "The site's implementation is still in progress and the code can be viewed in <a href='https://github.com/e-m-lange/jollyroom' target='_blank'>GitHub</a>."
+        },
+        "section12": {
             "type": "embed",
-            "param0": "<embed src=\"https://e-m-lange.github.io/jollyroom/\" style=\"width:90%; height: 150%;\">"
+            "param0": "<embed src=\"https://e-m-lange.github.io/jollyroom/\" style=\"width:100%; height: calc(100% + 4rem);\">"
         }
     }
 }
