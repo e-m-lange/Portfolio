@@ -30,7 +30,7 @@ async function loadProjects() {
     preloadHeroImg(projects);
 }
 
-// Preload for better experience on homepage
+// Preload for better experience on homepage, preload images in browser cache earlier on
 function preloadHeroImg(project) {
     const numOfProjects = Object.keys(projects[0]).length; // get the length by counting how many keys there are
     const names = Array.from(Object.keys(projects[0]));
@@ -122,6 +122,7 @@ async function connectHomeAnimations() {
     var hamburgerDiv = document.querySelector("#navBtnMenu div")
     var hamburger = document.querySelector("#navBtnMenu")
     var navBtnList = document.querySelector(".navBtnList")
+    var arrow = document.querySelector("#projectLines1 svg")
 
     // Animate all buttons on page load
     btns.forEach(element => {
@@ -134,6 +135,7 @@ async function connectHomeAnimations() {
 
     addAnimateClass(projectImg, 400);
     addAnimateClass(title, 600);
+    wait(1200).then(() => { addAnimateClass(arrow, 500); });
 
     // Animate the button animations and also the image animation since they change too
     btns.forEach((element) => {
@@ -201,7 +203,7 @@ function headerScroll() {
         }
         let scrollPos = document.querySelector("main").scrollTop; // How far the page is scrolled vertically
 
-        if (scrollPos > 50) { // trigger after 200px of scrolling
+        if (scrollPos > 40) { // trigger after 200px of scrolling
             document.querySelector('header').style.opacity = 0;
         } else {
             document.querySelector('header').style.opacity = 1;

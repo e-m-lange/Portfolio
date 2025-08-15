@@ -51,7 +51,7 @@ main {
     gap: 0.75rem;
 }
 
-.navBtn, #navBtnMenu > div {
+.navBtn {
     font-family: 'Quicksand';
     font-weight: 600;
     font-size: 1rem;
@@ -69,20 +69,32 @@ main {
 }
 
 #navBtnMenu {
-    width: fit-content;
     display: none;
+    justify-items: end;
+    margin-right: 0.75rem;
 }
 
 #navBtnMenu > div {
-    padding-top: 1.85rem;
-    padding-bottom: 1.85rem;
+    display: flex;
+    border-radius: 50rem;
+    background-color: #0F1619;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
 }
 
-#navBtnMenu > div:hover > svg > path{
+#navBtnMenu > div:active {
+    background-color: white;
+}
+
+#navBtnMenu > div:active > svg > path{
     stroke: black;
 }
 
-.navBtn:hover, #goToProjectBtn:hover, #navBtnMenu > div:hover {
+.navBtn:hover, #goToProjectBtn:hover {
     position: relative;
     color: black;
     background-image: linear-gradient(to bottom, #f7f8f825 0%, #F7F8F8 100%);
@@ -92,7 +104,7 @@ main {
     transition: 0.3s;
 }
 
-.navBtn:hover::after, #goToProjectBtn:hover::after, #navBtnMenu > div:hover::after { /*creating the gradient border*/
+.navBtn:hover::after, #goToProjectBtn:hover::after { /*creating the gradient border*/
     position: absolute;
     top: -0.05rem; bottom: -0.065rem;
     left: -0.05rem; right: -0.05rem;
@@ -102,13 +114,13 @@ main {
     border-radius: 4rem;
 } /*https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient*/
 
-.navBtn:active, #goToProjectBtn:active, #navBtnMenu > div:active {
+.navBtn:active, #goToProjectBtn:active {
     background-image: none;
     background-color: var(--teal-light);
     transition: 0s;
 }
 
-.navBtn:active::after, #goToProjectBtn:active::after, #navBtnMenu > div:active::after { /*creating the gradient border*/
+.navBtn:active::after, #goToProjectBtn:active::after { /*creating the gradient border*/
     position: absolute;
     top: -0.085rem; bottom: -0.1rem;
     left: -0.085rem; right: -0.085rem;
@@ -310,6 +322,12 @@ main {
   width: 1px;              /* thickness of vertical line */
 }
 
+#projectLines1 svg {
+    position: absolute;
+    top: 45vh;
+    right: calc(6rem - 18px); /* Proejct Line from Right + half the width of the arrow */
+}
+
 #projectLines2 {
     z-index: -1;
     height: 100vh;
@@ -410,7 +428,7 @@ main {
     }
 
     header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     header p{
@@ -472,6 +490,8 @@ main {
     }
 
     #navBtnMenu {
+        height: fit-content;
+        width: fit-content;
         z-index: 1;
         display: block;
         transition: 0.3s;
@@ -484,7 +504,7 @@ main {
     #projectSection {
         width: auto;
         margin-right: 4rem;
-        margin-top: 12.5rem;
+        margin-top: 10rem;
         align-self: self-start;
         height: fit-content;
     }
@@ -494,12 +514,57 @@ main {
         align-self: start;
     }
     
+    #projectTitle h2 {
+        font-size: 1.85rem;
+        min-width: 13rem;
+    }
+
+    #projectTitle {
+        padding: 1.25rem;
+        padding-bottom: 0.75rem;
+    }
+    
     #projectLines1::after {
         right: 4.5rem;
     }
 
+    @keyframes arrowBounce {
+        0% {
+            transform: translateY(-5px);
+        }
+        25% {
+            transform: translateY(10px);
+        }
+        55% {
+            transform: translateY(-5px);
+        }
+        75% {
+            transform: translateY(3px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    #projectLines1 svg {
+        top: 45vh;
+        right: calc(4.5rem - 18px);
+    }
+
+    #projectLines1 svg.animate {
+        animation: arrowBounce 0.5s ease-in-out forwards; /* forwards keeps final state */
+    }
+
     #projectDescription {
+        height: fit-content;
+        padding: 1.25rem;
+        padding-bottom: 0.5rem;
         border-radius: 0.75rem 0rem 0rem 0rem;
+    }
+
+    #projectDescription p {
+        margin: 0rem;
+        font-size: 0.9rem;
     }
 
     #projectLines2 {
@@ -530,9 +595,8 @@ main {
 
     #projectImg {
         margin: 2rem 0rem 2rem 0rem;
-        width: 100%;
+        width: 100vw;
         margin-left: -2rem;
-        margin-right: -6rem;
         left: 0;
     }
 
