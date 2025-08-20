@@ -342,8 +342,7 @@ div {
 
 #nameTitle {
     display: flex;
-    background-image: linear-gradient(to left, black 0%, var(--blue-dark) 70%, var(--yellow-med));
-    color: transparent;
+    color: rgba(0, 0, 0, 0.65);
     background-clip: text;
     width: fit-content;
     margin: 0% 5% 0% 0%;
