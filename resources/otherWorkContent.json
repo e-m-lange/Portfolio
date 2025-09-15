@@ -2,80 +2,91 @@
     "otherWorkPage": {
         "section0": {
             "type": "titleParagraph",
-            "param0": "Western Union",
-            "param1": "Some of the marketing material I have made while working as a freelance graphic designer for WU."
+            "param0": "Pause20 App",
+            "param1": "Designed, implemented, and deployed an app that supports the 20-20-20 eye habit rule."
         },
         "section1": {
             "type": "fixedScrollableImage",
-            "param0": "resources\\navContentFiles\\otherWork\\wu\\wuGroup-0.webp",
+            "param0": "resources\\navContentFiles\\otherWork\\pause20\\pause20Group_0.webp",
             "param1": "",
             "param2": "X"
         },
         "section2": {
             "type": "titleParagraph",
-            "param0": "Digitised Group Museum Experience",
-            "param1": "App design made during my HCI master's to enhance the storytelling and context building of the museum artifacts, and to promote engaging educational social interactions within groups in the museum."
+            "param0": "Western Union",
+            "param1": "Some of the marketing material I have made while working as a freelance graphic designer for WU."
         },
         "section3": {
             "type": "fixedScrollableImage",
-            "param0": "resources\\navContentFiles\\otherWork\\museumApp\\museumApp.webp",
+            "param0": "resources\\navContentFiles\\otherWork\\wu\\wuGroup-0.webp",
             "param1": "",
             "param2": "X"
         },
         "section4": {
             "type": "titleParagraph",
+            "param0": "Digitised Group Museum Experience",
+            "param1": "App design made during my HCI master's to enhance the storytelling and context building of the museum artifacts, and to promote engaging educational social interactions within groups in the museum."
+        },
+        "section5": {
+            "type": "fixedScrollableImage",
+            "param0": "resources\\navContentFiles\\otherWork\\museumApp\\museumApp.webp",
+            "param1": "",
+            "param2": "X"
+        },
+        "section6": {
+            "type": "titleParagraph",
             "param0": "Information Visualisation",
             "param1": "After partaking in a course which resulted in visualising various datapoints in the OECD life satisfaction dataset. It was made with the Bokeh, a Python library that works with HTML and JS."
         },
-        "section5": {
+        "section7": {
             "type": "fixedScrollableImage",
             "param0": "resources\\navContentFiles\\otherWork\\infoVis\\infoVisFullpage.webp",
             "param1": "Full page of the information visualised",
             "param2": "Y"
         },
-        "section6": {
+        "section8": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-0.png*resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-2.png*resources\\navContentFiles\\otherWork\\infoVis\\infoVisAnim-1.png",
             "param1": ""
         },
-        "section7": {
+        "section9": {
             "type": "titleParagraph",
             "param0": "Agile Development with POS System",
             "param1": "Using agile weekly sprints, we gathered requirements through contextual inquiry and user stories, then developed a redesigned POS system prototype for an Indonesian restaurant in Stockholm."
         },
-        "section8": {
+        "section10": {
             "type": "fixedScrollableImage",
             "param0": "resources\\navContentFiles\\otherWork\\agile\\agile-0.webp",
             "param1": "",
             "param2": "X"
         },
-        "section9": {
+        "section11": {
             "type": "titleParagraph",
             "param0": "The Meeting Point",
             "param1": "App design idea that promotes transfer tech skills to the elderly through existing relationships, like family or friends. It strengthens bonds and supports remote learning, such as a child teaching a parent."
         },
-        "section10": {
+        "section12": {
             "type": "fixedScrollableImage",
             "param0": "resources\\navContentFiles\\otherWork\\meetingP\\meetingP-0.webp",
             "param1": "",
             "param2": "X"
         },
-        "section11": {
+        "section13": {
             "type": "titleParagraph",
             "param0": "Sparrow: 2D Platformer",
             "param1": "Hobby project developed in Godot, a 2D platformer mystery puzzle game still in the making."
         },
-        "section12": {
+        "section14": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_1.gif*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_2.gif*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_process_3.gif",
             "param1": ""
         },
-        "section13": {
+        "section15": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_moodboard_1.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_moodboard_2.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_dialogue_1.webp",
             "param1": ""
         },
-        "section14": {
+        "section16": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\otherWork\\sparrow\\sparrow_dialogue_2.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_icons_1.webp*resources\\navContentFiles\\otherWork\\sparrow\\sparrow_icons_animated.gif",
             "param1": ""
