@@ -24,14 +24,14 @@
         },
         "mobileHome": {
             "title": "New User Churn",
-            "snippet": "Mobile Design Ideas*Data Analysis*User Metrics",
+            "snippet": "Mobile Design*Data Analysis*User Metrics",
             "previewImageList": "thumbnails/previewsMobileHome/0-MobileHomePreview.webp*thumbnails/previewsMobileHome/1-MobileHomePreview.webp*thumbnails/previewsLandingPage/2-LandingPagePreview.webp*thumbnails/previewsMobileHome/3-MobileHomePreview.webp*thumbnails/previewsMobileHome/4-MobileHomePreview.webp*thumbnails/previewsMobileHome/5-MobileHomePreview.webp*thumbnails/previewsMobileHome/6-MobileHomePreview.webp",
             "blurb": "Investigation and design suggestions to decrease churn rates of new users",
             "imgUrl": "resources/thumbnails/previewsMobileHome/heroImgMobileHome.png"
         },
         "abTest": {
             "title": "A/B Tests",
-            "snippet": "Webpage Research*Conversion*Quantitative Data",
+            "snippet": "Webpage Research*Conversion*Quantitative",
             "previewImageList": "thumbnails/previewsAbTest/0-AbTestPreview.webp*thumbnails/previewsAbTest/1-AbTestPreview.jpg*thumbnails/previewsAbTest/2-AbTestPreview.webp*thumbnails/previewsAbTest/3-AbTestPreview.webp*thumbnails/previewsAbTest/4-AbTestPreview.jpg*thumbnails/previewsAbTest/5-AbTestPreview.webp*thumbnails/previewsAbTest/6-AbTestPreview.webp",
             "blurb": "A/B tests of company website pages to guide changes for higher user conversion",
             "team": "Me, Product Manager, Customer Support Team Lead",

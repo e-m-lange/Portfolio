@@ -216,12 +216,11 @@ main {
     flex-direction: column;
     align-items: end;
     z-index: 1;
-    bottom: -12.25rem;
+    bottom: -9.25rem;
 }
 
 #projectTitle, #projectDescription {
     padding: 2rem;
-    background-color: #0F1619;
     height: fit-content;
 }
 
@@ -231,7 +230,8 @@ main {
 
 #projectTitle {
     padding-bottom: 1rem;
-    border-radius: 0.75rem 2rem 0rem 0.75rem;
+    border-radius: 0rem 2rem 0rem 0.75rem;
+    background-image: linear-gradient(to top right, rgb(15, 22, 25, 1) 45%, rgba(15, 22, 25, 0.65) 90%);
 }
 
 @keyframes titleUp {
@@ -260,13 +260,18 @@ main {
 }
 
 #projectDescription {
+    background-color: #0F1619;
     z-index: 1;
-    height: 6.4rem;
+    height: 5rem;
     padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-radius: 0.75rem 0rem 0.75rem 2rem;
+    padding-bottom: 0.25rem;
+    border-radius: 0.75rem 0rem 0rem 0rem;
     /*border-top: 1px solid transparent;*/
     /*border-image: linear-gradient(to right, rgba(255,255,255, 1), rgba(255,255,255,0) 75%) 1;*/
+}
+
+#projectDescription p {
+    margin: 0.25rem;
 }
 
 #goToProjectBtn {
@@ -274,13 +279,12 @@ main {
     align-items: center;
     justify-content: right;
     gap: 1rem;
-    margin-top: 0.75rem;
-    padding: 1.165rem 1.915rem 1.165rem 1.915rem;
+    padding: 0.8rem 1.915rem 1.165rem 1.915rem;
     background-image: linear-gradient(to bottom, #cfdfe300 0%, rgba(0, 0, 0, 0.5) 70%);
     background-color: #0F1619;
     color: white;
-    width: fit-content;
-    border-radius: 30rem 10rem 30rem 30rem;
+    width: 100%;
+    border-radius: 0rem 0rem 0rem 2rem;
     box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
     border: 0.05rem solid transparent;
     cursor: pointer;
@@ -293,7 +297,11 @@ main {
 }
 
 #goToProjectBtn:hover svg path {
-    stroke: #0F1619;
+    stroke: #0F1619 !important;
+}
+
+#goToProjectBtn:hover {
+    border-radius: 0rem 0rem 0rem 1.75rem !important;
 }
 
 #projectLines1 {
@@ -355,6 +363,26 @@ main {
     content: "";
     border-top: 1px solid rgb(0, 0, 0);
     position: relative;
+}
+
+#projectLines3 {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: inline-flex;
+    justify-content: end;
+    align-items: end;
+}
+
+#projectLines3::after {
+    right: 2rem;
+    width: 100%;
+    height: 100%;             /* thickness of horizontal line */
+    top: -100%;
+    content: "";
+    border-left: 1px solid black;
+    position: relative;            /* thickness of vertical line */
 }
 
 #otherProjects {
@@ -475,7 +503,7 @@ main {
 
     .navBtnList button {
         width: fit-content;
-        padding: 1.75rem 2.25rem 1.75rem 2.25rem;
+        padding: 1.165rem 1.915rem 1.165rem 1.915rem;
     }
 
     div .navBtnList {
@@ -589,10 +617,14 @@ main {
         display: none;
     }
 
+    #projectLines3 {
+        display: none;
+    }
+
     #goToProjectBtn {
         margin-top: -1px;
         width: 100%;
-        border-radius: 0rem 0rem 0.75rem 0.75rem;
+        border-radius: 0rem 0rem 0rem 2.25rem;
         text-align: end;
     }
 
