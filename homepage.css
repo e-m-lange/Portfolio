@@ -27,7 +27,7 @@ header {
     position: absolute;
     padding: 2.25rem;
     padding-left: 4rem;
-    z-index: 2;
+    z-index: 3;
     transition: 0.2s;
 }
 
@@ -49,7 +49,7 @@ main {
     display: flex;
     padding: 1rem 0rem 0rem 0rem;
     gap: 1.25rem;
-    z-index: 2;
+    z-index: 3;
 }
 
 .navBtn {
@@ -560,7 +560,7 @@ main {
     #navBtnMenu {
         height: fit-content;
         width: fit-content;
-        z-index: 1;
+        z-index: 3;
         display: block;
         transition: 0.3s;
     }
