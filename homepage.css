@@ -49,6 +49,7 @@ main {
     display: flex;
     padding: 1rem 0rem 0rem 0rem;
     gap: 1.25rem;
+    z-index: 2;
 }
 
 .navBtn {
@@ -216,7 +217,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: end;
-    z-index: 1;
+    z-index: 2;
     bottom: -9.25rem;
 }
 
@@ -423,6 +424,7 @@ main {
     right: 0;
     bottom: 0;
     margin: 4rem;
+    z-index: 2;
 }
 
 @keyframes fadeInSlideRight {
