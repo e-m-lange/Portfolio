@@ -7,7 +7,7 @@ function setCustomVh() {
     document.documentElement.style.setProperty('--customVh', `${customVh}px`);
     vhDifference = mostVh - Number(customVh);
     document.documentElement.style.setProperty('--vhDifference', `${vhDifference}px`);
-    //console.log('Visual viewport resized:' + customVh + " " + vvVh + " max " + mostVh + " difference " + vhDifference);
+    console.log('Visual viewport resized:' + customVh + " " + vvVh + " max " + mostVh + " difference " + vhDifference);
 }
 
 function attachHeaderEvents() {
@@ -334,6 +334,10 @@ function updateCurrentPage(pageName = "") {
 function attachCircleEvent() {
     const container = document.querySelector('#otherProjects');
     const circle = document.querySelector('#otherProjectsCircle');
+
+    if (circle == null || container == null) {
+        return
+    }
 
     container.addEventListener('mousemove', (e) => {
     const rect = container.getBoundingClientRect();
