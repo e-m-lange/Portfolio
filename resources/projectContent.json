@@ -683,7 +683,7 @@
     },
     "abTest": {
         "hero" : {
-            "heroTitle": "A/B Tests",
+            "heroTitle": "A/B Testing",
             "heroImg": "resources\\projectContentFiles\\abTest\\heroImgAbTest.png"
         },
         "summary": {

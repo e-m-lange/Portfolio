@@ -30,7 +30,7 @@
             "imgUrl": "resources/thumbnails/previewsMobileHome/heroImgMobileHome.png"
         },
         "abTest": {
-            "title": "A/B Tests",
+            "title": "A/B Testing",
             "snippet": "Webpage Research*Conversion*Quantitative",
             "previewImageList": "thumbnails/previewsAbTest/0-AbTestPreview.webp*thumbnails/previewsAbTest/1-AbTestPreview.jpg*thumbnails/previewsAbTest/2-AbTestPreview.webp*thumbnails/previewsAbTest/3-AbTestPreview.webp*thumbnails/previewsAbTest/4-AbTestPreview.jpg*thumbnails/previewsAbTest/5-AbTestPreview.webp*thumbnails/previewsAbTest/6-AbTestPreview.webp",
             "blurb": "A/B tests of company website pages to guide changes for higher user conversion",
@@ -49,7 +49,7 @@
             "snippet": "Web design*Web Development*Small Business",
             "previewImageList": "thumbnails/previewsJollyRoom/0-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/1-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/2-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/4-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/5-JollyRoomPreview.webp*thumbnails/previewsJollyRoom/6-JollyRoomPreview.webp",
             "blurb": "Design and implementation of a website for party room business.",
-            "imgUrl": "resources/thumbnails/previewsJollyRoom/heroImgJollyRoom.png"
+            "imgUrl": "resources/thumbnails/previewsJollyRoom/heroImgJollyRoom_1.webp"
         }
     }
 ]

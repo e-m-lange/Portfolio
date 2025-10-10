@@ -68,11 +68,41 @@ function attachProjectBtnEvents(projects) {
     const names = Array.from(Object.keys(projects[0]));
     let i2 = 0;
 
+    //move the navigation bar to the left/right depending on project selected
+    var otherProjectsBar = document.querySelector("#otherProjectsDiv");
+
     for (let i = 0; i < numOfProjects; i++) { // 1 higher since we are currently in one project, the first once
         // update which project is selected currently in click project card
         if (i !== currOpenedProjectNum) { // Don't update with what project currently shown
             projectBtns[i2].setAttribute("data-projectNumber", i); // for tracking
-            projectBtns[i2].addEventListener("click", (element) => { 
+            projectBtns[i2].addEventListener("click", (element) => {
+                if (window.innerWidth <= 625) {
+                    //move the navigation bar to the left/right depending on project selected
+                    if (i == (numOfProjects - 1)) {
+                        otherProjectsBar.scrollTo({
+                            left: otherProjectsBar.scrollWidth,
+                            behavior: 'smooth'
+                        });
+                    }
+                    else if (i !== 1 && i - currOpenedProjectNum > 0) { // moving up
+                        otherProjectsBar.scrollTo({
+                            left: i * (otherProjectsBar.scrollWidth / 5),
+                            behavior: 'smooth'
+                        });
+                    }
+                    else if (i !== 1 && i - currOpenedProjectNum <= 0) { // moving up
+                        otherProjectsBar.scrollTo({
+                            left: -i * (otherProjectsBar.scrollWidth / 5),
+                            behavior: 'smooth'
+                        });
+                    }
+                    else {
+                        otherProjectsBar.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
                 updateCurrentProjectVar(element.target.getAttribute("data-projectNumber"));
                 updateProjectText();
                 updateOtherProjectBtn();
@@ -87,15 +117,28 @@ function attachProjectBtnEvents(projects) {
 // When swapping projects, update the other projects buttons with the unselected options
 function updateOtherProjectBtn() {
     const projectBtns = document.getElementsByClassName("otherProjectBtn");
+    const otherProjectsMarker = document.getElementById("otherProjectsMarker");
     const names = Array.from(Object.keys(projects[0]));
     const numOfProjects = Object.keys(projects[0]).length;
     let i2 = 0;
 
     for (let i = 0; i < numOfProjects; i++) {
         if (i !== parseInt(currOpenedProjectNum)) {
+            // update item location
+            if (i < numOfProjects) {
+                projectBtns[i2].style.order = i2;
+            }
+            else if (i == numOfProjects) {
+                projectBtns[i2].style.order = i2;
+            }
+
             projectBtns[i2].setAttribute("data-projectNumber", i); // update which projects the buttons lead to
             projectBtns[i2].innerHTML = projects[0][names[i]].title;
             i2++;
+        }
+        else {
+            // Update the location of the marker
+            otherProjectsMarker.style.order = i;
         }
     }
 }
@@ -105,7 +148,8 @@ function updateCurrentProjectVar(projectNumber) {
 }
 
 function updateProjectText() {
-    document.querySelector("#projectTitle h2").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].title;
+    document.querySelector("#projectTitle #titleFirst").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].title;
+    document.querySelector("#projectTitle #titleSecond").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].title;
     document.querySelector("#projectDescription p").innerHTML = projects[0][projectKeys[currOpenedProjectNum]].blurb;
     document.querySelector("#projectImg img").src = preloadedHeroImg[currOpenedProjectNum].src; // Take the image from the preloaded images
     const tags = (projects[0][projectKeys[currOpenedProjectNum]].snippet).split("*");
@@ -117,12 +161,14 @@ function updateProjectText() {
 async function connectHomeAnimations() {
     var btns = document.querySelectorAll('.otherProjectBtn');
     var projectImg = document.querySelector('#projectImg img');
-    var title = document.querySelector("#projectTitle");
+    var title = document.querySelector("#projectTitle #titleFirst");
+    var title2 = document.querySelector("#projectTitle #titleSecond");
     var tags = document.querySelectorAll("#projectTags p");
-    var hamburgerDiv = document.querySelector("#navBtnMenu div")
-    var hamburger = document.querySelector("#navBtnMenu")
-    var navBtnList = document.querySelector(".navBtnList")
-    var arrow = document.querySelector("#projectLines1 svg")
+    var hamburgerDiv = document.querySelector("#navBtnMenu div");
+    var hamburger = document.querySelector("#navBtnMenu");
+    var navBtnList = document.querySelector(".navBtnList");
+    var arrow = document.querySelector("#goToProjectArrow");
+    var marker = document.querySelector("#otherProjectsMarker");
 
     // Animate all buttons on page load
     btns.forEach(element => {
@@ -134,8 +180,10 @@ async function connectHomeAnimations() {
     });
 
     addAnimateClass(projectImg, 400);
-    addAnimateClass(title, 600);
-    wait(1200).then(() => { addAnimateClass(arrow, 500); });
+    addAnimateClass(title, 500);
+    addAnimateClass(title2, 500);
+    addAnimateClass(arrow, 600);
+    addAnimateClass(marker, 400);
 
     // Animate the button animations and also the image animation since they change too
     btns.forEach((element) => {
@@ -143,10 +191,13 @@ async function connectHomeAnimations() {
             btns.forEach(element => {        // loop over all buttons
                 addAnimateClass(element, 500);
                 addAnimateClass(projectImg, 400);
-                addAnimateClass(title, 600);
+                addAnimateClass(title, 500);
+                addAnimateClass(title2, 500);
                 tags.forEach(element => {
                     addAnimateClass(element, 400);
                 });
+                addAnimateClass(arrow, 600);
+                addAnimateClass(marker, 400);
             });
         });
     })
@@ -203,7 +254,7 @@ function headerScroll() {
         }
         let scrollPos = document.querySelector("main").scrollTop; // How far the page is scrolled vertically
 
-        if (scrollPos > 40) { // trigger after 200px of scrolling
+        if (scrollPos > 160) { // trigger after 200px of scrolling
             document.querySelector('header').style.opacity = 0;
         } else {
             document.querySelector('header').style.opacity = 1;
@@ -272,6 +323,48 @@ function updateCurrentPage(pageName = "") {
     return false;
 }
 
+// for the otherProjectCircle follow cursor
+function attachCircleEvent() {
+    const container = document.querySelector('#otherProjects');
+    const circle = document.querySelector('#otherProjectsCircle');
+
+    container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const remInPixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const offsetX = -5.5 * remInPixels;
+    const offsetY = 3.5 * remInPixels;
+    const x = e.clientX + offsetX;
+    const y = e.clientY - offsetY;
+
+    circle.style.left = `${x}px`;
+    circle.style.top = `${y}px`;
+    });
+
+    container.addEventListener('mouseenter', () => {
+    circle.style.transform = 'scale(1)';
+    });
+
+    container.addEventListener('mouseleave', () => {
+    circle.style.transform = 'scale(0)';
+    });
+
+    // Smooth animation loop
+    function animate() {
+        // easing factor (0 < factor < 1)
+        const ease = 0.5;
+
+        circleX += (mouseX - circleX) * ease;
+        circleY += (mouseY - circleY) * ease;
+
+        circle.style.left = `${circleX}px`;
+        circle.style.top = `${circleY}px`;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
 async function start() {
     //console.log("Start " + sessionStorage.currentPage);
     if (!updateCurrentPage()) {
@@ -290,6 +383,7 @@ async function start() {
     }
     attachDocumentClick();
     attachHeaderEvents();
+    attachCircleEvent();
 
     setCustomVh();
     window.addEventListener('resize', setCustomVh);
