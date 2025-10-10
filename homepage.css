@@ -34,6 +34,7 @@ header {
 
 header p {
     margin: 0.5rem 0rem 0.75rem 0.2rem;
+    transition: 0.2s;
 }
 
 main {
@@ -529,6 +530,7 @@ main {
         top: 0;
         right: 0;
         justify-content: right;
+        transition: 0.2s;
     }
 
     header h1 {
@@ -625,17 +627,18 @@ main {
     }
 
     #nameSquare {
-        margin: 2rem;
-        margin-bottom: 3rem;
-        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+        margin: 4rem 2rem 1.5rem 1.65rem;
+        padding: 0rem;
+        border: none;
     }
 
     #nameSquare h1 {
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
 
     #nameSquare p {
         padding-left: 0.4rem;
+        font-weight: 500;
     }
 
     #navBtnMenu {
@@ -649,7 +652,7 @@ main {
     #projectImgSection {
         order: 0;
         flex-direction: column;
-        bottom: 2.25rem;
+        bottom: 2rem;
     }
 
     #projectTags {
@@ -694,13 +697,13 @@ main {
 
     #projectTitle h2 {
         width: 100%;
-        font-size: 18vw;
+        font-size: 17vw;
         text-align: center;
         line-height: 110%;
     }
 
     #projectTitle #titleSecond {
-        font-size: 18vw;
+        font-size: 17vw;
     }
 
     #otherProjectsCircle {

@@ -248,6 +248,7 @@ function checkDocumentClick(click) {
 
 // To handle disappearing the header on mobile view
 function headerScroll() {
+    const header = document.querySelector('header');
     document.querySelector("main").addEventListener('scroll', function() {
         if (this.innerWidth > 625) {
             return
@@ -255,9 +256,15 @@ function headerScroll() {
         let scrollPos = document.querySelector("main").scrollTop; // How far the page is scrolled vertically
 
         if (scrollPos > 160) { // trigger after 200px of scrolling
-            document.querySelector('header').style.opacity = 0;
+            header.style.opacity = 0;
+            setTimeout(() => {
+                header.style.zIndex = "-5";
+            }, 300);
         } else {
-            document.querySelector('header').style.opacity = 1;
+            header.style.opacity = 1;
+            setTimeout(() => {
+                header.style.zIndex = "3";
+            }, 300);
         }
     });
 }
