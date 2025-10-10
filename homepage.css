@@ -609,6 +609,7 @@ main {
 
     #rightSection {
         order: 0;
+        align-self: self-start;
     }
 
     #leftSection {
@@ -627,7 +628,7 @@ main {
     }
 
     #nameSquare {
-        margin: 4rem 2rem 1.5rem 1.65rem;
+        margin: 4rem 2rem 2.25rem 1.65rem;
         padding: 0rem;
         border: none;
     }
@@ -639,6 +640,7 @@ main {
     #nameSquare p {
         padding-left: 0.4rem;
         font-weight: 500;
+        width: 16rem;
     }
 
     #navBtnMenu {
