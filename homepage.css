@@ -626,12 +626,16 @@ main {
 
     #nameSquare {
         margin: 2rem;
-        margin-bottom: 4rem;
-        padding: 2rem 2rem 1rem 2rem;
+        margin-bottom: 3rem;
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     }
 
     #nameSquare h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+    #nameSquare p {
+        padding-left: 0.4rem;
     }
 
     #navBtnMenu {
@@ -642,14 +646,10 @@ main {
         flex-direction: column;
     }
 
-    #projectText {
-        order: 1;
-    }
-
     #projectImgSection {
         order: 0;
         flex-direction: column;
-        bottom: 2.75rem;
+        bottom: 2.25rem;
     }
 
     #projectTags {
@@ -663,8 +663,10 @@ main {
     }
 
     #projectText {
+        order: 1;
         margin: 0rem 2rem 6rem 2rem;
         width: 100%;
+        margin-top: -1rem;
     }
 
     #projectDescription {
@@ -692,13 +694,17 @@ main {
 
     #projectTitle h2 {
         width: 100%;
-        font-size: 20vw;
+        font-size: 18vw;
         text-align: center;
-        line-height: 115%;
+        line-height: 110%;
     }
 
     #projectTitle #titleSecond {
-        font-size: 20vw;
+        font-size: 18vw;
+    }
+
+    #otherProjectsCircle {
+        display: none;
     }
 }
 
@@ -746,5 +752,9 @@ main {
 
     #projectTitle h2 {
         max-width: 100%;
+    }
+
+    #projectImgSection {
+        margin-right: 2rem;
     }
 }
