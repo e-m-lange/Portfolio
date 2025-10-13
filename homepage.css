@@ -309,7 +309,7 @@ main {
 #projectTitle h2 {
     width: max-content;
     color: #323232;
-    font-size: 6.25rem;
+    font-size: 5.5rem;
     font-weight: 400;
     -webkit-text-stroke: 0.1rem #323232; /* width + stroke color */
     transform: scaleX(1.05);
@@ -318,7 +318,6 @@ main {
 
 #projectTitle #titleSecond {
     position: absolute;
-    font-size: 6.25rem;
     top: 0;
     opacity: 0.5;
     transform: scaleX(1.05);
@@ -761,5 +760,25 @@ main {
 
     #projectImgSection {
         margin-right: 2rem;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1699px) {
+    #projectTitle h2 {
+        font-size: 5.5rem;
+    }
+
+    #nameSquare h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1919px) {
+    #projectTitle h2 {
+        font-size: 7rem;
+    }
+
+    #nameSquare h1 {
+        font-size: 3.75;
     }
 }
