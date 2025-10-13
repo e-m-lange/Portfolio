@@ -782,3 +782,23 @@ main {
         font-size: 3.75;
     }
 }
+
+@media (min-width: 1920px) and (max-width: 2559px) { /* 1920px */
+    #projectTitle h2 {
+        font-size: 5.5rem;
+    }
+
+    #nameSquare h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 2560px) { /* 2K resolution 2560px */
+    #projectTitle h2 {
+        font-size: 5.5rem;
+    }
+
+    #nameSquare h1 {
+        font-size: 4rem;
+    }
+}
