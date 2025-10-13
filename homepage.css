@@ -309,7 +309,7 @@ main {
 #projectTitle h2 {
     width: max-content;
     color: #323232;
-    font-size: 5.5rem;
+    font-size: 6.25rem;
     font-weight: 400;
     -webkit-text-stroke: 0.1rem #323232; /* width + stroke color */
     transform: scaleX(1.05);
@@ -775,7 +775,7 @@ main {
 
 @media (min-width: 1700px) and (max-width: 1919px) {
     #projectTitle h2 {
-        font-size: 7rem;
+        font-size: 6.25rem;
     }
 
     #nameSquare h1 {
