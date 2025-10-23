@@ -437,13 +437,13 @@ function templateEmbed(embedCode) {
 // Template with text spanning whole screen and automaticall scrolls (slowly)
 function templateScrollingHorizontal(textSrcList, duration) {
     var splitText = textSrcList.split("*");
-    var template = `<div class="templateScrollingHorizontal" style="animation-duration: ${duration}s;">`;
+    var template = `<div class="templateScrollingHorizontalParent"><div class="templateScrollingHorizontal" style="animation-duration: ${duration}s;">`;
     for(var i = 0; i < 2; i++) {
         splitText.forEach(i => {
             template += `<p style="width: fit-content; text-wrap-mode: nowrap;">${i}</p>`;
         });
     }
-    template += "</div>";
+    template += "</div></div>";
 
     return template;
 }

@@ -754,6 +754,11 @@ div:has(> #projectFeaturedImage) { /* Parent of */
     object-fit: contain;
 }
 
+.templateScrollingHorizontalParent {
+    overflow: hidden;
+    width: 100vw;
+}
+
 .templateScrollingHorizontal {
     display: inline-flex;
     align-self: start;
