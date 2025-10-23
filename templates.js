@@ -184,6 +184,8 @@ function loadTemplate(type, param0 = "", param1 = "", param2 = "", param3 = "") 
         case "fixedScrollableImage":
             return templateFixedScrollableImage(param0, param1, param2);
             break;
+        case "scrollingHorizontal":
+            return templateScrollingHorizontal(param0, param1);
     }
 }
 
@@ -430,6 +432,20 @@ function templateEmbed(embedCode) {
     </div>`
 
     return template
+}
+
+// Template with text spanning whole screen and automaticall scrolls (slowly)
+function templateScrollingHorizontal(textSrcList, duration) {
+    var splitText = textSrcList.split("*");
+    var template = `<div class="templateScrollingHorizontal" style="animation-duration: ${duration}s;">`;
+    for(var i = 0; i < 2; i++) {
+        splitText.forEach(i => {
+            template += `<p style="width: fit-content; text-wrap-mode: nowrap;">${i}</p>`;
+        });
+    }
+    template += "</div>";
+
+    return template;
 }
 
 function showHideTemplateExpandable(element) {

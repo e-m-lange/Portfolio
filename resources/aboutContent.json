@@ -12,80 +12,105 @@
         },
         "section0": {
             "type": "titleParagraph",
-            "param0": "Education",
+            "param0": "Experience",
             "param1": ""
         },
         "section1": {
             "type": "list",
-            "param0": "<span style=\"font-weight: 600;\">MSc Human-Computer Interaction, Uppsala University 2022-2024</span>",
-            "param1": "Conducted thesis on AI-enabled work tools & IT professionals*HCI: Embodied Interaction, Requirements within Agile Development, User Interface Programming I, Scientific Methods within HCI, Measuring and Analysing User Experience (Statistics)*Other: Reinforcement Learning, Information Visualization, AI for Game Programming 1 & 2, Big Data Analytics, Deep Learning for Industrial Imaging, Privacy Patterns for Software Design"
+            "param0": "<span style=\"font-weight: 600;\">UX/UI Design Intern at Cubicasa 2024-2025</span> <i>Helsinki, Finland</i>",
+            "param1": "Re-designed the in-house tool used by the CS team for unification & increased efficiency. From research to hi-fi design in close collaboration with CS team lead & product manager.*Designed landing pages and their content to inform and convert users; implemented on the company website. Balanced the goals and needs of the marketing team with the technical constraints of the development team through collaborative communication.*Analysed user data and developed wireframes to reduce first-time user churn, focused on improvements to the homepage content and first-timer user flow.*Created A/B tests on company website pages, which resulted in ~12-17% increase in conversion rate. Improved the testing process by setting up more targeted goal tracking."
         },
         "section2": {
-            "type": "list",
-            "param0": "<span style=\"font-weight: 600;\">BA Design+Change, Linnaeus University 2019-2022</span>",
-            "param1": "All semesters in this program focus on sustainability (e.g., in service design, design methods, system thinking)*Extra Courses: Intro to App Dev with Flutter, Intro to Lifecycle Analysis, Digitalization of Society, Programming in C# I & II & III, Social Psychology, HCI, Web Management, Applied IoT Intro, Sustainable Development, 3D Modelling, Structured Programming with C++"
-        },
-        "section3": {
-            "type": "titleParagraph",
-            "param0": "Experience",
-            "param1": ""
-        },
-        "section4": {
-            "type": "list",
-            "param0": "<span style=\"font-weight: 600;\">Website Design and Development July 2025-Now</span>",
-            "param1": "Independently designing and developing a responsive website for a Hong Kong party room using JavaScript, HTML, CSS, GSAP, and Astro. <a href=https://e-m-lange.github.io/jollyroom/>https://e-m-lange.github.io/jollyroom/</a>*Created the brand identity and design system, gathered requirements, and captured original venue photography."
-        },
-        "section5": {
-            "type": "list",
-            "param0": "<span style=\"font-weight: 600;\">Western Union 2019-Now</span>",
-            "param1": "Freelance Graphic Designer*Creation of marketing material, physical and digital in Hong Kong"
-        },
-        "section6": {
-            "type": "list",
-            "param0": "<span style=\"font-weight: 600;\">Cubicasa 2024-2025 (6 months)</span>",
-            "param1": "UX/UI Design Intern*Was located in Helsinki, Finland"
-        },
-        "section7": {
             "type": "expandable",
             "param0": "Evaluation by Anastasia Corjan, Senior Marketing Manager",
             "param1": "\"Eve has successfully completed her UX/UI internship at CubiCasa, demonstrating exceptional creativity, problem-solving skills, and a strong understanding of user-centered design. Throughout her internship, she contributed to various projects, including improving the user experience of our employee facing web portal and customer facing mobile app. Her ability to conduct user research, analyze feedback, and translate insights into intuitive design solutions greatly enhanced the usability of CubiCasa.\""
         },
-        "section8": {
+        "section3": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">Freelance Graphic Designer Western Union 2019-Now</span> <i>Hong Kong</i>",
+            "param1": "Creation of marketing material such as posters, flyers, social media assets, shop-rebranding with fast-turnaround & iterations.*Alignment with brand visual guidelines & multilingual audiences."
+        },
+        "section4": {
             "type": "list",
             "param0": "<span style=\"font-weight: 600;\">2nd Place Winner in Uppsala Sustainable Mobility Hackathon 2023</span>",
-            "param1": "Hosted by InnoCenter, supported by European Union"
+            "param1": "Teamed with five at a two-day InnoCenter Uppsala event (EU-supported) to develop a pitch promoting sustainable transport."
+        },
+        "sectionSkills1": {
+            "type": "scrollingHorizontal",
+            "param0": "UX & UI (ux/ui) design*User-centred Design*Wireframing*Prototyping*Mockups*Mobile & Desktop Design*Web Design*Responsive Design*Presentation*Graphic Design*HCI*UX Research*A/B Testing*Usability Testing*User Behaviour Analytics*Front-End Programming*Design Trends*Design Components*User Requirements*End-to-End Design",
+            "param1": 90
+        },
+        "section5": {
+            "type": "titleParagraph",
+            "param0": "Projects",
+            "param1": ""
+        },
+        "section6": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">Mobile App Design & Development</span>",
+            "param1": "Independently designed and developed a Flutter-based mobile app that supports users in following the 20-20-20 eye habit rule. Already available: <a href=\"https://play.google.com/store/apps/details?id=com.noxul.pause20\">Pause20 on Google Play</a>*Designed a clean, modern dark-themed UI and positioned the app through market research to address user needs."
+        },
+        "section7": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">Website Design and Development July 2025-Now</span> <i>Hong Kong</i>",
+            "param1": "Independently designing and developing a responsive website for a Hong Kong party room using JavaScript, HTML, CSS, GSAP, and Astro. <a href=https://e-m-lange.github.io/jollyroom/>https://e-m-lange.github.io/jollyroom/</a>*Created the brand identity and design system, gathered requirements, and captured original venue photography."
+        },
+        "sectionSkills2": {
+            "type": "scrollingHorizontal",
+            "param0": "Figma*Figjam*Adobe CC*Illustrator*Photoshop*Premiere Pro*VWO*Hotjar*Google Analytics*WordPress*Godot*Unity",
+            "param1": 50
+        },
+        "section8": {
+            "type": "titleParagraph",
+            "param0": "Education",
+            "param1": ""
         },
         "section9": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">MSc Human-Computer Interaction, Uppsala University 2022-2024</span>",
+            "param1": "Conducted thesis on AI-enabled work tools & IT professionals, <a href=\"https://link.springer.com/chapter/10.1007/978-3-031-93429-2_3\">published at HCII 2025</a>*HCI: Embodied Interaction, Requirements within Agile Development, User Interface Programming I, Scientific Methods within HCI, Measuring and Analysing User Experience (Statistics)*Other: Reinforcement Learning, Information Visualization, AI for Game Programming 1 & 2, Big Data Analytics, Deep Learning for Industrial Imaging, Privacy Patterns for Software Design"
+        },
+        "section10": {
+            "type": "list",
+            "param0": "<span style=\"font-weight: 600;\">BA Design+Change, Linnaeus University 2019-2022</span>",
+            "param1": "All semesters in this program focus on sustainability (e.g., in service design, design methods, system thinking)*Extra Courses: Intro to App Dev with Flutter, Intro to Lifecycle Analysis, Digitalization of Society, Programming in C# I & II & III, Social Psychology, HCI, Web Management, Applied IoT Intro, Sustainable Development, 3D Modelling, Structured Programming with C++"
+        },
+        "sectionSkills3": {
+            "type": "scrollingHorizontal",
+            "param0": "JavaScript*HTML*CSS*C#*Flutter*Dart",
+            "param1": 30
+        },
+        "section11": {
             "type": "titleParagraph",
             "param0": "Professional Development",
             "param1": ""
         },
-        "section10": {
+        "section12": {
             "type": "list",
             "param0": "<span style=\"font-weight: 600;\">Full-Stack Web Development Course (Udemy) Ongoing</span>",
             "param1": "Comprehensive training in front-end and back-end development, covering HTML, CSS, JavaScript, Node.js, databases, and deployment workflows"
         },
-        "section11": {
+        "section13": {
             "type": "titleParagraph",
             "param0": "Hobbies & Free Time",
             "param1": "I enjoy photography, especially when travelling, art/digital illustration, badminton, hiking, and podcasts (like 'the next big idea' and 'no stupid questions')!</br></br>Also enjoy storytelling in general—from books to games, and am currently making a small game for fun.</br></br>Occasionally, a need arises that allows me to enjoy designing 3D printing solutions to those problems (except when in the middle of printing, you realise you've made an error...)"
         },
-        "section12": {
+        "section14": {
             "type": "fixedHeightImage",
             "param0": "resources\\navContentFiles\\aboutPage\\3dPrint_1.webp*resources\\navContentFiles\\aboutPage\\3dPrint_0.webp*resources\\navContentFiles\\aboutPage\\3dPrint_2.webp*resources\\navContentFiles\\aboutPage\\3dPrint_3.webp*resources\\navContentFiles\\aboutPage\\3dPrint_5.webp",
             "param1": "Drawing tablet stand disassembled*Drawing tablet on the stand*Back view of the e-reader case*Front view of the e-reader case*Figuring out the drawing tablet stand for 15° vertical incline"
         },
-        "section13": {
+        "section15": {
             "type": "titleParagraph",
             "param0": "",
             "param1": "Oh and I love my dogs, whom I train."
         },
-        "section14": {
+        "section16": {
             "type": "fixedWidthImage",
             "param0": "resources\\navContentFiles\\aboutPage\\dogJump.webp",
             "param1": "The Great Devourer"
         },
-        "section15": {
+        "section17": {
             "type": "fixedHeightImage",
             "param0": "resources\\navContentFiles\\aboutPage\\illu_1.webp*resources\\navContentFiles\\aboutPage\\illu_2.webp",
             "param1": ""

@@ -753,3 +753,25 @@ div:has(> #projectFeaturedImage) { /* Parent of */
     width: 1.5rem;
     object-fit: contain;
 }
+
+.templateScrollingHorizontal {
+    display: inline-flex;
+    align-self: start;
+    position: relative;
+    animation: autoScrollAnimation infinite linear;
+    font-weight: 500;
+    color: #0c2b30;
+    opacity: 0.5;
+    margin: 3rem 0rem 2em 0rem;
+    min-width: 200%;
+}
+
+.templateScrollingHorizontal p {
+    flex: 1;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+@keyframes autoScrollAnimation {
+    from {transform: translateX(-51%);} /*-51 and 0*/
+    to {transform: translateX(0%);} /*cancels out the parent-relative shift and repositions it by its own width.*/
+}
