@@ -145,10 +145,6 @@ main {
     flex: 3;
 }
 
-#nameSquare {
-    flex: 1;
-}
-
 #projectImgSection img {
     object-fit: cover;
     position: relative;
@@ -489,6 +485,8 @@ main {
     display: flex;
     flex: 1;
     align-items: end;
+    overflow: hidden;
+    position: relative;
 }
 
 #nameSquare {
@@ -496,6 +494,7 @@ main {
     margin: 2rem 2rem 2.25rem 2rem;
     padding: 2rem;
     height: fit-content;
+    flex: 1;
 }
 
 #nameSquare h1 {
@@ -506,6 +505,22 @@ main {
 #nameSquare p {
     font-weight: 600;
     padding-left: 0.5rem;
+}
+
+#drawnNameTitle * {
+    fill: #668D93;
+    font-size: 5.5vw;
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 300ms ease, color 300ms ease;
+}
+
+#drawnNameParagraph * {
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 0rem 2.25rem 2.25rem 2.25rem;
+    text-align: end;
+    margin: 0rem;
+    color: #234f57  ;
 }
 
 #nameSquare * {
@@ -609,6 +624,8 @@ main {
     #rightSection {
         order: 0;
         align-self: self-start;
+        min-height: 19rem;
+        align-items: center;
     }
 
     #leftSection {
@@ -710,6 +727,28 @@ main {
     #otherProjectsCircle {
         display: none;
     }
+
+    #drawnNameSVG {
+        position: relative !important;
+        transform: translateY(0rem) translateX(-11.5rem) rotate(73deg) !important;
+        height: 18rem !important;
+        width: 18rem !important;
+    }
+
+    #drawnNameTitle * {
+        font-size: 6rem;
+    }
+
+    #drawnNameParagraph {
+        width: 40%;
+        margin-left: -11rem;
+    }
+
+    #drawnNameParagraph * {
+        padding: 0rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
 
 @media (min-width: 626px) and (max-width: 1300px) { /* Tablet size and when rem font size changes*/
@@ -731,9 +770,10 @@ main {
 
     #rightSection {
         order: 0;
-        width: 65%;
-        max-width: 40rem;
         min-width: 20rem;
+        flex-direction: row;
+        flex: 1;
+        min-height: 22rem;
     }
 
     #leftSection {
@@ -761,6 +801,33 @@ main {
     #projectImgSection {
         margin-right: 2rem;
     }
+
+    #drawnNameSVG {
+        position: relative !important;
+        transform: translateY(2.5rem) translateX(-6rem) rotate(105deg) !important;
+        height: 30rem !important;
+        width: 30rem !important;
+    }
+
+    #drawnNameTitle * {
+        font-size: 7rem;
+    }
+
+    #drawnNameParagraph {
+        width: 60%;
+        margin-left: -10%;
+    }
+
+    #drawnNameParagraph * {
+        padding-left: 0rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:1300px) {
+    #drawnNameTitle *:hover {
+        letter-spacing: 1rem;
+    }
 }
 
 @media (min-width: 1300px) and (max-width: 1699px) {
@@ -783,6 +850,12 @@ main {
     }
 }
 
+@media (min-width: 1920px) {
+    #drawnNameTitle * {
+        font-size: 4.25vw;
+    }
+}
+
 @media (min-width: 1920px) and (max-width: 2559px) { /* 1920px */
     #projectTitle h2 {
         font-size: 5.5rem;
@@ -800,5 +873,14 @@ main {
 
     #nameSquare h1 {
         font-size: 4rem;
+    }
+
+    #drawnNameTitle * {
+        font-size: 3.5vw;
+        letter-spacing: 0.4rem;
+    }
+
+    #drawnNameParagraph * {
+        font-size: 1.5rem;
     }
 }

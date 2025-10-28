@@ -69,10 +69,35 @@
             </section>
         </section>
         <section id="rightSection">
-            <div id="nameSquare">
+            <!-- <div id="nameSquare">
                 <h1>Eve Lange</h1>
                 <p>UX/UI Designer, always ready to say "let's try it!"</p>
+            </div> -->
+
+            <svg id="drawnNameSVG" style="position:absolute; transform: translateY(-15vh) translateX(10vw) rotate(-105deg); width: 35vw; height: 35vw;" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Text on a circle example">
+                <!-- Define a circular path using a path element -->
+                <!-- center at (200,100), radius 80 -->
+                <path id="circlePath"
+                        d="M300,200 m -200,0
+                        a 200,200 0 1,1 400,0
+                        a 200,200 0 1,1 -400,0"
+                        fill="none" stroke="none"/>
+
+                <!-- Visible guide circle (optional) -->
+                <!-- <circle cx="250" cy="150" r="200" fill="none" stroke="#ddd"/> -->
+
+                <!-- Text that follows the path; startOffset="50%" centers the text -->
+                <text id="drawnNameTitle" fill="#111">
+                    <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
+                    Eve Lange
+                    </textPath>
+                </text>
+            </svg>
+
+            <div id="drawnNameParagraph">
+                <p>UX/UI Designer, always ready to say "let's try it!"</p>
             </div>
+
         </section>
     </main>
     <header>

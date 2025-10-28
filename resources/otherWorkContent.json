@@ -3,7 +3,7 @@
         "section0": {
             "type": "titleParagraph",
             "param0": "Pause20 App",
-            "param1": "Designed, implemented, and deployed an app that supports the 20-20-20 eye habit rule."
+            "param1": "Designed, implemented, and deployed an app that supports the 20-20-20 eye habit rule. 100+ downloads, check out <a href='https://play.google.com/store/apps/details?id=com.noxul.pause20'>Pause20 on Google Play</a>"
         },
         "section1": {
             "type": "fixedScrollableImage",
