@@ -730,7 +730,7 @@ main {
 
     #drawnNameSVG {
         position: relative !important;
-        transform: translateY(0rem) translateX(-11.5rem) rotate(73deg) !important;
+        transform: translateY(0rem) translateX(-11rem) rotate(73deg) !important;
         height: 18rem !important;
         width: 18rem !important;
     }
@@ -746,8 +746,10 @@ main {
 
     #drawnNameParagraph * {
         padding: 0rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         text-align: center;
+        padding-right: 2rem;
+        width: 50vw;
     }
 }
 
